@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+/* === Сброс стилей === */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  font-family: 'Roboto', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+a {
+  text-decoration-skip-ink: auto;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* === Конец сброса стилей === */
+
+.header {
+    height: 157px;
+    background: rgba(252, 247, 241, 1);
+}
+
+.header-content {
+    max-width: 1440px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    margin-left: 96px;
+}
+
+.nav {
+    margin-right: 96px;
+    margin-top: -5px;
+    display: flex;
+    width: 446px;
+    justify-content: space-between;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: uppercase;
+}
+
+.nav > a {
+    color: #292929;
+}
+
+.block1 {
+    width: 100%;
+    height: 662px;
+    background: rgba(252, 247, 241, 1);
+    border-radius: 0 0 0 176px;
+    padding-top: 48px;
+}
+
+.block1-1 {
+    width: 1248px;
+    margin: 0 auto;
+}
+
+.block1-1-h1 {
+    font-weight: 300;
+    font-size: 112px;
+    line-height: 124px;
+    text-transform: uppercase;
+    color: #292929;
+}
+
+.block1-2-img1 {
+    position: absolute;
+    right: 183px;
+    top: 388px;
+}
+
+.block1-2-img2 {
+    position: absolute;
+    right: 100px;
+    top: 335px;
+}
+
+.block1-3 {
+    display: flex;
+    float: right;
+    margin-right: 94px;
+    margin-top: 176px;
+    width: 210px;
+    height: 44px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.blue-line {
+    height: 44px;
+    width: 1px;
+    background: #3DB0F0;
+}
