@@ -83,11 +83,13 @@ select {
 }
 
 .logo {
-    margin-left: 96px;
+    margin-left: 6.5vw;
+    /* margin-left: 96px; */
 }
 
 .nav {
-    margin-right: 96px;
+    /* margin-right: 96px; */
+    margin-right: 6.5vw;
     margin-top: -5px;
     display: flex;
     width: 446px;
@@ -112,12 +114,14 @@ select {
 
 .block1-1 {
     width: 1248px;
-    margin: 0 auto;
+    /* margin: 0 auto; */
+    margin: 0 6.5vw;
 }
 
 .block1-1-h1 {
     font-weight: 300;
-    font-size: 112px;
+    /* font-size: 112px; */
+    font-size: 7.8vw;
     line-height: 124px;
     text-transform: uppercase;
     color: #292929;
@@ -125,13 +129,15 @@ select {
 
 .block1-2-img1 {
     position: absolute;
-    right: 183px;
+    /* right: 183px; */
+    right: 12.75vw;
     top: 388px;
 }
 
 .block1-2-img2 {
     position: absolute;
-    right: 100px;
+    /* right: 100px; */
+    right: 7vw;
     top: 335px;
 }
 
@@ -172,8 +178,10 @@ select {
     height: 613px;
     border-radius: 176px 0 0 0;
     background: #3DB0F0;
-    padding-left: 97px;
+    /* padding-left: 97px; */
+    padding-left: 6.5vw;
     padding-top: 97px;
+    padding-right: 25px;
 }
 
 .block3-1-h2 {
@@ -189,6 +197,13 @@ select {
     font-size: 32px;
     line-height: 40px;
     color: #FFFFFF;
+}
+
+.block3-2 {
+    width: 47.4%;
+    height: 613px;
+    background: url(img/Rectangle-39314.png);
+    background-position: center;
 }
 
 .block3-2-img2 {
