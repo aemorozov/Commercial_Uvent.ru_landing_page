@@ -145,7 +145,7 @@ select {
     display: flex;
     float: right;
     margin-right: 94px;
-    margin-top: 176px;
+    margin-top: 173px;
     width: 210px;
     height: 44px;
     justify-content: space-between;
@@ -210,4 +210,49 @@ select {
     position: absolute;
     right: 0;
     top: 1154px;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 1441px) {
+    .logo {
+        margin-left: 96px;
+    }
+    
+    .nav {
+        margin-right: 96px;
+    }
+
+    .block1-1 {
+        margin: 0 auto;
+    }
+    
+    .block1-1-h1 {
+        font-size: 112px;
+    }
+    
+    .block1-2-img1 {
+        right: 183px;
+    }
+    
+    .block1-2-img2 {
+        right: 100px;
+    }
+
+    .block1-3 {
+        margin-right: calc(6.6vw * 2.7);
+    }
+
+    .block3-2 {
+        background-size: 100%;
+    }
+
 }
