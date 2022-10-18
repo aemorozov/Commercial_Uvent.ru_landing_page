@@ -83,14 +83,14 @@ select {
 }
 
 .logo {
-    margin-left: 6.5vw;
+    margin-left: 6.7vw;
     /* margin-left: 96px; */
 }
 
 .nav {
     /* margin-right: 96px; */
-    margin-right: 6.5vw;
-    margin-top: -5px;
+    margin-right: 6.7vw;
+    margin-top: -10px;
     display: flex;
     width: 446px;
     justify-content: space-between;
@@ -122,7 +122,8 @@ select {
     font-weight: 300;
     /* font-size: 112px; */
     font-size: 7.8vw;
-    line-height: 124px;
+    line-height: 8.5vw;
+    /* line-height: 124px; */
     text-transform: uppercase;
     color: #292929;
 }
@@ -137,15 +138,18 @@ select {
 .block1-2-img2 {
     position: absolute;
     /* right: 100px; */
-    right: 7vw;
-    top: 335px;
+    right: 6.9vw;
+    top: 333px;
 }
 
 .block1-3 {
+    position: absolute;
     display: flex;
     float: right;
-    margin-right: 94px;
-    margin-top: 173px;
+    /* margin-right: 94px;
+    margin-top: 177px; */
+    right: 94px;
+    top: 749px;
     width: 210px;
     height: 44px;
     justify-content: space-between;
@@ -169,7 +173,7 @@ select {
 
 .block3 {
     display: flex;
-    margin-top: -360px;
+    margin-top: -362px;
     justify-content: space-between;
 }
 
@@ -179,7 +183,7 @@ select {
     border-radius: 176px 0 0 0;
     background: #3DB0F0;
     /* padding-left: 97px; */
-    padding-left: 6.5vw;
+    padding-left: 6.7vw;
     padding-top: 97px;
     padding-right: 25px;
 }
@@ -209,8 +213,94 @@ select {
 .block3-2-img2 {
     position: absolute;
     right: 0;
-    top: 1154px;
+    top: 1150px;
 }
+
+.block4 {
+    width: 100%;
+    height: 900px;
+    background: rgba(252, 247, 241, 1);
+    padding-top: 96px;
+    padding-left: 6.7vw;
+    /* padding-left: 97px; */
+}
+
+.block4-content {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.block4-1-h2 {
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 72px;
+    color: #292929;
+}
+
+.block4-2 {
+    display: flex;
+    margin-top: 159px;
+    margin-left: 173px;
+}
+
+.block4-2-circle1, .block4-2-circle2, .block4-2-circle3 {
+    position: relative;
+    min-width: 500px;
+    width: 500px;
+    height: 500px;
+    border-radius: 250px;
+    margin-left: -79px;
+}
+
+.block4-2-circle1 {
+    background: #40D8C9;
+}
+
+.block4-2-circle2 {
+    background: #FF9DC6;
+}
+
+.block4-2-circle3 {
+    background: #3DB0F0;
+}
+
+.block4-2-circle1-text {
+    color: #FFFFFF;
+    margin-top: 225px;
+    margin-left: 250px;
+}
+
+.block4-2-circle2-text {
+    color: #000;
+    margin-top: 225px;
+    margin-left: 250px;
+}
+
+.block4-2-circle3-text {
+    color: #FFFFFF;
+    margin-top: 225px;
+    margin-left: 250px;
+}
+
+span {
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 47px;
+    display: inline-block;
+    width: 25px;
+    position: absolute;
+    transform: translate(-12.5px,0px)rotate(var(--rot)) translate(0,-200px);
+}
+
+.block4-2-circle1-foto-img, .block4-2-circle2-foto-img, .block4-2-circle3-foto-img {
+    margin: 0 auto;
+    position: relative;
+    margin-top: -130px;
+}
+
+
+
+
 
 
 
@@ -237,6 +327,7 @@ select {
     
     .block1-1-h1 {
         font-size: 112px;
+        line-height: 124px;
     }
     
     .block1-2-img1 {
@@ -248,7 +339,8 @@ select {
     }
 
     .block1-3 {
-        margin-right: calc(6.6vw * 2.7);
+        right: calc(2.6vw * 2.7);
+        top: 749px;
     }
 
     .block3-2 {
