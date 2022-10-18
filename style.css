@@ -240,7 +240,8 @@ select {
 .block4-2 {
     display: flex;
     margin-top: 159px;
-    margin-left: 173px;
+    margin-left: calc(19vw - 100px);
+    /* margin-left: 12vw; */
 }
 
 .block4-2-circle1, .block4-2-circle2, .block4-2-circle3 {
