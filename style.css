@@ -377,6 +377,10 @@ select {
     width: 229px;
     margin: 0 auto;
     display: none;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 22px;
+    color: #292929;
 }
 
 .item1-p-disp-none {
