@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
 
 /* === Сброс стилей === */
 
@@ -283,7 +284,7 @@ select {
     margin-left: 250px;
 }
 
-span {
+.circle-text {
     font-weight: 400;
     font-size: 40px;
     line-height: 47px;
@@ -298,6 +299,163 @@ span {
     position: relative;
     margin-top: -130px;
 }
+
+.block5 {
+    width: 100%;
+    height: 800px;
+    background: rgba(252, 247, 241, 1);
+    padding-top: 94px;
+}
+
+.block5-center {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.block5-h2 {
+    width: fit-content;
+    margin: 0 auto;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 72px;
+    color: #292929;
+}
+
+.block5-flex {
+    width: 100%;
+    margin-top: 91px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.block5-flex-item1, .block5-flex-item2, .block5-flex-item3, .block5-flex-item4 {
+    max-width: 310px;
+    width: 100%;
+    height: 510px;
+    box-sizing:border-box;
+    cursor: default;
+}
+
+.item1-number, .item2-number, .item3-number, .item4-number {
+    font-family: 'Open Sans';
+    font-weight: 700;
+    font-size: 112px;
+    line-height: 128px;
+    text-transform: lowercase;
+    /* font-feature-settings: 'tnum' on, 'lnum' on; */
+    width: fit-content;
+    margin: 76px auto 0 auto;
+}
+
+.item1-number {
+    color: #3DB0F0;
+}
+
+.item2-number {
+    color: #FED467;
+}
+
+.item3-number {
+    color: #FF9DC6;
+}
+
+.item4-number {
+    color: #40D8C9;
+}
+
+.item1-h3, .item2-h3, .item3-h3, .item4-h3 {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 40px;
+    color: #292929;
+    width: fit-content;
+    margin: 68px auto 0 auto;
+}
+
+.item1-p-disp-none, .item2-p-disp-none, .item3-p-disp-none, .item4-p-disp-none {
+    width: 229px;
+    margin: 0 auto;
+    display: none;
+}
+
+.item1-p-disp-none {
+    margin-top: 70px;
+}
+
+.item2-p-disp-none {
+    margin-top: 30px;
+}
+
+.item3-p-disp-none {
+    margin-top: 70px;
+}
+
+.item4-p-disp-none {
+    margin-top: 72px;
+}
+
+.span-disp-none {
+    display: none;
+}
+
+.zvezda1, .zvezda2, .zvezda3, .zvezda4 {
+    position: absolute;
+    margin-top: -534px;
+    margin-left: 127px;
+    display: none;
+}
+
+.zvezda2, .zvezda3 {
+    margin-top: -562px;
+}
+
+
+.block5-flex-item1:hover, .block5-flex-item2:hover, .block5-flex-item3:hover, .block5-flex-item4:hover {
+    margin-top: -2px;
+    border: 2px solid #FF9DC6;
+    box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    box-sizing:border-box;
+}
+
+.block5-flex-item1:hover .item1-p-disp-none {
+    display: block;
+}
+
+.block5-flex-item1:hover .zvezda1 {
+    display: block;
+}
+
+.block5-flex-item2:hover .span-disp-none {
+    display: block;
+}
+
+.block5-flex-item2:hover .item2-p-disp-none {
+    display: block;
+}
+
+.block5-flex-item2:hover .zvezda2 {
+    display: block;
+}
+
+.block5-flex-item3:hover .item3-p-disp-none {
+    display: block;
+}
+
+.block5-flex-item3:hover .zvezda3 {
+    display: block;
+}
+
+.block5-flex-item4:hover .item4-p-disp-none {
+    display: block;
+}
+
+.block5-flex-item4:hover .zvezda4 {
+    display: block;
+}
+
+
 
 
 
