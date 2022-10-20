@@ -548,7 +548,7 @@ select {
     position: absolute;
     background: linear-gradient(360deg, #050000 4.09%, rgba(0, 0, 0, 0) 54.55%);
     border-radius: 0px 0px 60px 60px;
-    width: 50%;
+    width: 43%;
     height: 440px;
     margin-left: -32px;
     margin-bottom: -32px;
@@ -593,8 +593,6 @@ select {
 .block6-item6:hover .block6-gradient {
     display: flex;
 }
-
-
 
 
 
