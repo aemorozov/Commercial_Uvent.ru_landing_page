@@ -485,7 +485,7 @@ select {
 
 .block6-flex {
     max-width: 1248px;
-    margin-top: 55px;
+    margin: 56px auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
