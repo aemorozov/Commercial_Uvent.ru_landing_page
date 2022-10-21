@@ -677,6 +677,7 @@ select {
     background: url(img/podarok.png);
     background-position: center;
     margin: 0 auto;
+    filter: brightness(98%);
 }
 
 .block8-title {
@@ -690,8 +691,12 @@ select {
     color: #FFFFFF;
 }
 
-.block8-a:hover .block8-title {
+.block8-background:hover .block8-title {
     color: #FF9DC6;
+}
+
+.block8-background:hover {
+    filter: brightness(102%);
 }
 
 .block9 {
