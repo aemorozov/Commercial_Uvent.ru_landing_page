@@ -85,11 +85,9 @@ select {
 
 .logo {
     margin-left: 6.7vw;
-    /* margin-left: 96px; */
 }
 
 .nav {
-    /* margin-right: 96px; */
     margin-right: 6.7vw;
     margin-top: -10px;
     display: flex;
@@ -114,47 +112,51 @@ select {
 }
 
 .block1-1 {
-    width: 1248px;
-    /* margin: 0 auto; */
-    margin: 0 6.5vw;
+    width: 100%;
+    max-width: 1440px;
 }
 
 .block1-1-h1 {
     font-weight: 300;
-    /* font-size: 112px; */
     font-size: 7.8vw;
-    line-height: 8.5vw;
-    /* line-height: 124px; */
+    line-height: 8.6vw;
     text-transform: uppercase;
     color: #292929;
+    padding-left: 96px;
+}
+
+.block1-2 {
+    position: inherit;
+    float: right;
+    margin-top: -16.9vw;
+    margin-right: 100px;
 }
 
 .block1-2-img1 {
-    position: absolute;
-    /* right: 183px; */
-    right: 12.75vw;
-    top: 388px;
+    position: inherit;
+    margin-top: -35px;
 }
 
 .block1-2-img2 {
-    position: absolute;
-    /* right: 100px; */
-    right: 6.9vw;
-    top: 333px;
+    position: inherit;
+    margin-left: 175px;
+}
+
+.block1-3-center {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 .block1-3 {
-    position: absolute;
     display: flex;
     float: right;
-    /* margin-right: 94px;
-    margin-top: 177px; */
-    right: 94px;
-    top: 749px;
-    width: 210px;
+    width: 207px;
     height: 44px;
     justify-content: space-between;
     align-items: center;
+    margin-top: 12vw;
+    margin-right: -269px;
 }
 
 .blue-line {
@@ -183,7 +185,6 @@ select {
     height: 613px;
     border-radius: 176px 0 0 0;
     background: #3DB0F0;
-    /* padding-left: 97px; */
     padding-left: 6.7vw;
     padding-top: 97px;
     padding-right: 25px;
@@ -223,7 +224,6 @@ select {
     background: rgba(252, 247, 241, 1);
     padding-top: 96px;
     padding-left: 6.7vw;
-    /* padding-left: 97px; */
 }
 
 .block4-content {
@@ -242,7 +242,6 @@ select {
     display: flex;
     margin-top: 159px;
     margin-left: calc(19vw - 100px);
-    /* margin-left: 12vw; */
 }
 
 .block4-2-circle1, .block4-2-circle2, .block4-2-circle3 {
@@ -316,7 +315,6 @@ select {
 
 .block5-h2 {
     width: fit-content;
-    /* margin: 0 auto; */
     font-weight: 400;
     font-size: 64px;
     line-height: 72px;
@@ -345,7 +343,6 @@ select {
     font-size: 112px;
     line-height: 128px;
     text-transform: lowercase;
-    /* font-feature-settings: 'tnum' on, 'lnum' on; */
     width: fit-content;
     margin: 76px auto 0 auto;
 }
@@ -872,18 +869,21 @@ select {
         font-size: 112px;
         line-height: 124px;
     }
+
+    .block1-2 {
+        margin-top: -242px;
+    }
     
-    .block1-2-img1 {
+    /* .block1-2-img1 {
         right: 183px;
     }
     
     .block1-2-img2 {
         right: 100px;
-    }
+    } */
 
     .block1-3 {
-        right: calc(2.6vw * 2.7);
-        top: 749px;
+        margin-top: 172.8px;
     }
 
     .block3-2 {
