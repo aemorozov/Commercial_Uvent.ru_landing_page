@@ -8,7 +8,8 @@
   "scripts": {
     "prettier": "prettier -c \"./**/*.{js,css,json,html,md}\"",
     "prettier-fix": "yarn prettier --write",
-    "commitlint": "commitlint -c commitlint.config.js --from 71e0852d27132e61f927cb0e318dc9d7f775a5f1"
+    "commitlint": "commitlint -c commitlint.config.js --from 71e0852d27132e61f927cb0e318dc9d7f775a5f1",
+    "lint": "yarn prettier && yarn commitlint"
   },
   "husky": {
     "hooks": {
