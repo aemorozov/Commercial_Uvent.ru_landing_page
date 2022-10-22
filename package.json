@@ -1,0 +1,15 @@
+{
+  "name": "uvent",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Opty1712/uvent.git",
+  "author": "Andrey Edounov <opty@opty.ru>",
+  "license": "MIT",
+  "scripts": {
+    "prettier": "prettier -c \"./**/*.{js,css,json,html,md}\"",
+    "prettier-fix": "yarn prettier --write"
+  },
+  "devDependencies": {
+    "prettier": "^2.7.1"
+  }
+}
