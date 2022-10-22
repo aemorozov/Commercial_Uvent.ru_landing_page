@@ -7,11 +7,13 @@
   "license": "MIT",
   "scripts": {
     "prettier": "prettier -c \"./**/*.{js,css,json,html,md}\"",
-    "prettier-fix": "yarn prettier --write"
+    "prettier-fix": "yarn prettier --write",
+    "commitlint": "commitlint -c commitlint.config.js --from 71e0852d27132e61f927cb0e318dc9d7f775a5f1"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "lint-staged": {
@@ -20,8 +22,10 @@
     ]
   },
   "devDependencies": {
+    "@commitlint/config-conventional": "8",
+    "commitlint": "8",
     "husky": "4",
-    "lint-staged": "^13.0.3",
+    "lint-staged": "10",
     "prettier": "^2.7.1"
   }
 }
