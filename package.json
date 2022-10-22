@@ -9,7 +9,19 @@
     "prettier": "prettier -c \"./**/*.{js,css,json,html,md}\"",
     "prettier-fix": "yarn prettier --write"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,css,json,html,md}": [
+      "prettier --write"
+    ]
+  },
   "devDependencies": {
+    "husky": "4",
+    "lint-staged": "^13.0.3",
     "prettier": "^2.7.1"
   }
 }
