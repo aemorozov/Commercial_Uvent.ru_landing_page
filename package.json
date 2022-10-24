@@ -1,0 +1,37 @@
+{
+  "name": "uvent",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/aemorozov/uvent.git",
+  "author": "aemorozov <mclenina19@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@commitlint/config-conventional": "8",
+    "commitlint": "8",
+    "husky": "4",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1"
+  },
+  "scripts": {
+    "prettier": "prettier -c \"./**/*.{js,css,json,html,md}\"",
+    "prettier-fix": "yarn prettier --write",
+    "commitlint": "commitlint -c commitlint.config.js --from ac436ad4a7930cc54ca52cc3c020d556cdc68da1"
+  },
+  "editor.formatOnSave": true,
+  "prettier.singleQuote": true,
+  "prettier.printWidth": 70,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.{js,css,json,html,md}": [
+      "prettier --write"
+    ]
+  }
+}
