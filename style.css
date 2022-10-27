@@ -171,6 +171,11 @@ select {
   bottom: -7px;
 }
 
+.social {
+  width: 34px;
+  height: 34px;
+}
+
 .blue-line {
   height: 44px;
   width: 1px;
@@ -313,6 +318,8 @@ select {
   margin: 0 auto;
   position: relative;
   margin-top: -130px;
+  width: 310px;
+  height: 310px;
 }
 
 .block5 {
@@ -677,6 +684,11 @@ select {
   margin: 39px auto;
 }
 
+.card-foto {
+  width: 159px;
+  height: 159px;
+}
+
 .block7-card-header {
   font-weight: 400;
   font-size: 24px;
@@ -777,6 +789,8 @@ select {
   float: right;
   margin-top: -356px;
   margin-right: -24px;
+  width: 131px;
+  height: 131px;
 }
 
 .block9-form {
@@ -852,6 +866,8 @@ select {
 .footer-logo {
   width: fit-content;
   margin: 0 auto;
+  width: 695px;
+  height: 106px;
 }
 
 .footer-flex {
@@ -873,6 +889,26 @@ select {
   width: 182px;
   align-items: center;
   margin-top: -11px;
+}
+
+.footer-social-tg {
+  width: 18px;
+  height: 18px;
+}
+
+.footer-social-yt {
+  width: 18px;
+  height: 12px;
+}
+
+.footer-social-wa {
+  width: 16px;
+  height: 16px;
+}
+
+.footer-social-vk {
+  width: 22px;
+  height: 12px;
 }
 
 .black-line {
