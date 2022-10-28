@@ -543,7 +543,7 @@ select {
   align-items: flex-end;
   padding-bottom: 32px;
   padding-left: 32px;
-  padding-right: 10px;
+  /* padding-right: 10px; */
 }
 
 .block6-item1 {
@@ -576,7 +576,8 @@ select {
   background-position: center center;
 }
 
-.block6-h4 {
+.block6-h4,
+.block6-h4-gradient {
   font-weight: 700;
   font-size: 32px;
   line-height: 40px;
@@ -584,19 +585,24 @@ select {
   align-items: center;
   color: #fcf8f3;
   z-index: 10;
+  margin-right: 30px;
+}
+
+.block6-h4-gradient {
+  margin-bottom: -8px;
 }
 
 .block6-gradient {
-  position: absolute;
+  /* position: absolute; */
   background: linear-gradient(360deg, #050000 4.09%, rgba(0, 0, 0, 0) 54.55%);
   border-radius: 0px 0px 60px 60px;
-  width: 43%;
+  width: 150%;
   height: 440px;
   margin-left: -32px;
   margin-bottom: -32px;
   max-width: 604px;
-  display: flex;
-  align-items: flex-end;
+  /* display: flex; */
+  /* align-items: flex-end; */
   padding-bottom: 40px;
   padding-left: 32px;
   display: none;
@@ -610,30 +616,67 @@ select {
   align-items: center;
   color: #fcf8f3;
   text-transform: uppercase;
+  margin-bottom: 20px;
 }
 
 .block6-item1:hover .block6-gradient {
   display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.block6-item1:hover .block6-h4 {
+  display: none;
 }
 
 .block6-item2:hover .block6-gradient {
   display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.block6-item2:hover .block6-h4 {
+  display: none;
 }
 
 .block6-item3:hover .block6-gradient {
   display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.block6-item3:hover .block6-h4 {
+  display: none;
 }
 
 .block6-item4:hover .block6-gradient {
   display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.block6-item4:hover .block6-h4 {
+  display: none;
 }
 
 .block6-item5:hover .block6-gradient {
   display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.block6-item5:hover .block6-h4 {
+  display: none;
 }
 
 .block6-item6:hover .block6-gradient {
   display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.block6-item6:hover .block6-h4 {
+  display: none;
 }
 
 .block7 {
