@@ -874,6 +874,10 @@ select {
   outline: none;
 }
 
+.label {
+  display: none;
+}
+
 .button-subscribe {
   width: 400px;
   height: 60px;
