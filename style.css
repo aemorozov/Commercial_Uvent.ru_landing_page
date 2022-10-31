@@ -168,7 +168,7 @@ select {
   /* margin-top: 12vw; */
   /* margin-right: -269px; */
   right: 6.7vw;
-  bottom: -7px;
+  bottom: 200px;
 }
 
 .social {
@@ -360,7 +360,7 @@ select {
   width: 100%;
   height: 510px;
   box-sizing: border-box;
-  cursor: default;
+  cursor: pointer;
 }
 
 .item1-number,
@@ -755,6 +755,7 @@ select {
 }
 
 .block8 {
+  position: inherit;
   width: 100%;
   height: 520px;
   background: #d9d9d9;
@@ -767,13 +768,13 @@ select {
   background: url(img/podarok.png);
   background-position: center;
   margin: 0 auto;
-  filter: brightness(98%);
+  position: relative;
 }
 
 .block8-title {
   width: fit-content;
   margin: 0 auto;
-  padding: 197px 30px 195px 30px;
+  padding: 197px 30px 200px 30px;
   font-weight: 300;
   font-size: 112px;
   line-height: 124px;
@@ -785,8 +786,21 @@ select {
   color: #ff9dc6;
 }
 
-.block8-background:hover {
-  filter: brightness(102%);
+.block8-gradient-left {
+  position: absolute;
+  height: 520px;
+  width: 15%;
+  background: linear-gradient(90deg, #d9d9d9 0%, rgba(0, 0, 0, 0) 100%);
+  z-index: 100;
+}
+
+.block8-gradient-right {
+  position: absolute;
+  height: 520px;
+  width: 15%;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #d9d9d9 100%);
+  z-index: 100;
+  right: 0;
 }
 
 .block9 {
@@ -860,6 +874,7 @@ select {
   color: #8f8f8f;
   padding-left: 15px;
   margin-bottom: 16px;
+  outline: none;
 }
 
 .button-subscribe {
@@ -923,6 +938,12 @@ select {
   font-size: 18px;
   line-height: 22px;
   color: #292929;
+}
+
+.footer-phone1,
+.footer-phone2,
+.footer-email {
+  color: rgba(41, 41, 41, 1);
 }
 
 .footer-socials {

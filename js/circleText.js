@@ -1,5 +1,5 @@
 const makeCircleText = (blockClass, text) => {
-  const rotation = 360 / (text.length + 2);
+  const rotation = 360 / text.length;
 
   document.querySelector(blockClass).innerHTML = text
     .split("")
@@ -14,17 +14,17 @@ const makeCircleText = (blockClass, text) => {
 
 makeCircleText(
   ".block4-2-circle1-text",
-  "С В А Д Ь Б Ы    С В А Д Ь Б Ы    С В А Д Ь Б Ы    С В А Д Ь Б Ы    С В А Д Ь Б Ы "
+  "С В А Д Ь Б Ы    С В А Д Ь Б Ы    С В А Д Ь Б Ы    С В А Д Ь Б Ы    С В А Д Ь Б Ы   "
 );
 
 makeCircleText(
   ".block4-2-circle2-text",
-  "В Ы П У С К Н Ы Е   В Ы П У С К Н Ы Е   В Ы П У С К Н Ы Е   В Ы П У С К Н Ы Е "
+  "В Ы П У С К Н Ы Е   В Ы П У С К Н Ы Е   В Ы П У С К Н Ы Е   В Ы П У С К Н Ы Е   "
 );
 
 makeCircleText(
   ".block4-2-circle3-text",
-  "Д Н И  Р О Ж Д Е Н И Я  Д Н И  Р О Ж Д Е Н И Я  Д Н И  Р О Ж Д Е Н И Я "
+  "Д Н И  Р О Ж Д Е Н И Я  Д Н И  Р О Ж Д Е Н И Я  Д Н И  Р О Ж Д Е Н И Я   "
 );
 
 // document.querySelector(".block4-2-circle1-text").innerHTML =

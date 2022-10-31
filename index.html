@@ -6,19 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="style.css" rel="stylesheet" type=" text/css" />
     <title>Uvent</title>
-    <link rel="shortcut icon" href="#" />
+    <link rel="icon" href="#" />
     <!-- ввести ссылку на иконку -->
     <link rel="canoncial" href="#" />
     <!-- ввести ссылку на релевантный домен -->
     <link rel="alternate" hreflang="ru" href="#" />
     <!-- ввести ссылку на альтернативный доступ -->
+    <meta name="robots" content="noindex, nofollow" />
+    <!-- изменить content при публикации сайта -->
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, user-scalable=yes"
     />
     <meta
       name="description"
-      content="Uvent - организация праздников, свадеб, дней рождений, дестких мероприятий"
+      content="Uvent - организация праздников, свадеб, дней рождений, дестких мероприятий."
     />
     <meta
       property="og:title"
@@ -139,6 +141,7 @@
                   alt="Дни рождения"
                 />
               </div>
+              <script src="js/circleText.js"></script>
             </div>
           </div>
         </div>
@@ -167,8 +170,8 @@
                 Предлагаем <br /><span class="span-disp-none">концепцию</span>
               </div>
               <div class="item2-p-disp-none">
-                Мы готовим для Вас предло- жение. Оно будет включать варианты
-                площадок, идеи для праздника.
+                Мы готовим для Вас предло-<br />
+                жение. Оно будет включать варианты площадок, идеи для праздника.
               </div>
               <div class="zvezda2">
                 <img src="img/zvezda.svg" alt="Звезда 2" />
@@ -179,7 +182,8 @@
               <div class="item3-h3">Согласовываем</div>
               <div class="item3-p-disp-none">
                 “Вот оно! Идеальное меро-<br />
-                приятие!” Мы ударяем по ру- кам и приступаем к вопло-щению идей.
+                приятие!” Мы ударяем по ру-<br />
+                кам и приступаем к вопло-<br />щению идей.
               </div>
               <div class="zvezda3">
                 <img src="img/zvezda.svg" alt="Звезда 3" />
@@ -338,6 +342,8 @@
 
       <div class="block8">
         <div class="block8-background">
+          <div class="block8-gradient-left"></div>
+          <div class="block8-gradient-right"></div>
           <a href="#" class="block8-a">
             <h1 class="block8-title">Создать событие</h1>
           </a>
@@ -415,9 +421,11 @@
       <div class="footer-center">
         <img src="img/footer-logo.png" alt="ЛОГОТИП" class="footer-logo" />
         <div class="footer-flex">
-          <div class="footer-phone1">+7 916 115 15 30</div>
-          <div class="footer-phone2">+7 977 298 83 68</div>
-          <div class="footer-email">uvent2020@mail.ru</div>
+          <a href="tel:+79161151530" class="footer-phone1">+7 916 115 15 30</a>
+          <a href="tel:+79772988368" class="footer-phone2">+7 977 298 83 68</a>
+          <a href="mailto:uvent2020@mail.ru" class="footer-email"
+            >uvent2020@mail.ru</a
+          >
           <div class="footer-socials">
             <a href="#" target="_blank">
               <img
@@ -454,7 +462,5 @@
         </div>
       </div>
     </footer>
-
-    <script src="js/circleText.js"></script>
   </body>
 </html>
