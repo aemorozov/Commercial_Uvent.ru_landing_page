@@ -322,8 +322,16 @@ select {
   margin-left: 250px;
 }
 
-.block4-text {
+.block4-text1 {
   margin: 4% auto;
+}
+
+.block4-text2 {
+  margin: 5% auto;
+}
+
+.block4-text3 {
+  margin: 5% auto;
 }
 
 .circle-text {
