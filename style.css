@@ -1,10 +1,10 @@
 @font-face {
-  font-family: "Roboto";
+  font-family: "Roboto-bold";
   src: local("Roboto-Bold"), url("/fonts/Roboto-Bold.ttf");
 }
 
 @font-face {
-  font-family: "Roboto";
+  font-family: "Roboto-light";
   src: local("Roboto-Light"), url("/fonts/Roboto-Light.ttf");
 }
 
@@ -142,6 +142,7 @@ select {
 }
 
 .block1-1-h1 {
+  font-family: "Roboto-light";
   font-weight: 300;
   font-size: 7.8vw;
   line-height: 8.6vw;
@@ -621,6 +622,7 @@ select {
 
 .block6-h3,
 .block6-h3-gradient {
+  font-family: "Roboto-bold";
   font-weight: 700;
   font-size: 32px;
   line-height: 40px;
@@ -788,12 +790,10 @@ select {
 
 .block7-card-p {
   width: 75%;
-  margin: 22px auto 0 auto;
+  margin: 18px auto 0 auto;
+  font-family: "Roboto-light";
   font-weight: 300;
-  font-size: 16px;
   line-height: 22px;
-  display: flex;
-  align-items: center;
   color: #292929;
 }
 
@@ -815,9 +815,10 @@ select {
 }
 
 .block8-title {
+  font-family: "Roboto-light";
   width: fit-content;
   margin: 0 auto;
-  padding: 197px 30px 200px 30px;
+  padding: 194px 30px 200px 19px;
   font-weight: 300;
   font-size: 112px;
   line-height: 124px;
