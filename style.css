@@ -1,3 +1,23 @@
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto-Bold"), url("/fonts/Roboto-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto-Light"), url("/fonts/Roboto-Light.ttf");
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto-Regular"), url("/fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: local("OpenSans-Bold"), url("/fonts/OpenSans-Bold.ttf");
+}
+
 /* === Сброс стилей === */
 
 *,
@@ -16,7 +36,7 @@ body,
 h1,
 h2,
 h3,
-h4,
+h3,
 p,
 ul[class],
 ol[class],
@@ -65,6 +85,9 @@ select {
 }
 
 /* === Конец сброса стилей === */
+
+/* @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap"); */
 
 .header {
   height: 157px;
@@ -299,6 +322,10 @@ select {
   margin-left: 250px;
 }
 
+.block4-text {
+  margin: 4% auto;
+}
+
 .circle-text {
   font-weight: 400;
   font-size: 40px;
@@ -314,9 +341,20 @@ select {
 .block4-2-circle3-foto-img {
   margin: 0 auto;
   position: relative;
-  margin-top: -130px;
   width: 310px;
   height: 310px;
+}
+
+.block4-2-circle1-foto-img {
+  margin-top: -405px;
+}
+
+.block4-2-circle2-foto-img {
+  margin-top: -409px;
+}
+
+.block4-2-circle3-foto-img {
+  margin-top: -406px;
 }
 
 .block5 {
@@ -573,8 +611,8 @@ select {
   background-position: center center;
 }
 
-.block6-h4,
-.block6-h4-gradient {
+.block6-h3,
+.block6-h3-gradient {
   font-weight: 700;
   font-size: 32px;
   line-height: 40px;
@@ -585,7 +623,7 @@ select {
   margin-right: 30px;
 }
 
-.block6-h4-gradient {
+.block6-h3-gradient {
   margin-bottom: -8px;
 }
 
@@ -622,7 +660,7 @@ select {
   justify-content: end;
 }
 
-.block6-item1:hover .block6-h4 {
+.block6-item1:hover .block6-h3 {
   display: none;
 }
 
@@ -632,7 +670,7 @@ select {
   justify-content: end;
 }
 
-.block6-item2:hover .block6-h4 {
+.block6-item2:hover .block6-h3 {
   display: none;
 }
 
@@ -642,7 +680,7 @@ select {
   justify-content: end;
 }
 
-.block6-item3:hover .block6-h4 {
+.block6-item3:hover .block6-h3 {
   display: none;
 }
 
@@ -652,7 +690,7 @@ select {
   justify-content: end;
 }
 
-.block6-item4:hover .block6-h4 {
+.block6-item4:hover .block6-h3 {
   display: none;
 }
 
@@ -662,7 +700,7 @@ select {
   justify-content: end;
 }
 
-.block6-item5:hover .block6-h4 {
+.block6-item5:hover .block6-h3 {
   display: none;
 }
 
@@ -672,7 +710,7 @@ select {
   justify-content: end;
 }
 
-.block6-item6:hover .block6-h4 {
+.block6-item6:hover .block6-h3 {
   display: none;
 }
 
@@ -1025,6 +1063,3 @@ select {
     background-size: 100%;
   }
 }
-
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap");
