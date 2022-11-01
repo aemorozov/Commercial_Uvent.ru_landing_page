@@ -305,22 +305,15 @@ select {
   background: #3db0f0;
 }
 
-.block4-2-circle1-text {
+.text {
   color: #ffffff;
   margin-top: 225px;
   margin-left: 250px;
+  text-transform: uppercase;
 }
 
 .block4-2-circle2-text {
   color: #000;
-  margin-top: 225px;
-  margin-left: 250px;
-}
-
-.block4-2-circle3-text {
-  color: #ffffff;
-  margin-top: 225px;
-  margin-left: 250px;
 }
 
 .block4-text1 {
