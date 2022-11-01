@@ -1,21 +1,21 @@
 @font-face {
   font-family: "Roboto-bold";
-  src: local("Roboto-Bold"), url("/fonts/Roboto-Bold.ttf");
+  src: local("Roboto-Bold"), url("fonts/Roboto-Bold.ttf");
 }
 
 @font-face {
   font-family: "Roboto-light";
-  src: local("Roboto-Light"), url("/fonts/Roboto-Light.ttf");
+  src: local("Roboto-Light"), url("fonts/Roboto-Light.ttf");
 }
 
 @font-face {
   font-family: "Roboto";
-  src: local("Roboto-Regular"), url("/fonts/Roboto-Regular.ttf");
+  src: local("Roboto-Regular"), url("fonts/Roboto-Regular.ttf");
 }
 
 @font-face {
   font-family: "Open Sans";
-  src: local("OpenSans-Bold"), url("/fonts/OpenSans-Bold.ttf");
+  src: local("OpenSans-Bold"), url("fonts/OpenSans-Bold.ttf");
 }
 
 /* === Сброс стилей === */
