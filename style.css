@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
   font-family: "Roboto-bold";
   src: local("Roboto-Bold"), url("fonts/Roboto-Bold.ttf");
 }
@@ -16,7 +16,7 @@
 @font-face {
   font-family: "Open Sans";
   src: local("OpenSans-Bold"), url("fonts/OpenSans-Bold.ttf");
-}
+} */
 
 /* === Сброс стилей === */
 
@@ -86,8 +86,8 @@ select {
 
 /* === Конец сброса стилей === */
 
-/* @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap");
 
 .header {
   height: 157px;
