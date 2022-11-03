@@ -3,18 +3,12 @@ const text = document.getElementsByClassName("text"); // забираем все
 makeCircleText(text); // всю коллекцию отдаём в функцию
 
 function makeCircleText(text) {
-  let rotation = 0; // создаём переменную для местоположения
-
-  // let textForTransform = "";                          // создаём переменную для
+  let rotation = 0; // создаём переменную для местоположения каждого символа
 
   for (i = 0; i < text.length; i++) {
-    // textForTransform = text[i].outerText;
+    rotation = 360 / (text[i].outerText.length + 1); // в каждом элементе коллекции забираем текст
 
-    // console.log(text[i].outerText.length);
-
-    rotation = 360 / (text[i].outerText.length + 1);
-
-    text[i].innerHTML = text[i].innerHTML
+    text[i].innerHTML = text[i].innerHTML // и меняем его на круговой
       .split("")
       .map(
         (symbol, index) =>
