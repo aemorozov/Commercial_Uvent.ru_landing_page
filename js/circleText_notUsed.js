@@ -1,14 +1,16 @@
-const text = document.getElementsByClassName("text");
+const text = document.getElementsByClassName("text"); // забираем все элементы с классом text в коллекцию
+
+makeCircleText(text); // всю коллекцию отдаём в функцию
 
 function makeCircleText(text) {
-  let rotation = 0;
+  let rotation = 0; // создаём переменную для местоположения
 
-  let textForTransform = "";
+  // let textForTransform = "";                          // создаём переменную для
 
   for (i = 0; i < text.length; i++) {
-    textForTransform = text[i].outerText;
+    // textForTransform = text[i].outerText;
 
-    console.log(text[i].outerText.length);
+    // console.log(text[i].outerText.length);
 
     rotation = 360 / (text[i].outerText.length + 1);
 
@@ -23,8 +25,6 @@ function makeCircleText(text) {
       .join("");
   }
 }
-
-makeCircleText(text);
 
 // const makeCircleText = (blockClass, text) => {
 //   const rotation = 360 / text.length;
