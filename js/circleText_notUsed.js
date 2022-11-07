@@ -3,7 +3,7 @@ const text = document.getElementsByClassName("text-for-circle-in-js");
 
 const correctionCollection = {
   А: 0.5,
-  Б: 0.5,
+  Б: 0,
   В: 0.5,
   Г: 0,
   Д: 0,
@@ -42,17 +42,12 @@ makeCircleText(text);
 // передаём всю коллекцию в функцию для поочерёдной обработки
 
 function makeCircleText(text) {
-  let rotation;
-  // создаём пустую переменную для местоположения каждого символа
-  let textToUpperCase;
-  // создаём переменную для перевода текста в uppercase
-
   for (let i = 0; i < text.length; i++) {
     // берём по очереди каждый элемент (строку из HTML) коллекции text
-    rotation = 360 / (text[i].outerText.length + 1);
+    const rotation = 360 / (text[i].outerText.length + 1);
     // высчитываем равные координаты для установки каждого символа в строке
 
-    textToUpperCase = text[i].outerText.toUpperCase();
+    const textToUpperCase = text[i].outerText.toUpperCase();
     // переводим весь текст в uppercase
 
     text[i].innerHTML = textToUpperCase
