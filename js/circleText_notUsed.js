@@ -1,19 +1,67 @@
-const text = document.getElementsByClassName("text"); // забираем все элементы с классом text в коллекцию
+const text = document.getElementsByClassName("text-for-circle-in-js");
+// забираем все элементы с классом text-for-circle-in-js в одну коллекцию
 
-makeCircleText(text); // всю коллекцию отдаём в функцию
+const correctionCollection = {
+  // создаём объект, где лежат коррекции для каждого символа
+  А: 0.5,
+  Б: 0.5,
+  В: 0,
+  Г: 0,
+  Д: 1,
+  Е: 1.5,
+  Ё: 0,
+  Ж: -1.8,
+  З: 0,
+  И: -0.5,
+  Й: 0,
+  К: 0,
+  Л: 0,
+  М: 0,
+  Н: 0,
+  О: -1,
+  П: 1,
+  Р: 0,
+  С: 0,
+  Т: 0,
+  У: 1,
+  Ф: 0,
+  Х: 0,
+  Ц: 0,
+  Ч: 0,
+  Ш: 0,
+  Щ: 0,
+  Ъ: 0,
+  Ы: 0,
+  Ь: 2,
+  Э: 0,
+  Ю: 0,
+  Я: -1,
+};
+
+makeCircleText(text);
+// передаём всю коллекцию в функцию для поочерёдной обработки
 
 function makeCircleText(text) {
-  let rotation = 0; // создаём переменную для местоположения каждого символа
+  let rotation;
+  // создаём пустую переменную для местоположения каждого символа
+  let textToUpperCase;
+  // создаём переменную для перевода текста в uppercase
 
-  for (i = 0; i < text.length; i++) {
-    rotation = 360 / (text[i].outerText.length + 1); // в каждом элементе коллекции забираем текст
+  for (let i = 0; i < text.length; i++) {
+    // берём по очереди каждый элемент (строку из HTML) коллекции text
+    rotation = 360 / (text[i].outerText.length + 1);
+    // высчитываем равные координаты для установки каждого символа в строке
 
-    text[i].innerHTML = text[i].innerHTML // и меняем его на круговой
+    textToUpperCase = text[i].outerText.toUpperCase();
+    // переводим весь текст в uppercase
+
+    text[i].innerHTML = textToUpperCase
+      // пересобираем текст и добавляем каждому символу координату вдоль окружности плюс коррекцию
       .split("")
       .map(
         (symbol, index) =>
           `<span class="circle-text" style="--rot:${
-            index * rotation
+            index * rotation + correctionCollection[symbol]
           }deg">${symbol}</span>`
       )
       .join("");
