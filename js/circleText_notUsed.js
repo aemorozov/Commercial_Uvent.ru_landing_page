@@ -42,11 +42,11 @@ const correctionForSymbols = {
 makeCircleText(collection);
 
 function makeCircleText(collection) {
-  // берём по очереди каждый элемент (строку из HTML) коллекции text
+  // берём по очереди каждый DOM элемент коллекции text
   for (let i = 0; i < collection.length; i++) {
-    // забираем весь текст из элемента коллекции и переводим его в верхний регистр
+    // забираем весь текст из DOM элемента коллекции и переводим его в верхний регистр
     const collectionElementText = collection[i].outerText.toUpperCase();
-    // высчитываем равные координаты для установки каждого символа в строке
+    // делим полную окружность на количество элементов в строке + 1 пробел
     const rotation = 360 / (collectionElementText.length + 1);
 
     // пересобираем текст и добавляем каждому символу координату вдоль окружности плюс коррекцию
