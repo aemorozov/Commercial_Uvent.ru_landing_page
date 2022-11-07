@@ -46,7 +46,7 @@ function makeCircleText(collection) {
   for (let i = 0; i < collection.length; i++) {
     // создаём переменную для элемента коллекции
     const collectionElement = collection[i];
-    // забираем весь текст из элемента
+    // забираем весь текст из элемента и переводим его в верхний регистр
     const collectionElementText = collectionElement.outerText.toUpperCase();
     // высчитываем равные координаты для установки каждого символа в строке
     const rotation = 360 / (collectionElementText.length + 1);
