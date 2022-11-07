@@ -43,7 +43,6 @@ makeCircleText(collection);
 
 function makeCircleText(collection) {
   // берём по очереди каждый элемент (строку из HTML) коллекции text
-
   for (let i = 0; i < collection.length; i++) {
     // забираем весь текст из элемента коллекции и переводим его в верхний регистр
     const collectionElementText = collection[i].outerText.toUpperCase();
