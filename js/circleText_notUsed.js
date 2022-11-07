@@ -44,15 +44,13 @@ makeCircleText(collection);
 function makeCircleText(collection) {
   // берём по очереди каждый элемент (строку из HTML) коллекции text
   for (let i = 0; i < collection.length; i++) {
-    // создаём переменную для элемента коллекции
-    const collectionElement = collection[i];
-    // забираем весь текст из элемента и переводим его в верхний регистр
-    const collectionElementText = collectionElement.outerText.toUpperCase();
+    // забираем весь текст из элемента коллекции и переводим его в верхний регистр
+    const collectionElementText = collection[i].outerText.toUpperCase();
     // высчитываем равные координаты для установки каждого символа в строке
     const rotation = 360 / (collectionElementText.length + 1);
 
     // пересобираем текст и добавляем каждому символу координату вдоль окружности плюс коррекцию
-    collectionElement.innerHTML = collectionElementText
+    collection[i].innerHTML = collectionElementText
       .split("")
       .map(
         (symbol, index) =>
