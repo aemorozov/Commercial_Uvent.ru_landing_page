@@ -7,20 +7,31 @@
   "license": "MIT",
   "devDependencies": {
     "@commitlint/config-conventional": "8",
+    "browser-sync": "^2.27.10",
     "commitlint": "8",
+    "del": "5",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "7",
+    "gulp-sass": "^5.1.0",
+    "gulp-uglify": "^3.0.2",
     "husky": "4",
     "lint-staged": "^13.0.3",
-    "prettier": "^2.7.1"
+    "prettier": "^2.7.1",
+    "sass": "^1.56.1"
   },
   "scripts": {
     "prettier": "prettier -c \"./**/*.{js,css,json,html,md}\"",
     "prettier-fix": "yarn prettier --write",
     "commitlint": "commitlint -c commitlint.config.js --from ac436ad4a7930cc54ca52cc3c020d556cdc68da1",
-    "lint": "yarn prettier && yarn commitlint"
+    "lint": "yarn prettier && yarn commitlint",
+    "dev": "gulp",
+    "build": "gulp build"
   },
   "editor.formatOnSave": true,
-  "prettier.singleQuote": true,
-  "prettier.printWidth": 70,
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
