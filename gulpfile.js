@@ -9,6 +9,7 @@ const cssMinify = require("gulp-clean-css");
 const gcssmq = require("gulp-group-css-media-queries");
 const gulpSass = require("gulp-sass");
 const sass = require("sass");
+const concatCss = require("gulp-concat-css");
 
 const browserSync = require("browser-sync");
 
@@ -58,6 +59,7 @@ const processStyle = () => {
     .pipe(gulpSassWorker().on("error", gulpSassWorker.logError))
     .pipe(autoprefixer({ grid: true }))
     .pipe(gcssmq())
+    .pipe(concatCss("style.css"))
     .pipe(cssMinify())
     .pipe(gulp.dest(`${distDir}${stylesDir}`))
     .pipe(browserSync.stream());
