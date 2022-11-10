@@ -16,7 +16,7 @@ const distDir = "./dist/";
 const srcDir = "./src/";
 
 const htmlDir = "html/";
-const htmlFiles = `${srcDir}${htmlDir}*.html`;
+const htmlFiles = `${srcDir}*.html`;
 
 const jsDir = "js/";
 const jsFiles = `${srcDir}${jsDir}*.js`;
