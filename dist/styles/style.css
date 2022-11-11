@@ -1,57 +1,13 @@
-*,
-::after,
-::before {
-  box-sizing: border-box;
-}
-ol,
-ul {
-  padding: 0;
-  margin: 0;
-}
-blockquote,
-body,
-dd,
-dl,
-figcaption,
-figure,
-h1,
-h2,
-h3,
-li,
-ol[class],
-p,
-ul[class] {
-  font-family: Roboto, sans-serif;
-  padding: 0;
-  margin: 0;
-}
-body {
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
-  font-family: Roboto, sans-serif;
-  overflow-x: hidden;
-}
 html {
   overflow-x: hidden;
 }
-ol[class],
-ul[class] {
-  list-style: none;
-}
-a {
-  -webkit-text-decoration-skip: ink;
-  text-decoration-skip-ink: auto;
-  text-decoration: none;
-}
-img {
-  max-width: 100%;
-  display: block;
-}
-button,
-input,
-select,
-textarea {
-  font: inherit;
+body {
+  text-rendering: optimizeSpeed;
+  font-family: Roboto, sans-serif;
+  line-height: 1.5;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
 }
 .header {
   height: 157px;
@@ -71,6 +27,7 @@ textarea {
 .logo-img {
   width: 189px;
   height: 29px;
+  display: block;
 }
 .nav {
   margin-right: 6.7vw;
@@ -85,6 +42,7 @@ textarea {
 }
 .nav > a {
   color: #292929;
+  text-decoration: none;
 }
 .pre-block1 {
   width: 100%;
@@ -102,6 +60,7 @@ textarea {
   background: #fcf7f1;
   border-radius: 0 0 0 176px;
   padding-top: 48px;
+  box-sizing: border-box;
 }
 .block1-1 {
   width: 100%;
@@ -115,11 +74,12 @@ textarea {
   text-transform: uppercase;
   color: #292929;
   padding-left: 96px;
+  margin-top: 0;
 }
 .block1-2 {
   position: inherit;
   float: right;
-  margin-top: -16.9vw;
+  margin-top: -22.2vw;
   margin-right: 100px;
 }
 .block1-2-img1 {
@@ -127,12 +87,14 @@ textarea {
   margin-top: -35px;
   width: 181px;
   height: 189px;
+  display: block;
 }
 .block1-2-img2 {
   position: inherit;
   margin-left: 175px;
   width: 90px;
   height: 90px;
+  display: block;
 }
 .block1-3-center {
   width: 100%;
@@ -145,7 +107,8 @@ textarea {
   height: 44px;
   justify-content: space-between;
   align-items: center;
-  margin-right: 50px;
+  margin-right: 96px;
+  margin-bottom: 7px;
 }
 .social {
   width: 34px;
@@ -163,20 +126,23 @@ textarea {
   background: #fed467;
   transform: translateY(-50%);
   z-index: -100;
+  box-sizing: border-box;
 }
 .block3 {
   display: flex;
   margin-top: -360px;
   justify-content: space-between;
+  box-sizing: border-box;
 }
 .block3-1 {
-  width: 52.9%;
+  width: 53%;
   height: 613px;
   border-radius: 176px 0 0 0;
   background: #3db0f0;
   padding-left: 6.7vw;
-  padding-top: 97px;
+  padding-top: 42px;
   padding-right: 25px;
+  box-sizing: border-box;
 }
 .block3-1-h2 {
   font-weight: 400;
@@ -190,6 +156,8 @@ textarea {
   font-size: 32px;
   line-height: 40px;
   color: #fff;
+  margin-bottom: 0;
+  margin-top: 0;
 }
 .block3-2 {
   width: 47.1%;
@@ -201,13 +169,15 @@ textarea {
   position: absolute;
   right: 0;
   top: 1150px;
+  display: block;
 }
 .block4 {
   width: 100%;
   height: 900px;
   background: #fcf7f1;
-  padding-top: 96px;
+  padding-top: 43px;
   padding-left: 6.7vw;
+  box-sizing: border-box;
 }
 .block4-content {
   max-width: 1440px;
@@ -222,7 +192,7 @@ textarea {
 .block4-2 {
   display: flex;
   margin-top: 159px;
-  margin-left: calc(19vw - 100px);
+  margin-left: calc(12vw - 93px);
 }
 .block4-2-circle1,
 .block4-2-circle2,
@@ -296,6 +266,7 @@ textarea {
   position: relative;
   width: 310px;
   height: 310px;
+  display: block;
 }
 .block4-2-circle1-foto-img,
 .block4-2-circle2-foto-img,
@@ -306,13 +277,15 @@ textarea {
 .block4-2-circle7-foto-img {
   margin-top: -130px;
   border-radius: 50%;
+  display: block;
 }
 .block5 {
   width: 100%;
-  height: 800px;
+  height: 743px;
   background: #fcf7f1;
-  padding-top: 94px;
+  padding-top: 39px;
   padding-left: 6.7vw;
+  box-sizing: border-box;
 }
 .block5-center {
   width: 100%;
@@ -460,10 +433,11 @@ textarea {
 }
 .block6 {
   width: 100%;
-  height: 1688px;
+  height: 1743px;
   padding-left: 6.7vw;
   padding-top: 24px;
   background: #fcf7f1;
+  box-sizing: border-box;
 }
 .block6-center {
   max-width: 1440px;
@@ -496,8 +470,9 @@ textarea {
   border-radius: 60px;
   display: flex;
   align-items: flex-end;
-  padding-bottom: 32px;
   padding-left: 32px;
+  box-sizing: border-box;
+  text-decoration: none;
 }
 .block6-item1 {
   background: url(../img/pic1.jpg);
@@ -612,6 +587,7 @@ textarea {
   width: 100%;
   height: 704px;
   background: #3db0f0;
+  box-sizing: border-box;
 }
 .block7-center {
   max-width: 1440px;
@@ -626,13 +602,14 @@ textarea {
   color: #fff;
   padding-top: 74px;
   margin-left: 96px;
+  margin-top: 0;
 }
 .block7-for-flex {
   width: 100%;
   max-width: 1440px;
 }
 .block7-cards {
-  margin-top: 42px;
+  margin-top: 57px;
   width: 300vw;
   height: -moz-fit-content;
   height: fit-content;
@@ -644,7 +621,7 @@ textarea {
   height: 399px;
   background: #fcf8f3;
   border-radius: 48px;
-  margin: 16px;
+  margin: 0 16px 0 16px;
 }
 .block7-card-foto {
   width: -moz-fit-content;
@@ -679,6 +656,7 @@ textarea {
   width: 100%;
   height: 520px;
   background: #d9d9d9;
+  box-sizing: border-box;
 }
 .block8-background {
   width: 100%;
@@ -719,10 +697,14 @@ textarea {
   z-index: 100;
   right: 0;
 }
+.block8-a {
+  text-decoration: none;
+}
 .block9 {
   width: 100%;
   height: 526px;
   background: #3db0f0;
+  box-sizing: border-box;
 }
 .block9-flex {
   width: 100%;
@@ -758,10 +740,12 @@ textarea {
   margin-right: -24px;
   width: 131px;
   height: 131px;
+  display: block;
 }
 .block9-form {
   margin-top: 89px;
   padding-left: 80px;
+  box-sizing: border-box;
 }
 .forma {
   display: flex;
@@ -775,6 +759,7 @@ textarea {
   background: #fff;
   border-radius: 12px;
   border: 0;
+  font: inherit;
   font-weight: 400;
   font-size: 24px;
   line-height: 32px;
@@ -782,6 +767,7 @@ textarea {
   padding-left: 15px;
   margin-bottom: 16px;
   outline: 0;
+  box-sizing: border-box;
 }
 .label {
   display: none;
@@ -809,6 +795,7 @@ textarea {
   line-height: 24px;
   color: #fff;
   margin-top: 34px;
+  text-decoration: none;
 }
 .block9-form-a {
   text-decoration: underline;
@@ -827,6 +814,7 @@ textarea {
 .footer-logo {
   width: -moz-fit-content;
   width: fit-content;
+  display: block;
   margin: 0 auto;
   width: 695px;
   height: 106px;
@@ -846,6 +834,7 @@ textarea {
 .footer-phone1,
 .footer-phone2 {
   color: #292929;
+  text-decoration: none;
 }
 .footer-socials {
   display: flex;
@@ -854,6 +843,7 @@ textarea {
   width: 182px;
   align-items: center;
   margin-top: -11px;
+  margin-right: -11px;
 }
 .footer-social-tg {
   width: 18px;
