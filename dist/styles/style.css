@@ -301,7 +301,6 @@ body {
   width: 150%;
   height: 440px;
   margin-left: -32px;
-  margin-bottom: -32px;
   max-width: 604px;
   padding-bottom: 40px;
   padding-left: 32px;
@@ -315,7 +314,7 @@ body {
   align-items: center;
   color: #fcf8f3;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  margin-bottom: -10px;
 }
 .block6-item1:hover .block6-gradient {
   display: flex;
