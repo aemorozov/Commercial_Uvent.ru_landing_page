@@ -1,0 +1,56 @@
+@import "vars.scss";
+
+.who-we-are {
+    display: flex;
+    margin-top: -360px;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+  
+  .who-we-are-text {
+    width: 53%;
+    height: 613px;
+    border-radius: 176px 0 0 0;
+    background: $color-nice-blue;
+    padding-left: 6.7vw;
+    padding-top: 42px;
+    padding-right: 25px;
+    box-sizing: border-box;
+  }
+  
+  .who-we-are-h2 {
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 72px;
+    color: #ffffff;
+    margin-bottom: 223px;
+  }
+  
+  .who-we-are-h3 {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 40px;
+    color: #ffffff;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  
+  .who-we-are-img {
+    width: 47%;
+    height: 613px;
+    background: url(../img/Rectangle-39314.jpg);
+    background-position: center;
+  }
+  
+  .zvezdochka {
+    position: absolute;
+    right: 0;
+    top: 1150px;
+    display: block;
+  }
+  
+  @media (min-width: 1441px) {
+    .who-we-are-2 {
+        background-size: 100%;
+    }
+  }

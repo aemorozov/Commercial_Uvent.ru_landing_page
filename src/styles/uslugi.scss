@@ -1,0 +1,95 @@
+@import "vars.scss";
+
+.uslugi {
+    width: 100%;
+    height: 900px;
+    background: $color-for-background;
+    padding-top: 43px;
+    padding-left: 6.7vw;
+    box-sizing: border-box;
+  }
+  
+  .uslugi-content {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  
+  .uslugi-h2 {
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 72px;
+    color: $color-for-links;
+  }
+  
+  .uslugi-for-circles {
+    display: flex;
+    margin-top: 159px;
+    margin-left: calc(12vw - 93px);
+  }
+  
+  .uslugi-circle1,
+  .uslugi-circle2,
+  .uslugi-circle3,
+  .uslugi-circle4,
+  .uslugi-circle5,
+  .uslugi-circle6,
+  .uslugi-circle7 {
+    position: relative;
+    min-width: 500px;
+    width: 500px;
+    height: 500px;
+    border-radius: 250px;
+    margin-left: -79px;
+  }
+  
+  .uslugi-circle1,
+  .uslugi-circle5 {
+    background: $color-nice-green;
+  }
+  
+  .uslugi-circle2,
+  .uslugi-circle4,
+  .uslugi-circle6 {
+    background: $color-nice-pink;
+  }
+  
+  .uslugi-circle3,
+  .uslugi-circle7 {
+    background: $color-nice-blue;
+  }
+  
+  .text-for-circle-in-js {
+    color: #fff;
+    margin-top: 225px;
+    margin-left: 250px;
+    text-transform: uppercase;
+  }
+  
+  .uslugi-circle-black-text {
+    color: #000;
+  }
+  
+  .circle-text {
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 47px;
+    display: inline-block;
+    width: 25px;
+    position: absolute;
+    transform: translate(-12.5px, 0px) rotate(var(--rot)) translate(0, -200px);
+  }
+  
+  .uslugi-circle1-img,
+  .uslugi-circle2-img,
+  .uslugi-circle3-img,
+  .uslugi-circle4-img,
+  .uslugi-circle5-img,
+  .uslugi-circle6-img,
+  .uslugi-circle7-img {
+    display: block;
+    position: relative;
+    margin: -130px auto;
+    width: 310px;
+    height: 310px;
+    border-radius: 50%;
+  }
