@@ -27,6 +27,9 @@ const imgFiles = `${srcDir}${imgDir}**/*`;
 const stylesDir = "styles/";
 const styleFiles = `${srcDir}${stylesDir}**/*.+(css|scss)`;
 
+const fontsDir = "fonts/";
+const fontsFiles = `${srcDir}${fontsDir}**/*`;
+
 const processHTML = () => {
   return gulp
     .src(htmlFiles)
@@ -91,7 +94,21 @@ const initBrowserSync = () => {
   });
 };
 
-const jobs = [clean, processHTML, processJS, processIMG, processStyle];
+const processFonts = () => {
+  return gulp
+    .src(fontsFiles)
+    .pipe(gulp.dest(`${distDir}${fontsDir}`))
+    .pipe(browserSync.stream());
+};
+
+const jobs = [
+  clean,
+  processHTML,
+  processJS,
+  processIMG,
+  processStyle,
+  processFonts,
+];
 
 exports.build = gulp.series(...jobs);
 exports.default = gulp.parallel(...jobs, initBrowserSync, watchDev);
