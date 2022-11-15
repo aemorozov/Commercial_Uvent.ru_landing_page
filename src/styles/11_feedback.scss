@@ -1,0 +1,116 @@
+@import "01_vars.scss";
+
+.feedback {
+    width: 100%;
+    height: 526px;
+    background: $color-nice-blue;
+    box-sizing: border-box;
+  }
+  
+  .feedback-flex {
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    margin: 0 auto;
+  }
+  
+  .feedback-text {
+    width: 60%;
+  }
+  
+  .feedback-form {
+    width: 40%;
+  }
+  
+  .feedback-text-h2 {
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 72px;
+    color: #ffffff;
+    margin-left: 96px;
+    margin-top: 97px;
+  }
+  
+  .feedback-text-p {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    color: #ffffff;
+    margin-top: 101px;
+    margin-left: 96px;
+  }
+  
+  .feedback-text-img {
+    float: right;
+    margin-top: -356px;
+    margin-right: -24px;
+    width: 131px;
+    height: 131px;
+    display: block;
+  }
+  
+  .feedback-form {
+    margin-top: 89px;
+    padding-left: 80px;
+    box-sizing: border-box;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .name,
+  .email,
+  .phone {
+    width: 400px;
+    height: 60px;
+    background: #ffffff;
+    border-radius: 12px;
+    border: 0px;
+    font: inherit;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    color: #8f8f8f;
+    padding-left: 15px;
+    margin-bottom: 16px;
+    outline: none;
+    box-sizing: border-box;
+  }
+  
+  .label {
+    display: none;
+  }
+  
+  .button-subscribe {
+    width: 400px;
+    height: 60px;
+    background: $color-nice-green;
+    border-radius: 12px;
+    border: 0px;
+    cursor: pointer;
+  }
+  
+  .button-subscribe-span {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    color: #ffffff;
+    margin: 0 auto;
+  }
+  
+  .feedback-form-p,
+  .feedback-form-a {
+    max-width: 400px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #ffffff;
+    margin-top: 34px;
+    text-decoration: none;
+  }
+  
+  .feedback-form-a {
+    text-decoration: underline;
+  }

@@ -1,0 +1,77 @@
+@import "01_vars.scss";
+
+.footer {
+    background: $color-for-background;
+    width: 100%;
+    height: 496px;
+  }
+  
+  .footer-center {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-top: 132px;
+  }
+  
+  .footer-logo {
+    width: fit-content;
+    display: block;
+    margin: 0 auto;
+    width: 695px;
+    height: 106px;
+  }
+  
+  .footer-flex {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 132px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: $color-for-links;
+  }
+  
+  .footer-phone1,
+  .footer-phone2,
+  .footer-email {
+    color: rgba(41, 41, 41, 1);
+    text-decoration: none;
+  }
+  
+  .footer-socials {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    width: 182px;
+    align-items: center;
+    margin-top: -11px;
+    margin-right: -11px;
+  }
+  
+  .footer-social-tg {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .footer-social-yt {
+    width: 18px;
+    height: 12px;
+  }
+  
+  .footer-social-wa {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .footer-social-vk {
+    width: 22px;
+    height: 12px;
+  }
+  
+  .black-line {
+    height: 40px;
+    width: 1px;
+    background: $color-for-links;
+  }
