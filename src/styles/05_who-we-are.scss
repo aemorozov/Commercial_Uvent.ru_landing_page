@@ -23,7 +23,7 @@
     font-size: 64px;
     line-height: 72px;
     color: #ffffff;
-    margin-bottom: 223px;
+    margin-bottom: 231px;
   }
   
   .who-we-are-h3 {
@@ -38,7 +38,7 @@
   .who-we-are-img {
     width: 47%;
     height: 613px;
-    background: url(../img/Rectangle-39314.jpg);
+    background: url(../img/Rectangle-39314.webp);
     background-position: center;
   }
   
@@ -49,8 +49,14 @@
     display: block;
   }
   
-  @media (min-width: 1441px) {
+@media (min-width: 1441px) {
     .who-we-are-2 {
         background-size: 100%;
     }
   }
+
+@media (min-width: 900px) and (max-width: 1200px) {
+  .who-we-are-h2 {
+      margin-bottom: 160px;
+  }
+}

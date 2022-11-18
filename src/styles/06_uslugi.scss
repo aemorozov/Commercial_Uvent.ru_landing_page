@@ -93,3 +93,9 @@
     height: 310px;
     border-radius: 50%;
   }
+
+  @media (min-width: 900px) and (max-width: 1200px) {
+    .uslugi-for-circles {
+      margin-left: calc(20vw - 93px);
+    }
+  }
