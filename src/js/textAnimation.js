@@ -1,4 +1,4 @@
-const h1_1 = document.querySelector(".h1_1"); // забираем из HTML тег H1 с id = h1_1
+const h1_1 = document.querySelector(".h1_1"); // забираем из HTML тег H1 с h1_1
 
 const h1_1Arr = h1_1.textContent.split(""); // превращаем вложенный текст в массив по символам
 
