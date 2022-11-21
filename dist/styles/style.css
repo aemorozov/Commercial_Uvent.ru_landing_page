@@ -212,7 +212,7 @@ body {
 .who-we-are-img {
   width: 47%;
   height: 613px;
-  background: url(../img/Rectangle-39314.webp);
+  background: url(img/Rectangle-39314.webp);
   background-position: center;
 }
 .zvezdochka {
@@ -758,7 +758,7 @@ body {
   width: 100%;
   max-width: 1440px;
   height: 520px;
-  background: url(../img/podarok.webp);
+  background: url(img/podarok.webp);
   background-position: center;
   margin: 0 auto;
   position: relative;
