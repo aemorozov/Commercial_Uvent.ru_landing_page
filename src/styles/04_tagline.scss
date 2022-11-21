@@ -23,6 +23,7 @@
 .tagline-text-and-svg {
     width: 100%;
     max-width: 1440px;
+    height: 540px;
 }
 
 .tagline-h1 {
@@ -34,12 +35,15 @@
     color: $color-for-links;
     padding-left: 96px;
     margin-top: 0;
+    margin-bottom: 0;
+    height: 372px;
+    width: 1170px;
 }
 
 .tagline-svg {
-    position: inherit;
+    position: relative;
     float: right;
-    margin-top: -22.2vw;
+    bottom: 242px;
     margin-right: 100px;
 }
 

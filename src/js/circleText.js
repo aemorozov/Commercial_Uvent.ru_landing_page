@@ -4,37 +4,16 @@ const collection = document.getElementsByClassName("text-for-circle-in-js");
 // создаём объект, где лежат коррекции для каждого символа
 const correctionForSymbols = {
   А: 0.5,
-  Б: 0,
   В: 0.5,
-  Г: 0,
-  Д: 0,
   Е: 1,
-  Ё: 0,
   Ж: -1.8,
-  З: 0,
   И: -0.5,
-  Й: 0,
-  К: 0,
-  Л: 0,
-  М: 0,
   Н: -0.5,
   О: -1,
   П: 1,
-  Р: 0,
-  С: 0,
-  Т: 0,
   У: 1,
-  Ф: 0,
-  Х: 0,
-  Ц: 0,
-  Ч: 0,
-  Ш: 0,
-  Щ: 0,
-  Ъ: 0,
   Ы: -1,
   Ь: 1,
-  Э: 0,
-  Ю: 0,
   Я: -1,
 };
 
@@ -55,7 +34,7 @@ function makeCircleText(collection) {
       .map(
         (symbol, index) =>
           `<span class="circle-text" style="--rot:${
-            index * rotation + correctionForSymbols[symbol]
+            index * rotation + (correctionForSymbols[symbol] || 0)
           }deg">${symbol}</span>`
       )
       .join("");
