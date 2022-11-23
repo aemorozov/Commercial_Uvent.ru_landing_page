@@ -8,6 +8,7 @@
   "devDependencies": {
     "@commitlint/config-conventional": "8",
     "browser-sync": "^2.27.10",
+    "browserify": "^17.0.0",
     "commitlint": "8",
     "del": "5",
     "gulp": "^4.0.2",
@@ -18,7 +19,9 @@
     "gulp-htmlmin": "^5.0.1",
     "gulp-imagemin": "7",
     "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify": "^3.0.2",
+    "gulplog": "^2.0.1",
     "husky": "4",
     "lint-staged": "^13.0.3",
     "parse-import": "^2.0.0",
@@ -26,7 +29,9 @@
     "rework": "^1.0.1",
     "rework-import": "^2.1.0",
     "rework-plugin-url": "^1.1.0",
-    "sass": "^1.56.1"
+    "sass": "^1.56.1",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"
   },
   "scripts": {
     "prettier": "prettier -c \"./**/*.{js,css,json,html,md}\"",
@@ -50,5 +55,8 @@
     "*.{js,css,json,html,md}": [
       "prettier --write"
     ]
+  },
+  "dependencies": {
+    "vanilla-text-mask": "^5.1.1"
   }
 }

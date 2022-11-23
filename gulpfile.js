@@ -1,8 +1,8 @@
 const gulp = require("gulp");
 const htmlMinify = require("gulp-htmlmin");
-const jsMinify = require("gulp-uglify");
 const imgagemin = require("gulp-imagemin");
 const { sync } = require("del");
+const browserSync = require("browser-sync");
 
 const autoprefixer = require("gulp-autoprefixer");
 const cssMinify = require("gulp-clean-css");
@@ -11,7 +11,12 @@ const gulpSass = require("gulp-sass");
 const sass = require("sass");
 const concatCss = require("gulp-concat-css");
 
-const browserSync = require("browser-sync");
+const browserify = require("browserify");
+const source = require("vinyl-source-stream");
+const buffer = require("vinyl-buffer");
+const sourcemaps = require("gulp-sourcemaps");
+const log = require("gulplog");
+const jsMinify = require("gulp-uglify");
 
 const distDir = "./dist/";
 const srcDir = "./src/";
@@ -20,6 +25,8 @@ const htmlFiles = `${srcDir}*.html`;
 
 const jsDir = "js/";
 const jsFiles = `${srcDir}${jsDir}*.js`;
+const jsInput = `${srcDir}${jsDir}index.js`;
+const jsOutput = "app.js";
 
 const imgDir = "img/";
 const imgFiles = `${srcDir}${imgDir}**/*`;
@@ -39,11 +46,18 @@ const processHTML = () => {
 };
 
 const processJS = () => {
-  return gulp
-    .src(jsFiles)
+  return browserify({
+    entries: jsInput,
+    debug: true,
+  })
+    .bundle()
+    .pipe(source(jsOutput))
+    .pipe(buffer())
+    .pipe(sourcemaps.init({ loadMaps: true }))
     .pipe(jsMinify())
-    .pipe(gulp.dest(`${distDir}${jsDir}`))
-    .pipe(browserSync.stream());
+    .on("error", log.error)
+    .pipe(sourcemaps.write("./"))
+    .pipe(gulp.dest(`${distDir}${jsDir}`));
 };
 
 const processIMG = () => {
