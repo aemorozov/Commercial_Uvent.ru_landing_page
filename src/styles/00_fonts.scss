@@ -5,7 +5,7 @@
     font-weight: 300;
     src: local(''),
          url('../fonts/roboto-v30-cyrillic-300.woff2') format('woff2'); /* Super Modern Browsers */
-    font-display: swap;
+    font-display: Block;
   }
   
   /* roboto-regular - cyrillic */
@@ -15,7 +15,7 @@
     font-weight: 400;
     src: local(''),
          url('../fonts/roboto-v30-cyrillic-regular.woff2') format('woff2');
-    font-display: swap;
+    font-display: Block;
   }
   
   /* roboto-700 - cyrillic */
@@ -25,7 +25,7 @@
     font-weight: 700;
     src: local(''),
          url('../fonts/roboto-v30-cyrillic-700.woff2') format('woff2');
-    font-display: swap;
+    font-display: Block;
   }
   
   /* open-sans-700 - cyrillic */
@@ -35,5 +35,5 @@
     font-weight: 700;
     src: local(''),
          url('../fonts/open-sans-v34-cyrillic-700.woff2') format('woff2');
-    font-display: swap;
+    font-display: Block;
   }
