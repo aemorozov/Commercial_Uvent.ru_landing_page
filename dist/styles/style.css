@@ -676,6 +676,8 @@ body {
   height: 704px;
   background: #3db0f0;
   box-sizing: border-box;
+  z-index: 100;
+  position: relative;
 }
 .reviews-center {
   max-width: 1440px;
@@ -739,6 +741,46 @@ body {
   line-height: 22px;
   color: #292929;
 }
+.for-video-block {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+  margin-top: -99px;
+  margin-bottom: -100px;
+  z-index: 10;
+}
+.video {
+  width: 100%;
+  margin-bottom: -7px;
+  z-index: 10;
+  -o-object-fit: cover;
+  object-fit: cover;
+  min-width: 100%;
+  cursor: pointer;
+}
+.text-on-video-div {
+  position: absolute;
+  top: 0;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 112px;
+  line-height: 124px;
+  text-transform: uppercase;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+.text-on-video-p {
+  cursor: pointer;
+  transition: opacity 0.4s;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  margin-top: 20%;
+}
 .create-event {
   position: inherit;
   width: 100%;
@@ -793,6 +835,8 @@ body {
   height: 526px;
   background: #3db0f0;
   box-sizing: border-box;
+  position: relative;
+  z-index: 200;
 }
 .feedback-flex {
   width: 100%;

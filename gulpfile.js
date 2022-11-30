@@ -38,6 +38,9 @@ const styleFiles = `${srcDir}${stylesDir}**/*.+(css|scss)`;
 const fontsDir = "fonts/";
 const fontsFiles = `${srcDir}${fontsDir}**/*`;
 
+const videosDir = "videos/";
+const videoFiles = `${srcDir}${videosDir}**/*`;
+
 const processHTML = () => {
   return gulp
     .src(htmlFiles)
@@ -116,6 +119,10 @@ const processFonts = () => {
     .pipe(browserSync.stream());
 };
 
+const processVideos = () => {
+  return gulp.src(videoFiles).pipe(gulp.dest(`${distDir}${videosDir}`));
+};
+
 const jobs = [
   clean,
   processHTML,
@@ -123,6 +130,7 @@ const jobs = [
   processIMG,
   processStyle,
   processFonts,
+  processVideos,
 ];
 
 exports.build = gulp.series(...jobs);

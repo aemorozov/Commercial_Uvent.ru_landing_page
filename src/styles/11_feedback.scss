@@ -5,6 +5,8 @@
     height: 526px;
     background: $color-nice-blue;
     box-sizing: border-box;
+    position: relative;
+    z-index: 200;
   }
   
   .feedback-flex {
