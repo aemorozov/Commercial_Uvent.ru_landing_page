@@ -752,6 +752,7 @@ body {
 }
 .video {
   width: 100%;
+  height: 719px;
   margin-bottom: -7px;
   z-index: 10;
   -o-object-fit: cover;
