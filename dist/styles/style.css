@@ -748,6 +748,55 @@ body {
   line-height: 22px;
   color: #292929;
 }
+.create-event {
+  position: inherit;
+  width: 100%;
+  height: 520px;
+  background: #d9d9d9;
+  box-sizing: border-box;
+}
+.create-event-background {
+  width: 100%;
+  max-width: 1440px;
+  height: 520px;
+  background: url(../img/podarok.webp);
+  background-position: center;
+  margin: 0 auto;
+  position: relative;
+}
+.create-event-title {
+  font-family: Roboto;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 194px 30px 200px 19px;
+  font-weight: 300;
+  font-size: 112px;
+  line-height: 124px;
+  text-transform: uppercase;
+  color: #fff;
+}
+.create-event-background:hover .create-event-title {
+  color: #ff9dc6;
+}
+.create-event-gradient-left {
+  position: absolute;
+  height: 520px;
+  width: 15%;
+  background: linear-gradient(90deg, #d9d9d9 0, rgba(0, 0, 0, 0) 100%);
+  z-index: 100;
+}
+.create-event-gradient-right {
+  position: absolute;
+  height: 520px;
+  width: 15%;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0, #d9d9d9 100%);
+  z-index: 100;
+  right: 0;
+}
+.create-event-a {
+  text-decoration: none;
+}
 .for-video-block {
   width: 100%;
   max-width: 1440px;
@@ -799,55 +848,6 @@ body {
   background-repeat: no-repeat;
   opacity: 0.7;
   transition: opacity 0.4s;
-}
-.create-event {
-  position: inherit;
-  width: 100%;
-  height: 520px;
-  background: #d9d9d9;
-  box-sizing: border-box;
-}
-.create-event-background {
-  width: 100%;
-  max-width: 1440px;
-  height: 520px;
-  background: url(../img/podarok.webp);
-  background-position: center;
-  margin: 0 auto;
-  position: relative;
-}
-.create-event-title {
-  font-family: Roboto;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 0 auto;
-  padding: 194px 30px 200px 19px;
-  font-weight: 300;
-  font-size: 112px;
-  line-height: 124px;
-  text-transform: uppercase;
-  color: #fff;
-}
-.create-event-background:hover .create-event-title {
-  color: #ff9dc6;
-}
-.create-event-gradient-left {
-  position: absolute;
-  height: 520px;
-  width: 15%;
-  background: linear-gradient(90deg, #d9d9d9 0, rgba(0, 0, 0, 0) 100%);
-  z-index: 100;
-}
-.create-event-gradient-right {
-  position: absolute;
-  height: 520px;
-  width: 15%;
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0, #d9d9d9 100%);
-  z-index: 100;
-  right: 0;
-}
-.create-event-a {
-  text-decoration: none;
 }
 .feedback {
   width: 100%;

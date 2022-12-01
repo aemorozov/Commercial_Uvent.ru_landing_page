@@ -8,12 +8,12 @@ let play = false;
 textBlock.addEventListener("click", () => {
   if (play) {
     play = false;
-    // video.pause();
+    video.pause();
     text.style.opacity = "0.99";
     playButton.style.opacity = "0.5";
   } else {
     play = true;
-    // video.play();
+    video.play();
     text.style.opacity = "0";
     playButton.style.opacity = "0";
   }

@@ -691,13 +691,19 @@
       function (e, t, r) {
         var n = document.querySelector(".text-on-video-div");
         const o = document.querySelector(".text-on-video-p"),
-          i = document.querySelector(".play-button");
-        document.querySelector(".video");
-        let a = !1;
+          i = document.querySelector(".play-button"),
+          a = document.querySelector(".video");
+        let l = !1;
         n.addEventListener("click", () => {
-          a
-            ? ((a = !1), (o.style.opacity = "0.99"), (i.style.opacity = "0.5"))
-            : ((a = !0), (o.style.opacity = "0"), (i.style.opacity = "0"));
+          l
+            ? ((l = !1),
+              a.pause(),
+              (o.style.opacity = "0.99"),
+              (i.style.opacity = "0.5"))
+            : ((l = !0),
+              a.play(),
+              (o.style.opacity = "0"),
+              (i.style.opacity = "0"));
         });
       },
       {},
