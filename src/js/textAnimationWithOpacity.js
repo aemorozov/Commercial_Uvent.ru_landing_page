@@ -1,41 +1,41 @@
 const h1Array = document.querySelectorAll(".tagline-h1");
-let arrayLength = 0;
-let textSplit = "";
-let numberOfSymbol = 0;
-let arrayTextSplit = [];
-let varForInterval = "";
-let symbol = "";
+let symbolNumber = 0;
+
+let h1ArrayLength;
+let textAfterSplit;
+let arrayTextSplit;
+let varForInterval;
+let symbol;
 
 addOpacity0();
 addOpacity1();
 
 function addOpacity0() {
-  for (let x = 0; x < h1Array.length; x++) {
+  for (let rowNumber = 0; rowNumber < h1Array.length; rowNumber++) {
     // запускаем цикл, который берёт каждую строчку и добавляем прозрачности каждому символу
-    textSplit = h1Array[x].textContent.split(""); // делаем сплит по символам и заносим в переменную
-    arrayLength = h1Array[x].textContent.length; // сохраняем значение длины строки
-    h1Array[x].innerHTML = ""; // опустошаем строку
+    textAfterSplit = h1Array[rowNumber].textContent.split(""); // делаем сплит по символам и заносим в переменную
+    h1ArrayLength = h1Array[rowNumber].textContent.length; // сохраняем значение длины строки
+    h1Array[rowNumber].innerHTML = ""; // опустошаем строку
 
-    for (let i = 0; i < arrayLength; i++) {
+    for (let i = 0; i < h1ArrayLength; i++) {
       // запускаем цикл для каждого символа в строке
-      h1Array[x].innerHTML +=
+      h1Array[rowNumber].innerHTML +=
         // вкладываем вместо каждой буквы тег SPAN с уникальным ID, opacity = 0 и тем символом, что мы забрали
-        `<span class="opacity-0-styling" id="symbol-${numberOfSymbol}">${textSplit[i]}</span>`;
-      numberOfSymbol++; // увеличиваем ID на 1 и повторяем цикл для следующего символа
+        `<span class="opacity-0-styling" id="symbol-${symbolNumber}">${textAfterSplit[i]}</span>`;
+      symbolNumber++; // увеличиваем ID на 1 и повторяем цикл для следующего символа
     }
   } // завершаем работу со строкой и переходим к следующей строке
 
-  numberOfSymbol = 0; // обнуляем переменную для следующего цикла
+  symbolNumber = 0; // обнуляем переменную для следующей функции
 }
 
 function addOpacity1() {
   varForInterval = setInterval(() => {
-    symbol = document.querySelector(`#symbol-${numberOfSymbol}`);
+    symbol = document.querySelector(`#symbol-${symbolNumber}`); // забираем этот символ по ID
     if (symbol) {
-      // если
-      symbol.classList // забираем каждый символ по порядку по ID
-        .add("opacity-1-styling"); // добавляем класс
-      numberOfSymbol++; // добавляем +1 для запуска цикла со следующим символом
+      // если такой символ с таким ID существует, то...
+      symbol.classList.add("opacity-1-styling"); // добавляем класс
+      symbolNumber++; // добавляем к ID +1 для запуска цикла со следующим символом
     }
   }, 20); // можно менять время задержки появления букв в мс
 }

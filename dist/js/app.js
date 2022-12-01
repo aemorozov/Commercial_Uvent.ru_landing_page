@@ -666,24 +666,23 @@
       function (e, t, r) {
         const n = document.querySelectorAll(".tagline-h1");
         let o = 0,
-          i = "",
-          a = 0;
-        let l,
-          u = "";
+          i,
+          a;
+        let l, u;
         for (let t = 0; t < n.length; t++) {
-          (i = n[t].textContent.split("")),
-            (o = n[t].textContent.length),
+          (a = n[t].textContent.split("")),
+            (i = n[t].textContent.length),
             (n[t].innerHTML = "");
-          for (let e = 0; e < o; e++)
+          for (let e = 0; e < i; e++)
             (n[
               t
-            ].innerHTML += `<span class="opacity-0-styling" id="symbol-${a}">${i[e]}</span>`),
-              a++;
+            ].innerHTML += `<span class="opacity-0-styling" id="symbol-${o}">${a[e]}</span>`),
+              o++;
         }
-        (a = 0),
+        (o = 0),
           (l = setInterval(() => {
-            (u = document.querySelector("#symbol-" + a)) &&
-              (u.classList.add("opacity-1-styling"), a++);
+            (u = document.querySelector("#symbol-" + o)) &&
+              (u.classList.add("opacity-1-styling"), o++);
           }, 20));
       },
       {},
