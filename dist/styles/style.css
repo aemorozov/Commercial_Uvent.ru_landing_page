@@ -119,7 +119,7 @@ body {
 }
 .opacity-0-styling {
   opacity: 0;
-  transition: opacity 1s;
+  transition: opacity 0.2s;
 }
 .opacity-1-styling {
   opacity: 1;
