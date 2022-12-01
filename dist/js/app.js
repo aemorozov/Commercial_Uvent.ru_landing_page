@@ -668,6 +668,8 @@
         let o = 0,
           i = "",
           a = 0;
+        let l,
+          u = "";
         for (let t = 0; t < n.length; t++) {
           (i = n[t].textContent.split("")),
             (o = n[t].textContent.length),
@@ -679,12 +681,10 @@
               a++;
         }
         (a = 0),
-          setInterval(() => {
-            document
-              .querySelector("#symbol-" + a)
-              .classList.add("opacity-1-styling"),
-              a++;
-          }, 20);
+          (l = setInterval(() => {
+            (u = document.querySelector("#symbol-" + a)) &&
+              (u.classList.add("opacity-1-styling"), a++);
+          }, 20));
       },
       {},
     ],
@@ -692,19 +692,13 @@
       function (e, t, r) {
         var n = document.querySelector(".text-on-video-div");
         const o = document.querySelector(".text-on-video-p"),
-          i = document.querySelector(".play-button"),
-          a = document.querySelector(".video");
-        let l = !1;
+          i = document.querySelector(".play-button");
+        document.querySelector(".video");
+        let a = !1;
         n.addEventListener("click", () => {
-          l
-            ? ((l = !1),
-              a.pause(),
-              (o.style.opacity = "0.99"),
-              (i.style.opacity = "0.5"))
-            : ((l = !0),
-              a.play(),
-              (o.style.opacity = "0"),
-              (i.style.opacity = "0"));
+          a
+            ? ((a = !1), (o.style.opacity = "0.99"), (i.style.opacity = "0.5"))
+            : ((a = !0), (o.style.opacity = "0"), (i.style.opacity = "0"));
         });
       },
       {},

@@ -3,6 +3,8 @@ let arrayLength = 0;
 let textSplit = "";
 let numberOfSymbol = 0;
 let arrayTextSplit = [];
+let varForInterval = "";
+let symbol = "";
 
 addOpacity0();
 addOpacity1();
@@ -27,12 +29,14 @@ function addOpacity0() {
 }
 
 function addOpacity1() {
-  setInterval(() => {
-    // задаём интервал для добавления класса с opacity = 1 каждому символу по ID
-    document
-      .querySelector(`#symbol-${numberOfSymbol}`) // забираем каждый символ по порядку по ID
-      .classList.add("opacity-1-styling"); // добавляем класс
-    numberOfSymbol++; // добавляем +1 для запуска цикла со следующим символом
+  varForInterval = setInterval(() => {
+    symbol = document.querySelector(`#symbol-${numberOfSymbol}`);
+    if (symbol) {
+      // если
+      symbol.classList // забираем каждый символ по порядку по ID
+        .add("opacity-1-styling"); // добавляем класс
+      numberOfSymbol++; // добавляем +1 для запуска цикла со следующим символом
+    }
   }, 20); // можно менять время задержки появления букв в мс
 }
 
