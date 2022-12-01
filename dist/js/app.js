@@ -89,7 +89,7 @@
                 function (e, t, r) {
                   "use strict";
                   Object.defineProperty(t, "__esModule", { value: !0 });
-                  var q =
+                  var N =
                       "function" == typeof Symbol &&
                       "symbol" == typeof Symbol.iterator
                         ? function (e) {
@@ -119,7 +119,7 @@
                               : {};
                         if (!(0, A.isArray)(t)) {
                           if (
-                            (void 0 === t ? "undefined" : q(t)) !==
+                            (void 0 === t ? "undefined" : N(t)) !==
                             L.strFunction
                           )
                             throw new Error(
@@ -145,8 +145,8 @@
                           s = !1 === n && void 0 !== o,
                           r = e.length,
                           c = o.length,
-                          f = a.length,
-                          d = t.length,
+                          d = a.length,
+                          f = t.length,
                           p = r - c,
                           v = 0 < p,
                           h = u + (v ? -p : 0),
@@ -166,12 +166,12 @@
                         ) {
                           var x = b[C].char;
                           x !== i &&
-                            x === a[h <= C && c === d ? C - p : C] &&
+                            x === a[h <= C && c === f ? C - p : C] &&
                             b.splice(C, 1);
                         }
                         var k = I,
                           T = !1;
-                        e: for (var P = 0; P < f; P++) {
+                        e: for (var P = 0; P < d; P++) {
                           var O = a[P];
                           if (O === i) {
                             if (0 < b.length)
@@ -211,14 +211,14 @@
                                 }
                                 T = !0;
                               }
-                            !1 == s && (k += a.substr(P, f));
+                            !1 == s && (k += a.substr(P, d));
                             break;
                           }
                           k += O;
                         }
                         if (s && !1 == v) {
-                          for (var V = null, N = 0; N < k.length; N++)
-                            a[N] === i && (V = N);
+                          for (var V = null, q = 0; q < k.length; q++)
+                            a[q] === i && (V = q);
                           k = null !== V ? k.substr(0, V + 1) : I;
                         }
                         return {
@@ -299,8 +299,8 @@
                       if (0 === n || !i.length) return 0;
                       var e = i.length,
                         c = t.length,
-                        f = u.length,
-                        d = o.length,
+                        d = u.length,
+                        f = o.length,
                         p = 0 < (e = e - c);
                       if (1 < e && !p && !(0 === c)) return n;
                       var v = 0,
@@ -364,7 +364,7 @@
                               (c ? 1 : 0),
                             b = 0,
                             C = 0;
-                          C < d;
+                          C < f;
                           C++
                         ) {
                           v = C + 1;
@@ -372,10 +372,10 @@
                         }
                       }
                       if (p) {
-                        for (var x = v, k = v; k <= f; k++)
+                        for (var x = v, k = v; k <= d; k++)
                           if (
                             (u[k] === a && (x = k),
-                            u[k] === a || -1 !== s.indexOf(k) || k === f)
+                            u[k] === a || -1 !== s.indexOf(k) || k === d)
                           )
                             return x;
                       } else if (c) {
@@ -455,7 +455,7 @@
                             void 0 !== i.mask &&
                             ((u = i.pipe), (i = i.mask));
                           var c = void 0,
-                            f = void 0;
+                            d = void 0;
                           if (
                             (i instanceof Array &&
                               (c = (0, T.convertMaskToPlaceholder)(i, l)),
@@ -470,7 +470,7 @@
                                     JSON.stringify(e)
                                 );
                               })(e),
-                              d = o.selectionEnd,
+                              f = o.selectionEnd,
                               p = g.previousConformedValue,
                               v = g.previousPlaceholder,
                               h = void 0;
@@ -480,33 +480,33 @@
                             ) {
                               if (
                                 !1 ===
-                                (f = i(e, {
-                                  currentCaretPosition: d,
+                                (d = i(e, {
+                                  currentCaretPosition: f,
                                   previousConformedValue: p,
                                   placeholderChar: l,
                                 }))
                               )
                                 return;
-                              var m = (0, T.processCaretTraps)(f),
-                                f = m.maskWithoutCaretTraps,
+                              var m = (0, T.processCaretTraps)(d),
+                                d = m.maskWithoutCaretTraps,
                                 h = m.indexes,
-                                c = (0, T.convertMaskToPlaceholder)(f, l);
-                            } else f = i;
+                                c = (0, T.convertMaskToPlaceholder)(d, l);
+                            } else d = i;
                             (m = {
                               previousConformedValue: p,
                               guide: a,
                               placeholderChar: l,
                               pipe: u,
                               placeholder: c,
-                              currentCaretPosition: d,
+                              currentCaretPosition: f,
                               keepCharPositions: s,
                             }),
-                              (i = (0, k.default)(e, f, m).conformedValue),
+                              (i = (0, k.default)(e, d, m).conformedValue),
                               (a =
                                 (void 0 === u ? "undefined" : C(u)) ===
                                 P.strFunction),
                               (s = {}),
-                              (f =
+                              (d =
                                 (a &&
                                   (!1 === (s = u(i, b({ rawValue: e }, m)))
                                     ? (s = { value: p, rejected: !0 })
@@ -515,15 +515,15 @@
                               (u = (0, x.default)({
                                 previousConformedValue: p,
                                 previousPlaceholder: v,
-                                conformedValue: f,
+                                conformedValue: d,
                                 placeholder: c,
                                 rawValue: e,
-                                currentCaretPosition: d,
+                                currentCaretPosition: f,
                                 placeholderChar: l,
                                 indexesOfPipedChars: s.indexesOfPipedChars,
                                 caretTrapIndexes: h,
                               })),
-                              (m = f === c && 0 === u ? (n ? c : O) : f);
+                              (m = d === c && 0 === u ? (n ? c : O) : d);
                             (g.previousConformedValue = m),
                               (g.previousPlaceholder = c),
                               o.value !== m &&
@@ -664,28 +664,23 @@
     ],
     5: [
       function (e, t, r) {
-        const n = document.querySelector(".h1_1"),
-          o = n.textContent.split("");
-        let i = 0,
-          a = 0;
-        n.innerHTML = "";
-        {
-          const u = setInterval(() => {
-            void 0 !== o[i]
-              ? ((n.innerHTML += `<span class="opacity-0-styling" id="symbol-${i}">${o[i]}</span>`),
-                i++)
-              : (clearInterval(u), (i = 0));
-          }, 1);
-        }
-        setTimeout(function () {
-          for (a = 0; a < o.length; a++)
-            console.log(n.querySelector("#symbol-" + a)),
-              setTimeout(() => {
-                n.querySelector("#symbol-" + a).classList.add(
-                  "opacity-1-styling"
-                );
-              }, 300);
-        }, 3e3);
+        const n = document.querySelector(".h1_1");
+        var o = document.querySelector(".h1_2"),
+          i = document.querySelector(".h1_3");
+        const a = n.textContent.split("");
+        let u = 0,
+          l = 0;
+        (n.innerHTML = ""), (o.innerHTML = ""), (i.innerHTML = "");
+        for (let e = 0; e < a.length; e++)
+          n.innerHTML += `<span class="opacity-0-styling" id="symbol-${e}">${a[e]}</span>`;
+        l = setInterval(function () {
+          u < a.length
+            ? (n
+                .querySelector("#symbol-" + u)
+                .classList.add("opacity-1-styling"),
+              u++)
+            : clearInterval(l);
+        }, 20);
       },
       {},
     ],

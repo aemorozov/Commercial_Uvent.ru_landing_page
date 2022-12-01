@@ -1,36 +1,29 @@
 const h1_1 = document.querySelector(".h1_1");
+const h1_2 = document.querySelector(".h1_2");
+const h1_3 = document.querySelector(".h1_3");
 const h1_1Arr = h1_1.textContent.split("");
 
-let time = 1;
-let i = 0;
 let y = 0;
-// let symbol = ''
+let addOpacity1 = 0;
 
 h1_1.innerHTML = "";
+h1_2.innerHTML = "";
+h1_3.innerHTML = "";
 
 addSpanToAllSymbols();
-setTimeout(addClassWithOpacity1, 3000);
+addOpacity1 = setInterval(addClassWithOpacity1, 20);
 
 function addSpanToAllSymbols() {
-  const intervalFirstLine = setInterval(() => {
-    if (h1_1Arr[i] !== undefined) {
-      h1_1.innerHTML += `<span class="opacity-0-styling" id="symbol-${i}">${h1_1Arr[i]}</span>`;
-      i++;
-    } else {
-      clearInterval(intervalFirstLine);
-      i = 0;
-    }
-  }, time);
+  for (let i = 0; i < h1_1Arr.length; i++) {
+    h1_1.innerHTML += `<span class="opacity-0-styling" id="symbol-${i}">${h1_1Arr[i]}</span>`;
+  }
 }
 
 function addClassWithOpacity1() {
-  for (y = 0; y < h1_1Arr.length; y++) {
-    console.log(h1_1.querySelector(`#symbol-${y}`));
-    setTimeout(() => {
-      h1_1.querySelector(`#symbol-${y}`).classList.add("opacity-1-styling");
-    }, 300);
+  if (y < h1_1Arr.length) {
+    h1_1.querySelector(`#symbol-${y}`).classList.add("opacity-1-styling");
+    y++;
+  } else {
+    clearInterval(addOpacity1);
   }
-
-  // symbol = document.getElementById(`${i}`)
-  // symbol.classList.add('opacity-1-styling')
 }
