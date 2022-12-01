@@ -40,6 +40,15 @@
     width: 1170px;
 }
 
+.opacity-0-styling {
+    opacity: 0;
+    transition: opacity 3s;
+}
+
+.opacity-1-styling {
+    opacity: 1;
+}
+
 .tagline-svg {
     position: relative;
     float: right;
@@ -93,6 +102,8 @@
     z-index: -100;
     box-sizing: border-box;
   }
+
+
 
 @media (min-width: 1441px) {
     .tagline-h1 {

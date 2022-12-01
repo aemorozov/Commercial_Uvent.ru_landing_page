@@ -41,5 +41,16 @@
     width: 100%;
     text-align: center;
     margin: 0;
-    margin-top:20%;
+    margin-top:-30%;
+    opacity:0.99;
+}
+
+.play-button {
+    width: 100%;
+    height: 100%;
+    background: url('../img/play.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    opacity:0.7;
+    transition: opacity 0.4s;
 }

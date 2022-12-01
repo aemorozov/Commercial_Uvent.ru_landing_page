@@ -89,7 +89,7 @@
                 function (e, t, r) {
                   "use strict";
                   Object.defineProperty(t, "__esModule", { value: !0 });
-                  var A =
+                  var q =
                       "function" == typeof Symbol &&
                       "symbol" == typeof Symbol.iterator
                         ? function (e) {
@@ -103,42 +103,42 @@
                               ? "symbol"
                               : typeof e;
                           },
-                    q =
+                    A =
                       ((t.default = function () {
                         var e =
                             0 < arguments.length && void 0 !== arguments[0]
                               ? arguments[0]
-                              : F,
+                              : I,
                           t =
                             1 < arguments.length && void 0 !== arguments[1]
                               ? arguments[1]
-                              : I,
+                              : F,
                           r =
                             2 < arguments.length && void 0 !== arguments[2]
                               ? arguments[2]
                               : {};
-                        if (!(0, q.isArray)(t)) {
+                        if (!(0, A.isArray)(t)) {
                           if (
-                            (void 0 === t ? "undefined" : A(t)) !==
+                            (void 0 === t ? "undefined" : q(t)) !==
                             L.strFunction
                           )
                             throw new Error(
                               "Text-mask:conformToMask; The mask property must be an array."
                             );
                           (t = t(e, r)),
-                            (t = (0, q.processCaretTraps)(
+                            (t = (0, A.processCaretTraps)(
                               t
                             ).maskWithoutCaretTraps);
                         }
                         var n = void 0 === (u = r.guide) || u,
-                          o = void 0 === (u = r.previousConformedValue) ? F : u,
+                          o = void 0 === (u = r.previousConformedValue) ? I : u,
                           i =
                             void 0 === (u = r.placeholderChar)
                               ? L.placeholderChar
                               : u,
                           a =
                             void 0 === (u = r.placeholder)
-                              ? (0, q.convertMaskToPlaceholder)(t, i)
+                              ? (0, A.convertMaskToPlaceholder)(t, i)
                               : u,
                           u = r.currentCaretPosition,
                           l = r.keepCharPositions,
@@ -147,17 +147,17 @@
                           c = o.length,
                           f = a.length,
                           d = t.length,
-                          v = r - c,
-                          p = 0 < v,
-                          h = u + (p ? -v : 0),
-                          m = h + Math.abs(v);
-                        if (!0 === l && !p) {
-                          for (var y = F, g = h; g < m; g++)
+                          p = r - c,
+                          v = 0 < p,
+                          h = u + (v ? -p : 0),
+                          m = h + Math.abs(p);
+                        if (!0 === l && !v) {
+                          for (var y = I, g = h; g < m; g++)
                             a[g] === i && (y += i);
                           e = e.slice(0, h) + y + e.slice(h, r);
                         }
                         for (
-                          var b = e.split(F).map(function (e, t) {
+                          var b = e.split(I).map(function (e, t) {
                               return { char: e, isNew: h <= t && t < m };
                             }),
                             C = r - 1;
@@ -166,30 +166,30 @@
                         ) {
                           var x = b[C].char;
                           x !== i &&
-                            x === a[h <= C && c === d ? C - v : C] &&
+                            x === a[h <= C && c === d ? C - p : C] &&
                             b.splice(C, 1);
                         }
-                        var T = F,
-                          k = !1;
+                        var k = I,
+                          T = !1;
                         e: for (var P = 0; P < f; P++) {
-                          var M = a[P];
-                          if (M === i) {
+                          var O = a[P];
+                          if (O === i) {
                             if (0 < b.length)
                               for (; 0 < b.length; ) {
-                                var O = b.shift(),
-                                  S = O.char,
-                                  O = O.isNew;
-                                if (S === i && !0 != s) {
-                                  T += i;
+                                var S = b.shift(),
+                                  M = S.char,
+                                  S = S.isNew;
+                                if (M === i && !0 != s) {
+                                  k += i;
                                   continue e;
                                 }
-                                if (t[P].test(S)) {
+                                if (t[P].test(M)) {
                                   if (
                                     !0 === l &&
-                                    !1 !== O &&
-                                    o !== F &&
+                                    !1 !== S &&
+                                    o !== I &&
                                     !1 !== n &&
-                                    p
+                                    v
                                   ) {
                                     for (
                                       var w = b.length, _ = null, j = 0;
@@ -204,32 +204,32 @@
                                       }
                                     }
                                     null !== _
-                                      ? ((T += S), b.splice(_, 1))
+                                      ? ((k += M), b.splice(_, 1))
                                       : P--;
-                                  } else T += S;
+                                  } else k += M;
                                   continue e;
                                 }
-                                k = !0;
+                                T = !0;
                               }
-                            !1 == s && (T += a.substr(P, f));
+                            !1 == s && (k += a.substr(P, f));
                             break;
                           }
-                          T += M;
+                          k += O;
                         }
-                        if (s && !1 == p) {
-                          for (var V = null, N = 0; N < T.length; N++)
+                        if (s && !1 == v) {
+                          for (var V = null, N = 0; N < k.length; N++)
                             a[N] === i && (V = N);
-                          T = null !== V ? T.substr(0, V + 1) : F;
+                          k = null !== V ? k.substr(0, V + 1) : I;
                         }
                         return {
-                          conformedValue: T,
-                          meta: { someCharsRejected: k },
+                          conformedValue: k,
+                          meta: { someCharsRejected: T },
                         };
                       }),
                       r(3)),
                     L = r(1),
-                    I = [],
-                    F = "";
+                    F = [],
+                    I = "";
                 },
                 function (e, t, r) {
                   "use strict";
@@ -287,45 +287,45 @@
                   "use strict";
                   Object.defineProperty(t, "__esModule", { value: !0 }),
                     (t.default = function (e) {
-                      var t = void 0 === (t = e.previousConformedValue) ? O : t,
-                        r = void 0 === (r = e.previousPlaceholder) ? O : r,
+                      var t = void 0 === (t = e.previousConformedValue) ? S : t,
+                        r = void 0 === (r = e.previousPlaceholder) ? S : r,
                         n = void 0 === (n = e.currentCaretPosition) ? 0 : n,
                         o = e.conformedValue,
                         i = e.rawValue,
                         a = e.placeholderChar,
                         u = e.placeholder,
-                        l = void 0 === (l = e.indexesOfPipedChars) ? M : l,
-                        s = void 0 === (e = e.caretTrapIndexes) ? M : e;
+                        l = void 0 === (l = e.indexesOfPipedChars) ? O : l,
+                        s = void 0 === (e = e.caretTrapIndexes) ? O : e;
                       if (0 === n || !i.length) return 0;
                       var e = i.length,
                         c = t.length,
                         f = u.length,
                         d = o.length,
-                        v = 0 < (e = e - c);
-                      if (1 < e && !v && !(0 === c)) return n;
-                      var p = 0,
+                        p = 0 < (e = e - c);
+                      if (1 < e && !p && !(0 === c)) return n;
+                      var v = 0,
                         c = void 0,
                         h = void 0;
-                      if (v && (t === o || o === u)) p = n - e;
+                      if (p && (t === o || o === u)) v = n - e;
                       else {
                         var m = o.toLowerCase(),
                           t = i
                             .toLowerCase()
                             .substr(0, n)
-                            .split(O)
+                            .split(S)
                             .filter(function (e) {
                               return -1 !== m.indexOf(e);
                             }),
                           h = t[t.length - 1],
                           e = r
                             .substr(0, t.length)
-                            .split(O)
+                            .split(S)
                             .filter(function (e) {
                               return e !== a;
                             }).length,
                           y = u
                             .substr(0, t.length)
-                            .split(O)
+                            .split(S)
                             .filter(function (e) {
                               return e !== a;
                             }).length,
@@ -335,7 +335,7 @@
                             r[t.length - 1] !== a &&
                             r[t.length - 1] !== u[t.length - 1] &&
                             r[t.length - 1] === u[t.length - 2];
-                        !v &&
+                        !p &&
                           (y !== e || r) &&
                           0 < e &&
                           -1 < u.indexOf(h) &&
@@ -355,7 +355,7 @@
                             g =
                               u
                                 .substr(0, u.indexOf(a))
-                                .split(O)
+                                .split(S)
                                 .filter(function (e, t) {
                                   return e === h && i[t] !== e;
                                 }).length +
@@ -367,28 +367,28 @@
                           C < d;
                           C++
                         ) {
-                          p = C + 1;
+                          v = C + 1;
                           if ((m[C] === h && b++, g <= b)) break;
                         }
                       }
-                      if (v) {
-                        for (var x = p, T = p; T <= f; T++)
+                      if (p) {
+                        for (var x = v, k = v; k <= f; k++)
                           if (
-                            (u[T] === a && (x = T),
-                            u[T] === a || -1 !== s.indexOf(T) || T === f)
+                            (u[k] === a && (x = k),
+                            u[k] === a || -1 !== s.indexOf(k) || k === f)
                           )
                             return x;
                       } else if (c) {
-                        for (var k = p - 1; 0 <= k; k--)
-                          if (o[k] === h || -1 !== s.indexOf(k) || 0 === k)
-                            return k;
+                        for (var T = v - 1; 0 <= T; T--)
+                          if (o[T] === h || -1 !== s.indexOf(T) || 0 === T)
+                            return T;
                       } else
-                        for (var P = p; 0 <= P; P--)
+                        for (var P = v; 0 <= P; P--)
                           if (u[P - 1] === a || -1 !== s.indexOf(P) || 0 === P)
                             return P;
                     });
-                  var M = [],
-                    O = "";
+                  var O = [],
+                    S = "";
                 },
                 function (e, t, r) {
                   "use strict";
@@ -450,7 +450,7 @@
                           (e = void 0 === e ? o.value : e) !==
                           g.previousConformedValue
                         ) {
-                          (void 0 === i ? "undefined" : C(i)) === S &&
+                          (void 0 === i ? "undefined" : C(i)) === M &&
                             void 0 !== i.pipe &&
                             void 0 !== i.mask &&
                             ((u = i.pipe), (i = i.mask));
@@ -458,21 +458,21 @@
                             f = void 0;
                           if (
                             (i instanceof Array &&
-                              (c = (0, k.convertMaskToPlaceholder)(i, l)),
+                              (c = (0, T.convertMaskToPlaceholder)(i, l)),
                             !1 !== i)
                           ) {
                             var e = (function (e) {
-                                if ((0, k.isString)(e)) return e;
-                                if ((0, k.isNumber)(e)) return String(e);
-                                if (null == e) return M;
+                                if ((0, T.isString)(e)) return e;
+                                if ((0, T.isNumber)(e)) return String(e);
+                                if (null == e) return O;
                                 throw new Error(
                                   "The 'value' provided to Text Mask needs to be a string or a number. The value received was:\n\n " +
                                     JSON.stringify(e)
                                 );
                               })(e),
                               d = o.selectionEnd,
-                              v = g.previousConformedValue,
-                              p = g.previousPlaceholder,
+                              p = g.previousConformedValue,
+                              v = g.previousPlaceholder,
                               h = void 0;
                             if (
                               (void 0 === i ? "undefined" : C(i)) ===
@@ -482,18 +482,18 @@
                                 !1 ===
                                 (f = i(e, {
                                   currentCaretPosition: d,
-                                  previousConformedValue: v,
+                                  previousConformedValue: p,
                                   placeholderChar: l,
                                 }))
                               )
                                 return;
-                              var m = (0, k.processCaretTraps)(f),
+                              var m = (0, T.processCaretTraps)(f),
                                 f = m.maskWithoutCaretTraps,
                                 h = m.indexes,
-                                c = (0, k.convertMaskToPlaceholder)(f, l);
+                                c = (0, T.convertMaskToPlaceholder)(f, l);
                             } else f = i;
                             (m = {
-                              previousConformedValue: v,
+                              previousConformedValue: p,
                               guide: a,
                               placeholderChar: l,
                               pipe: u,
@@ -501,7 +501,7 @@
                               currentCaretPosition: d,
                               keepCharPositions: s,
                             }),
-                              (i = (0, T.default)(e, f, m).conformedValue),
+                              (i = (0, k.default)(e, f, m).conformedValue),
                               (a =
                                 (void 0 === u ? "undefined" : C(u)) ===
                                 P.strFunction),
@@ -509,12 +509,12 @@
                               (f =
                                 (a &&
                                   (!1 === (s = u(i, b({ rawValue: e }, m)))
-                                    ? (s = { value: v, rejected: !0 })
-                                    : (0, k.isString)(s) && (s = { value: s })),
+                                    ? (s = { value: p, rejected: !0 })
+                                    : (0, T.isString)(s) && (s = { value: s })),
                                 a ? s.value : i)),
                               (u = (0, x.default)({
-                                previousConformedValue: v,
-                                previousPlaceholder: p,
+                                previousConformedValue: p,
+                                previousPlaceholder: v,
                                 conformedValue: f,
                                 placeholder: c,
                                 rawValue: e,
@@ -523,7 +523,7 @@
                                 indexesOfPipedChars: s.indexesOfPipedChars,
                                 caretTrapIndexes: h,
                               })),
-                              (m = f === c && 0 === u ? (n ? c : M) : f);
+                              (m = f === c && 0 === u ? (n ? c : O) : f);
                             (g.previousConformedValue = m),
                               (g.previousPlaceholder = c),
                               o.value !== m &&
@@ -533,21 +533,21 @@
                                 document.activeElement === t) &&
                                 (w
                                   ? _(function () {
-                                      return t.setSelectionRange(r, r, O);
+                                      return t.setSelectionRange(r, r, S);
                                     }, 0)
-                                  : t.setSelectionRange(r, r, O));
+                                  : t.setSelectionRange(r, r, S));
                           }
                         }
                       },
                     };
                   };
                   var x = n(r(4)),
-                    T = n(r(2)),
-                    k = r(3),
+                    k = n(r(2)),
+                    T = r(3),
                     P = r(1),
-                    M = "",
-                    O = "none",
-                    S = "object",
+                    O = "",
+                    S = "none",
+                    M = "object",
                     w =
                       "undefined" != typeof navigator &&
                       /Android/i.test(navigator.userAgent),
@@ -622,14 +622,14 @@
     3: [
       function (e, t, r) {
         e("./circleText"),
-          e("./textAnimation"),
+          e("./textAnimationWithOpacity"),
           e("./phoneNumber"),
           e("./videoControl");
       },
       {
         "./circleText": 2,
         "./phoneNumber": 4,
-        "./textAnimation": 5,
+        "./textAnimationWithOpacity": 5,
         "./videoControl": 6,
       },
     ],
@@ -665,38 +665,27 @@
     5: [
       function (e, t, r) {
         const n = document.querySelector(".h1_1"),
-          o = document.querySelector(".h1_2"),
-          i = document.querySelector(".h1_3"),
-          a = n.textContent.split(""),
-          u = o.textContent.split(""),
-          l = i.textContent.split("");
-        let s = 0;
-        var c = 25 * a.length * 2,
-          f = c + 25 * u.length * 2;
+          o = n.textContent.split("");
+        let i = 0,
+          a = 0;
+        n.innerHTML = "";
         {
-          const d = setInterval(() => {
-            void 0 !== a[s]
-              ? ((n.innerHTML += a[s]), s++)
-              : (clearInterval(d), (s = 0));
-          }, 25);
+          const u = setInterval(() => {
+            void 0 !== o[i]
+              ? ((n.innerHTML += `<span class="opacity-0-styling" id="symbol-${i}">${o[i]}</span>`),
+                i++)
+              : (clearInterval(u), (i = 0));
+          }, 1);
         }
         setTimeout(function () {
-          let e = setInterval(() => {
-            void 0 !== u[s]
-              ? ((o.innerHTML += u[s]), s++)
-              : (clearInterval(e), (s = 0));
-          }, 25);
-        }, c),
-          setTimeout(function () {
-            let e = setInterval(() => {
-              void 0 !== l[s]
-                ? ((i.innerHTML += l[s]), s++)
-                : (clearInterval(e), (s = 0));
-            }, 25);
-          }, f),
-          (n.innerHTML = ""),
-          (o.innerHTML = ""),
-          (i.innerHTML = "");
+          for (a = 0; a < o.length; a++)
+            console.log(n.querySelector("#symbol-" + a)),
+              setTimeout(() => {
+                n.querySelector("#symbol-" + a).classList.add(
+                  "opacity-1-styling"
+                );
+              }, 300);
+        }, 3e3);
       },
       {},
     ],
@@ -704,12 +693,19 @@
       function (e, t, r) {
         var n = document.querySelector(".text-on-video-div");
         const o = document.querySelector(".text-on-video-p"),
-          i = document.querySelector(".video");
-        let a = !1;
+          i = document.querySelector(".play-button"),
+          a = document.querySelector(".video");
+        let u = !1;
         n.addEventListener("click", () => {
-          a
-            ? ((a = !1), i.pause(), (o.style.opacity = "1"))
-            : ((a = !0), i.play(), (o.style.opacity = "0"));
+          u
+            ? ((u = !1),
+              a.pause(),
+              (o.style.opacity = "0.99"),
+              (i.style.opacity = "0.5"))
+            : ((u = !0),
+              a.play(),
+              (o.style.opacity = "0"),
+              (i.style.opacity = "0"));
         });
       },
       {},

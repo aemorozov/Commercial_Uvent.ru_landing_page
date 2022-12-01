@@ -1,4 +1,4 @@
 require("./circleText");
-require("./textAnimation");
+require("./textAnimationWithOpacity");
 require("./phoneNumber");
 require("./videoControl");
