@@ -1,29 +1,42 @@
 const h1Array = document.querySelectorAll(".tagline-h1");
 let arrayLength = 0;
 let textSplit = "";
-let y = 0;
 let numberOfSymbol = 0;
 let arrayTextSplit = [];
 
-for (let x = 0; x < h1Array.length; x++) {
-  textSplit = h1Array[x].textContent.split("");
-  arrayLength = h1Array[x].textContent.length;
-  h1Array[x].innerHTML = "";
-  for (let i = 0; i < arrayLength; i++) {
-    h1Array[
-      x
-    ].innerHTML += `<span class="opacity-0-styling" id="symbol-${y}">${textSplit[i]}</span>`;
-    y++;
-  }
+addOpacity0();
+addOpacity1();
+
+function addOpacity0() {
+  for (let x = 0; x < h1Array.length; x++) {
+    // запускаем цикл, который берёт каждую строчку и добавляем прозрачности каждому символу
+    textSplit = h1Array[x].textContent.split(""); // делаем сплит по символам и заносим в переменную
+    arrayLength = h1Array[x].textContent.length; // сохраняем значение длины строки
+    h1Array[x].innerHTML = ""; // опустошаем строку
+
+    for (let i = 0; i < arrayLength; i++) {
+      // запускаем цикл для каждого символа в строке
+      h1Array[x].innerHTML +=
+        // вкладываем вместо каждой буквы тег SPAN с уникальным ID, opacity = 0 и тем символом, что мы забрали
+        `<span class="opacity-0-styling" id="symbol-${numberOfSymbol}">${textSplit[i]}</span>`;
+      numberOfSymbol++; // увеличиваем ID на 1 и повторяем цикл для следующего символа
+    }
+  } // завершаем работу со строкой и переходим к следующей строке
+
+  numberOfSymbol = 0; // обнуляем переменную для следующего цикла
 }
 
-setInterval(() => {
-  document
-    .querySelector(`#symbol-${numberOfSymbol}`)
-    .classList.add("opacity-1-styling");
-  numberOfSymbol++;
-}, 20);
+function addOpacity1() {
+  setInterval(() => {
+    // задаём интервал для добавления класса с opacity = 1 каждому символу по ID
+    document
+      .querySelector(`#symbol-${numberOfSymbol}`) // забираем каждый символ по порядку по ID
+      .classList.add("opacity-1-styling"); // добавляем класс
+    numberOfSymbol++; // добавляем +1 для запуска цикла со следующим символом
+  }, 20); // можно менять время задержки появления букв в мс
+}
 
+// =================================================
 // if (y < h1_1Arr.length) {
 //     h1_1.querySelector(`#symbol-${y}`).classList.add("opacity-1-styling");
 //     y++;
