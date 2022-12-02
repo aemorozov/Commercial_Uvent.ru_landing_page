@@ -3,7 +3,7 @@
 .pre-tagline {
     width: 100%;
     max-width: 1440px;
-    height: 600px;
+    height: 567px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -13,7 +13,7 @@
 
 .tagline {
     width: 100%;
-    height: 662px;
+    height: 630px;
     background: $color-for-background;
     border-radius: 0 0 0 176px;
     padding-top: 48px;
@@ -23,7 +23,7 @@
 .tagline-text-and-svg {
     width: 100%;
     max-width: 1440px;
-    height: 540px;
+    height: 500px;
 }
 
 .tagline-h1 {
@@ -36,7 +36,7 @@
     padding-left: 96px;
     margin-top: 0;
     margin-bottom: 0;
-    height: 123px;
+    height: 124px;
     width: 1170px;
 }
 
@@ -52,8 +52,8 @@
 .tagline-svg {
     position: relative;
     float: right;
-    bottom: 240px;
-    margin-right: 100px;
+    bottom: 247px;
+    margin-right: 99px;
 }
 
 .tagline-svg-zavitushka {
@@ -101,6 +101,7 @@
     transform: translateY(-50%);
     z-index: -100;
     box-sizing: border-box;
+    margin-bottom: -360px;
   }
 
 
