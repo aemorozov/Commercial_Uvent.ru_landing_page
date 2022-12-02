@@ -1,95 +1,95 @@
 !(function n(o, i, a) {
-  function l(t, e) {
-    if (!i[t]) {
-      if (!o[t]) {
-        var r = "function" == typeof require && require;
-        if (!e && r) return r(t, !0);
-        if (u) return u(t, !0);
+  function u(r, e) {
+    if (!i[r]) {
+      if (!o[r]) {
+        var t = "function" == typeof require && require;
+        if (!e && t) return t(r, !0);
+        if (l) return l(r, !0);
         throw (
-          (((e = new Error("Cannot find module '" + t + "'")).code =
+          (((e = new Error("Cannot find module '" + r + "'")).code =
             "MODULE_NOT_FOUND"),
           e)
         );
       }
-      (r = i[t] = { exports: {} }),
-        o[t][0].call(
-          r.exports,
+      (t = i[r] = { exports: {} }),
+        o[r][0].call(
+          t.exports,
           function (e) {
-            return l(o[t][1][e] || e);
+            return u(o[r][1][e] || e);
           },
-          r,
-          r.exports,
+          t,
+          t.exports,
           n,
           o,
           i,
           a
         );
     }
-    return i[t].exports;
+    return i[r].exports;
   }
   for (
-    var u = "function" == typeof require && require, e = 0;
+    var l = "function" == typeof require && require, e = 0;
     e < a.length;
     e++
   )
-    l(a[e]);
-  return l;
+    u(a[e]);
+  return u;
 })(
   {
     1: [
-      function (e, t, r) {
+      function (e, r, t) {
         var n, o;
         (n = this),
           (o = function () {
             return (
               (n = [
-                function (e, t, r) {
+                function (e, r, t) {
                   "use strict";
                   function n(e) {
                     return e && e.__esModule ? e : { default: e };
                   }
                   function o(e) {
-                    function t(e) {
+                    function r(e) {
                       return (e = e.target.value), n.update(e);
                     }
-                    var r = e.inputElement,
+                    var t = e.inputElement,
                       n = (0, a.default)(e);
                     return (
-                      r.addEventListener("input", t),
-                      n.update(r.value),
+                      t.addEventListener("input", r),
+                      n.update(t.value),
                       {
                         textMaskInputElement: n,
                         destroy: function () {
-                          r.removeEventListener("input", t);
+                          t.removeEventListener("input", r);
                         },
                       }
                     );
                   }
-                  Object.defineProperty(t, "__esModule", { value: !0 }),
-                    (t.conformToMask = void 0),
-                    (t.maskInput = o);
-                  var i = r(2),
-                    r =
-                      (Object.defineProperty(t, "conformToMask", {
+                  Object.defineProperty(r, "__esModule", { value: !0 }),
+                    (r.conformToMask = void 0),
+                    (r.maskInput = o);
+                  var i = t(2),
+                    t =
+                      (Object.defineProperty(r, "conformToMask", {
                         enumerable: !0,
                         get: function () {
                           return n(i).default;
                         },
                       }),
-                      r(5)),
-                    a = n(r);
-                  t.default = o;
+                      t(5)),
+                    a = n(t);
+                  r.default = o;
                 },
-                function (e, t) {
+                function (e, r) {
                   "use strict";
-                  Object.defineProperty(t, "__esModule", { value: !0 }),
-                    (t.placeholderChar = "_"),
-                    (t.strFunction = "function");
+                  Object.defineProperty(r, "__esModule", { value: !0 }),
+                    (r.placeholderChar = "_"),
+                    (r.strFunction = "function");
                 },
-                function (e, t, r) {
+                function (e, r, t) {
                   "use strict";
-                  Object.defineProperty(t, "__esModule", { value: !0 });
-                  var N =
+                  Object.defineProperty(r, "__esModule", { value: !0 });
+                  var A =
                       "function" == typeof Symbol &&
                       "symbol" == typeof Symbol.iterator
                         ? function (e) {
@@ -104,63 +104,63 @@
                               : typeof e;
                           },
                     q =
-                      ((t.default = function () {
+                      ((r.default = function () {
                         var e =
                             0 < arguments.length && void 0 !== arguments[0]
                               ? arguments[0]
                               : I,
-                          t =
+                          r =
                             1 < arguments.length && void 0 !== arguments[1]
                               ? arguments[1]
-                              : F,
-                          r =
+                              : L,
+                          t =
                             2 < arguments.length && void 0 !== arguments[2]
                               ? arguments[2]
                               : {};
-                        if (!(0, q.isArray)(t)) {
+                        if (!(0, q.isArray)(r)) {
                           if (
-                            (void 0 === t ? "undefined" : N(t)) !==
-                            L.strFunction
+                            (void 0 === r ? "undefined" : A(r)) !==
+                            F.strFunction
                           )
                             throw new Error(
                               "Text-mask:conformToMask; The mask property must be an array."
                             );
-                          (t = t(e, r)),
-                            (t = (0, q.processCaretTraps)(
-                              t
+                          (r = r(e, t)),
+                            (r = (0, q.processCaretTraps)(
+                              r
                             ).maskWithoutCaretTraps);
                         }
-                        var n = void 0 === (l = r.guide) || l,
-                          o = void 0 === (l = r.previousConformedValue) ? I : l,
+                        var n = void 0 === (u = t.guide) || u,
+                          o = void 0 === (u = t.previousConformedValue) ? I : u,
                           i =
-                            void 0 === (l = r.placeholderChar)
-                              ? L.placeholderChar
-                              : l,
+                            void 0 === (u = t.placeholderChar)
+                              ? F.placeholderChar
+                              : u,
                           a =
-                            void 0 === (l = r.placeholder)
-                              ? (0, q.convertMaskToPlaceholder)(t, i)
-                              : l,
-                          l = r.currentCaretPosition,
-                          u = r.keepCharPositions,
+                            void 0 === (u = t.placeholder)
+                              ? (0, q.convertMaskToPlaceholder)(r, i)
+                              : u,
+                          u = t.currentCaretPosition,
+                          l = t.keepCharPositions,
                           s = !1 === n && void 0 !== o,
-                          r = e.length,
+                          t = e.length,
                           c = o.length,
                           f = a.length,
-                          d = t.length,
-                          p = r - c,
+                          d = r.length,
+                          p = t - c,
                           v = 0 < p,
-                          h = l + (v ? -p : 0),
+                          h = u + (v ? -p : 0),
                           m = h + Math.abs(p);
-                        if (!0 === u && !v) {
+                        if (!0 === l && !v) {
                           for (var y = I, g = h; g < m; g++)
                             a[g] === i && (y += i);
-                          e = e.slice(0, h) + y + e.slice(h, r);
+                          e = e.slice(0, h) + y + e.slice(h, t);
                         }
                         for (
-                          var b = e.split(I).map(function (e, t) {
-                              return { char: e, isNew: h <= t && t < m };
+                          var b = e.split(I).map(function (e, r) {
+                              return { char: e, isNew: h <= r && r < m };
                             }),
-                            C = r - 1;
+                            C = t - 1;
                           0 <= C;
                           C--
                         ) {
@@ -183,9 +183,9 @@
                                   k += i;
                                   continue e;
                                 }
-                                if (t[P].test(M)) {
+                                if (r[P].test(M)) {
                                   if (
-                                    !0 === u &&
+                                    !0 === l &&
                                     !1 !== S &&
                                     o !== I &&
                                     !1 !== n &&
@@ -217,8 +217,8 @@
                           k += O;
                         }
                         if (s && !1 == v) {
-                          for (var V = null, A = 0; A < k.length; A++)
-                            a[A] === i && (V = A);
+                          for (var V = null, N = 0; N < k.length; N++)
+                            a[N] === i && (V = N);
                           k = null !== V ? k.substr(0, V + 1) : I;
                         }
                         return {
@@ -226,25 +226,25 @@
                           meta: { someCharsRejected: T },
                         };
                       }),
-                      r(3)),
-                    L = r(1),
-                    F = [],
+                      t(3)),
+                    F = t(1),
+                    L = [],
                     I = "";
                 },
-                function (e, t, r) {
+                function (e, r, t) {
                   "use strict";
                   function n(e) {
                     return (
                       (Array.isArray && Array.isArray(e)) || e instanceof Array
                     );
                   }
-                  Object.defineProperty(t, "__esModule", { value: !0 }),
-                    (t.convertMaskToPlaceholder = function () {
+                  Object.defineProperty(r, "__esModule", { value: !0 }),
+                    (r.convertMaskToPlaceholder = function () {
                       var e =
                           0 < arguments.length && void 0 !== arguments[0]
                             ? arguments[0]
                             : i,
-                        t =
+                        r =
                           1 < arguments.length && void 0 !== arguments[1]
                             ? arguments[1]
                             : o.placeholderChar;
@@ -252,114 +252,114 @@
                         throw new Error(
                           "Text-mask:convertMaskToPlaceholder; The mask property must be an array."
                         );
-                      if (-1 !== e.indexOf(t))
+                      if (-1 !== e.indexOf(r))
                         throw new Error(
                           "Placeholder character must not be used as part of the mask. Please specify a character that is not present in your mask as your placeholder character.\n\nThe placeholder character that was received is: " +
-                            JSON.stringify(t) +
+                            JSON.stringify(r) +
                             "\n\nThe mask that was received is: " +
                             JSON.stringify(e)
                         );
                       return e
                         .map(function (e) {
-                          return e instanceof RegExp ? t : e;
+                          return e instanceof RegExp ? r : e;
                         })
                         .join("");
                     }),
-                    (t.isArray = n),
-                    (t.isString = function (e) {
+                    (r.isArray = n),
+                    (r.isString = function (e) {
                       return "string" == typeof e || e instanceof String;
                     }),
-                    (t.isNumber = function (e) {
+                    (r.isNumber = function (e) {
                       return (
                         "number" == typeof e && void 0 === e.length && !isNaN(e)
                       );
                     }),
-                    (t.processCaretTraps = function (e) {
-                      for (var t, r = []; -1 !== (t = e.indexOf(a)); )
-                        r.push(t), e.splice(t, 1);
-                      return { maskWithoutCaretTraps: e, indexes: r };
+                    (r.processCaretTraps = function (e) {
+                      for (var r, t = []; -1 !== (r = e.indexOf(a)); )
+                        t.push(r), e.splice(r, 1);
+                      return { maskWithoutCaretTraps: e, indexes: t };
                     });
-                  var o = r(1),
+                  var o = t(1),
                     i = [],
                     a = "[]";
                 },
-                function (e, t) {
+                function (e, r) {
                   "use strict";
-                  Object.defineProperty(t, "__esModule", { value: !0 }),
-                    (t.default = function (e) {
-                      var t = void 0 === (t = e.previousConformedValue) ? S : t,
-                        r = void 0 === (r = e.previousPlaceholder) ? S : r,
+                  Object.defineProperty(r, "__esModule", { value: !0 }),
+                    (r.default = function (e) {
+                      var r = void 0 === (r = e.previousConformedValue) ? S : r,
+                        t = void 0 === (t = e.previousPlaceholder) ? S : t,
                         n = void 0 === (n = e.currentCaretPosition) ? 0 : n,
                         o = e.conformedValue,
                         i = e.rawValue,
                         a = e.placeholderChar,
-                        l = e.placeholder,
-                        u = void 0 === (u = e.indexesOfPipedChars) ? O : u,
+                        u = e.placeholder,
+                        l = void 0 === (l = e.indexesOfPipedChars) ? O : l,
                         s = void 0 === (e = e.caretTrapIndexes) ? O : e;
                       if (0 === n || !i.length) return 0;
                       var e = i.length,
-                        c = t.length,
-                        f = l.length,
+                        c = r.length,
+                        f = u.length,
                         d = o.length,
                         p = 0 < (e = e - c);
                       if (1 < e && !p && !(0 === c)) return n;
                       var v = 0,
                         c = void 0,
                         h = void 0;
-                      if (p && (t === o || o === l)) v = n - e;
+                      if (p && (r === o || o === u)) v = n - e;
                       else {
                         var m = o.toLowerCase(),
-                          t = i
+                          r = i
                             .toLowerCase()
                             .substr(0, n)
                             .split(S)
                             .filter(function (e) {
                               return -1 !== m.indexOf(e);
                             }),
-                          h = t[t.length - 1],
-                          e = r
-                            .substr(0, t.length)
+                          h = r[r.length - 1],
+                          e = t
+                            .substr(0, r.length)
                             .split(S)
                             .filter(function (e) {
                               return e !== a;
                             }).length,
-                          y = l
-                            .substr(0, t.length)
+                          y = u
+                            .substr(0, r.length)
                             .split(S)
                             .filter(function (e) {
                               return e !== a;
                             }).length,
-                          r =
-                            void 0 !== r[t.length - 1] &&
-                            void 0 !== l[t.length - 2] &&
-                            r[t.length - 1] !== a &&
-                            r[t.length - 1] !== l[t.length - 1] &&
-                            r[t.length - 1] === l[t.length - 2];
+                          t =
+                            void 0 !== t[r.length - 1] &&
+                            void 0 !== u[r.length - 2] &&
+                            t[r.length - 1] !== a &&
+                            t[r.length - 1] !== u[r.length - 1] &&
+                            t[r.length - 1] === u[r.length - 2];
                         !p &&
-                          (y !== e || r) &&
+                          (y !== e || t) &&
                           0 < e &&
-                          -1 < l.indexOf(h) &&
+                          -1 < u.indexOf(h) &&
                           void 0 !== i[n] &&
                           ((c = !0), (h = i[n]));
                         for (
-                          var y = u
+                          var y = l
                               .map(function (e) {
                                 return m[e];
                               })
                               .filter(function (e) {
                                 return e === h;
                               }).length,
-                            r = t.filter(function (e) {
+                            t = r.filter(function (e) {
                               return e === h;
                             }).length,
                             g =
-                              l
-                                .substr(0, l.indexOf(a))
+                              u
+                                .substr(0, u.indexOf(a))
                                 .split(S)
-                                .filter(function (e, t) {
-                                  return e === h && i[t] !== e;
+                                .filter(function (e, r) {
+                                  return e === h && i[r] !== e;
                                 }).length +
-                              r +
+                              t +
                               y +
                               (c ? 1 : 0),
                             b = 0,
@@ -374,8 +374,8 @@
                       if (p) {
                         for (var x = v, k = v; k <= f; k++)
                           if (
-                            (l[k] === a && (x = k),
-                            l[k] === a || -1 !== s.indexOf(k) || k === f)
+                            (u[k] === a && (x = k),
+                            u[k] === a || -1 !== s.indexOf(k) || k === f)
                           )
                             return x;
                       } else if (c) {
@@ -384,27 +384,27 @@
                             return T;
                       } else
                         for (var P = v; 0 <= P; P--)
-                          if (l[P - 1] === a || -1 !== s.indexOf(P) || 0 === P)
+                          if (u[P - 1] === a || -1 !== s.indexOf(P) || 0 === P)
                             return P;
                     });
                   var O = [],
                     S = "";
                 },
-                function (e, t, r) {
+                function (e, r, t) {
                   "use strict";
                   function n(e) {
                     return e && e.__esModule ? e : { default: e };
                   }
-                  Object.defineProperty(t, "__esModule", { value: !0 });
+                  Object.defineProperty(r, "__esModule", { value: !0 });
                   var b =
                       Object.assign ||
                       function (e) {
-                        for (var t = 1; t < arguments.length; t++) {
-                          var r,
-                            n = arguments[t];
-                          for (r in n)
-                            Object.prototype.hasOwnProperty.call(n, r) &&
-                              (e[r] = n[r]);
+                        for (var r = 1; r < arguments.length; r++) {
+                          var t,
+                            n = arguments[r];
+                          for (t in n)
+                            Object.prototype.hasOwnProperty.call(n, t) &&
+                              (e[t] = n[t]);
                         }
                         return e;
                       },
@@ -422,7 +422,7 @@
                               ? "symbol"
                               : typeof e;
                           };
-                  t.default = function (y) {
+                  r.default = function (y) {
                     var g = {
                       previousConformedValue: void 0,
                       previousPlaceholder: void 0,
@@ -430,8 +430,8 @@
                     return {
                       state: g,
                       update: function (e) {
-                        var t,
-                          r,
+                        var r,
+                          t,
                           n =
                             1 < arguments.length && void 0 !== arguments[1]
                               ? arguments[1]
@@ -439,9 +439,9 @@
                           o = n.inputElement,
                           i = n.mask,
                           a = n.guide,
-                          l = n.pipe,
-                          u = n.placeholderChar,
-                          u = void 0 === u ? P.placeholderChar : u,
+                          u = n.pipe,
+                          l = n.placeholderChar,
+                          l = void 0 === l ? P.placeholderChar : l,
                           s = n.keepCharPositions,
                           s = void 0 !== s && s,
                           n = n.showMask,
@@ -453,12 +453,12 @@
                           (void 0 === i ? "undefined" : C(i)) === M &&
                             void 0 !== i.pipe &&
                             void 0 !== i.mask &&
-                            ((l = i.pipe), (i = i.mask));
+                            ((u = i.pipe), (i = i.mask));
                           var c = void 0,
                             f = void 0;
                           if (
                             (i instanceof Array &&
-                              (c = (0, T.convertMaskToPlaceholder)(i, u)),
+                              (c = (0, T.convertMaskToPlaceholder)(i, l)),
                             !1 !== i)
                           ) {
                             var e = (function (e) {
@@ -483,68 +483,68 @@
                                 (f = i(e, {
                                   currentCaretPosition: d,
                                   previousConformedValue: p,
-                                  placeholderChar: u,
+                                  placeholderChar: l,
                                 }))
                               )
                                 return;
                               var m = (0, T.processCaretTraps)(f),
                                 f = m.maskWithoutCaretTraps,
                                 h = m.indexes,
-                                c = (0, T.convertMaskToPlaceholder)(f, u);
+                                c = (0, T.convertMaskToPlaceholder)(f, l);
                             } else f = i;
                             (m = {
                               previousConformedValue: p,
                               guide: a,
-                              placeholderChar: u,
-                              pipe: l,
+                              placeholderChar: l,
+                              pipe: u,
                               placeholder: c,
                               currentCaretPosition: d,
                               keepCharPositions: s,
                             }),
                               (i = (0, k.default)(e, f, m).conformedValue),
                               (a =
-                                (void 0 === l ? "undefined" : C(l)) ===
+                                (void 0 === u ? "undefined" : C(u)) ===
                                 P.strFunction),
                               (s = {}),
                               (f =
                                 (a &&
-                                  (!1 === (s = l(i, b({ rawValue: e }, m)))
+                                  (!1 === (s = u(i, b({ rawValue: e }, m)))
                                     ? (s = { value: p, rejected: !0 })
                                     : (0, T.isString)(s) && (s = { value: s })),
                                 a ? s.value : i)),
-                              (l = (0, x.default)({
+                              (u = (0, x.default)({
                                 previousConformedValue: p,
                                 previousPlaceholder: v,
                                 conformedValue: f,
                                 placeholder: c,
                                 rawValue: e,
                                 currentCaretPosition: d,
-                                placeholderChar: u,
+                                placeholderChar: l,
                                 indexesOfPipedChars: s.indexesOfPipedChars,
                                 caretTrapIndexes: h,
                               })),
-                              (m = f === c && 0 === l ? (n ? c : O) : f);
+                              (m = f === c && 0 === u ? (n ? c : O) : f);
                             (g.previousConformedValue = m),
                               (g.previousPlaceholder = c),
                               o.value !== m &&
                                 ((o.value = m),
-                                (t = o),
-                                (r = l),
-                                document.activeElement === t) &&
+                                (r = o),
+                                (t = u),
+                                document.activeElement === r) &&
                                 (w
                                   ? _(function () {
-                                      return t.setSelectionRange(r, r, S);
+                                      return r.setSelectionRange(t, t, S);
                                     }, 0)
-                                  : t.setSelectionRange(r, r, S));
+                                  : r.setSelectionRange(t, t, S));
                           }
                         }
                       },
                     };
                   };
-                  var x = n(r(4)),
-                    k = n(r(2)),
-                    T = r(3),
-                    P = r(1),
+                  var x = n(t(4)),
+                    k = n(t(2)),
+                    T = t(3),
+                    P = t(1),
                     O = "",
                     S = "none",
                     M = "object",
@@ -558,35 +558,35 @@
                 },
               ]),
               (o = {}),
-              (r.m = n),
-              (r.c = o),
-              (r.p = ""),
-              r(0)
+              (t.m = n),
+              (t.c = o),
+              (t.p = ""),
+              t(0)
             );
-            function r(e) {
-              var t;
+            function t(e) {
+              var r;
               return (
                 o[e] ||
-                ((t = o[e] = { exports: {}, id: e, loaded: !1 }),
-                n[e].call(t.exports, t, t.exports, r),
-                (t.loaded = !0),
-                t)
+                ((r = o[e] = { exports: {}, id: e, loaded: !1 }),
+                n[e].call(r.exports, r, r.exports, t),
+                (r.loaded = !0),
+                r)
               ).exports;
             }
             var n, o;
           }),
-          "object" == typeof r && "object" == typeof t
-            ? (t.exports = o())
+          "object" == typeof t && "object" == typeof r
+            ? (r.exports = o())
             : "function" == typeof define && define.amd
             ? define([], o)
-            : "object" == typeof r
-            ? (r.vanillaTextMask = o())
+            : "object" == typeof t
+            ? (t.vanillaTextMask = o())
             : (n.vanillaTextMask = o());
       },
       {},
     ],
     2: [
-      function (e, t, r) {
+      function (e, r, t) {
         var n = document.getElementsByClassName("text-for-circle-in-js");
         const o = {
           А: 0.5,
@@ -605,13 +605,13 @@
         var i = n;
         for (let e = 0; e < i.length; e++) {
           var a = i[e].outerText.toUpperCase();
-          const l = 360 / (a.length + 1);
+          const u = 360 / (a.length + 1);
           i[e].innerHTML = a
             .split("")
             .map(
-              (e, t) =>
+              (e, r) =>
                 `<span class="circle-text" style="--rot:${
-                  t * l + (o[e] || 0)
+                  r * u + (o[e] || 0)
                 }deg">${e}</span>`
             )
             .join("");
@@ -620,7 +620,7 @@
       {},
     ],
     3: [
-      function (e, t, r) {
+      function (e, r, t) {
         e("./circleText"),
           e("./textAnimationWithOpacity"),
           e("./phoneNumber"),
@@ -634,7 +634,7 @@
       },
     ],
     4: [
-      function (e, t, r) {
+      function (e, r, t) {
         var e = e("vanilla-text-mask"),
           n = document.querySelector("#phone");
         e.maskInput({
@@ -662,46 +662,21 @@
       },
       { "vanilla-text-mask": 1 },
     ],
-    5: [
-      function (e, t, r) {
-        const n = document.querySelectorAll(".tagline-h1"),
-          o = "symbol-";
-        let i = 0;
-        for (let t = 0; t < n.length; t++) {
-          var a = n[t].textContent,
-            l = a.split(""),
-            u = a.length;
-          n[t].innerHTML = "";
-          for (let e = 0; e < u; e++)
-            (n[
-              t
-            ].innerHTML += `<span class="opacity-0-styling" id="${o}${i}">${l[e]}</span>`),
-              i++;
-        }
-        i = 0;
-        {
-          const s = setInterval(() => {
-            var e = document.querySelector("#" + o + i);
-            e ? (e.classList.add("opacity-1-styling"), i++) : clearInterval(s);
-          }, 100);
-        }
-      },
-      {},
-    ],
+    5: [function (e, r, t) {}, {}],
     6: [
-      function (e, t, r) {
+      function (e, r, t) {
         var n = document.querySelector(".text-on-video-div");
         const o = document.querySelector(".text-on-video-p"),
           i = document.querySelector(".play-button"),
           a = document.querySelector(".video");
-        let l = !1;
+        let u = !1;
         n.addEventListener("click", () => {
-          l
-            ? ((l = !1),
+          u
+            ? ((u = !1),
               a.pause(),
               (o.style.opacity = "0.99"),
               (i.style.opacity = "0.5"))
-            : ((l = !0),
+            : ((u = !0),
               a.play(),
               (o.style.opacity = "0"),
               (i.style.opacity = "0"));
