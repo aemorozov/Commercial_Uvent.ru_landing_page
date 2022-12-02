@@ -664,28 +664,27 @@
     ],
     5: [
       function (e, t, r) {
-        const n = document.querySelectorAll(".tagline-h1");
-        let o = 0,
-          i,
-          a,
-          l;
+        const n = document.querySelectorAll(".tagline-h1"),
+          o = "symbol-";
+        let i = 0;
         for (let t = 0; t < n.length; t++) {
-          (a = n[t].textContent.split("")),
-            (i = n[t].textContent.length),
-            (n[t].innerHTML = "");
-          for (let e = 0; e < i; e++)
+          var a = n[t].textContent,
+            l = a.split(""),
+            u = a.length;
+          n[t].innerHTML = "";
+          for (let e = 0; e < u; e++)
             (n[
               t
-            ].innerHTML += `<span class="opacity-0-styling" id="symbol-${o}">${a[e]}</span>`),
-              o++;
+            ].innerHTML += `<span class="opacity-0-styling" id="${o}${i}">${l[e]}</span>`),
+              i++;
         }
-        (o = 0),
-          setInterval(() => {
-            (l = document.querySelector("#symbol-" + o)) &&
-              (console.log("test" + o),
-              l.classList.add("opacity-1-styling"),
-              o++);
-          }, 20);
+        i = 0;
+        {
+          const s = setInterval(() => {
+            var e = document.querySelector("#" + o + i);
+            e ? (e.classList.add("opacity-1-styling"), i++) : clearInterval(s);
+          }, 100);
+        }
       },
       {},
     ],

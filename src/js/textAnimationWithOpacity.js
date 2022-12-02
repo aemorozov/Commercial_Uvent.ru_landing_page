@@ -1,40 +1,36 @@
+// Мы исходим из того, что у нас 3 строки разной длины с классом tagline-h1
+// и нам нужно отрисовать каждый символ поочерёдно в той же строке, где он находится
+
 const h1Array = document.querySelectorAll(".tagline-h1");
+const prefixForID = "symbol-";
 let symbolNumber = 0;
 
-let h1ArrayLength;
-let textAfterSplit;
-let symbol;
-
-addOpacity0();
+addSpansWithOpacity0();
 addOpacity1();
 
-function addOpacity0() {
+function addSpansWithOpacity0() {
   for (let rowNumber = 0; rowNumber < h1Array.length; rowNumber++) {
-    // запускаем цикл, который берёт каждую строчку и добавляем прозрачности каждому символу
-    textAfterSplit = h1Array[rowNumber].textContent.split(""); // делаем сплит по символам и заносим в переменную
-    h1ArrayLength = h1Array[rowNumber].textContent.length; // сохраняем значение длины строки
-    h1Array[rowNumber].innerHTML = ""; // опустошаем строку
+    let textContent = h1Array[rowNumber].textContent;
+    let textAfterSplit = textContent.split("");
+    let h1ArrayLength = textContent.length;
+    h1Array[rowNumber].innerHTML = "";
 
     for (let i = 0; i < h1ArrayLength; i++) {
-      // запускаем цикл для каждого символа в строке
-      h1Array[rowNumber].innerHTML +=
-        // вкладываем вместо каждой буквы тег SPAN с уникальным ID, opacity = 0 и тем символом, что мы забрали
-        `<span class="opacity-0-styling" id="symbol-${symbolNumber}">${textAfterSplit[i]}</span>`;
-      symbolNumber++; // увеличиваем ID на 1 и повторяем цикл для следующего символа
+      h1Array[
+        rowNumber
+      ].innerHTML += `<span class="opacity-0-styling" id="${prefixForID}${symbolNumber}">${textAfterSplit[i]}</span>`;
+      symbolNumber++;
     }
-  } // завершаем работу со строкой и переходим к следующей строке
-
-  symbolNumber = 0; // обнуляем переменную для следующей функции
+  }
+  symbolNumber = 0;
 }
 
 function addOpacity1() {
-  setInterval(() => {
-    symbol = document.querySelector(`#symbol-${symbolNumber}`); // забираем этот символ по ID
+  const forCleanInterval = setInterval(() => {
+    let symbol = document.querySelector(`#${prefixForID}${symbolNumber}`);
     if (symbol) {
-      console.log("test" + symbolNumber);
-      // если такой символ с таким ID существует, то...
-      symbol.classList.add("opacity-1-styling"); // добавляем класс
-      symbolNumber++; // добавляем к ID +1 для запуска цикла со следующим символом
-    }
-  }, 20); // можно менять время задержки появления букв в мс
+      symbol.classList.add("opacity-1-styling");
+      symbolNumber++;
+    } else clearInterval(forCleanInterval);
+  }, 100);
 }
