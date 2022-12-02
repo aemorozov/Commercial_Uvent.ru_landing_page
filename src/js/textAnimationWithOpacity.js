@@ -3,8 +3,6 @@ let symbolNumber = 0;
 
 let h1ArrayLength;
 let textAfterSplit;
-let arrayTextSplit;
-let varForInterval;
 let symbol;
 
 addOpacity0();
@@ -30,9 +28,10 @@ function addOpacity0() {
 }
 
 function addOpacity1() {
-  varForInterval = setInterval(() => {
+  setInterval(() => {
     symbol = document.querySelector(`#symbol-${symbolNumber}`); // забираем этот символ по ID
     if (symbol) {
+      console.log("test" + symbolNumber);
       // если такой символ с таким ID существует, то...
       symbol.classList.add("opacity-1-styling"); // добавляем класс
       symbolNumber++; // добавляем к ID +1 для запуска цикла со следующим символом

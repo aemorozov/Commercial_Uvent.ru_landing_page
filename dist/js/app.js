@@ -667,8 +667,8 @@
         const n = document.querySelectorAll(".tagline-h1");
         let o = 0,
           i,
-          a;
-        let l, u;
+          a,
+          l;
         for (let t = 0; t < n.length; t++) {
           (a = n[t].textContent.split("")),
             (i = n[t].textContent.length),
@@ -680,10 +680,12 @@
               o++;
         }
         (o = 0),
-          (l = setInterval(() => {
-            (u = document.querySelector("#symbol-" + o)) &&
-              (u.classList.add("opacity-1-styling"), o++);
-          }, 20));
+          setInterval(() => {
+            (l = document.querySelector("#symbol-" + o)) &&
+              (console.log("test" + o),
+              l.classList.add("opacity-1-styling"),
+              o++);
+          }, 20);
       },
       {},
     ],
