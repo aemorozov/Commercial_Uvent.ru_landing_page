@@ -33,7 +33,8 @@ const imgDir = "img/";
 const imgFiles = `${srcDir}${imgDir}**/*`;
 
 const stylesDir = "styles/";
-const styleFiles = `${srcDir}${stylesDir}**/*.+(css|scss)`;
+const styleFiles = `${srcDir}${stylesDir}**/*.+(css|scss), !000_critical.scss`;
+const styleCriticalFiles = `${srcDir}${stylesDir}000_critical.scss`;
 
 const fontsDir = "fonts/";
 const fontsFiles = `${srcDir}${fontsDir}**/*`;
@@ -72,6 +73,18 @@ const processIMG = () => {
 };
 
 const gulpSassWorker = gulpSass(sass);
+
+const processCriticalStyle = () => {
+  return gulp
+    .src(styleCriticalFiles)
+    .pipe(gulpSassWorker().on("error", gulpSassWorker.logError))
+    .pipe(autoprefixer({ grid: true }))
+    .pipe(gcssmq())
+    .pipe(concatCss("critical.css"))
+    .pipe(cssMinify())
+    .pipe(gulp.dest(`${distDir}${stylesDir}`))
+    .pipe(browserSync.stream());
+};
 
 const processStyle = () => {
   return gulp
@@ -128,6 +141,7 @@ const jobs = [
   processHTML,
   processJS,
   processIMG,
+  processCriticalStyle,
   processStyle,
   processFonts,
   processVideos,

@@ -13,20 +13,6 @@
     url(../fonts/roboto-v30-cyrillic-regular.woff2) format("woff2");
   font-display: Block;
 }
-@font-face {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 700;
-  src: local(""), url(../fonts/roboto-v30-cyrillic-700.woff2) format("woff2");
-  font-display: Block;
-}
-@font-face {
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 700;
-  src: local(""), url(../fonts/open-sans-v34-cyrillic-700.woff2) format("woff2");
-  font-display: Block;
-}
 html {
   overflow-x: hidden;
 }
@@ -72,14 +58,6 @@ body {
 .nav > a {
   color: #292929;
   text-decoration: none;
-}
-@media (min-width: 1441px) {
-  .logo {
-    margin-left: 96px;
-  }
-  .nav {
-    margin-right: 96px;
-  }
 }
 .pre-tagline {
   width: 100%;
@@ -172,12 +150,6 @@ body {
   box-sizing: border-box;
   margin-bottom: -360px;
 }
-@media (min-width: 1441px) {
-  .tagline-h1 {
-    font-size: 112px;
-    line-height: 124px;
-  }
-}
 .who-we-are {
   display: flex;
   margin-top: -360px;
@@ -222,6 +194,16 @@ body {
   display: block;
 }
 @media (min-width: 1441px) {
+  .logo {
+    margin-left: 96px;
+  }
+  .nav {
+    margin-right: 96px;
+  }
+  .tagline-h1 {
+    font-size: 112px;
+    line-height: 124px;
+  }
   .who-we-are-2 {
     background-size: 100%;
   }
@@ -230,6 +212,20 @@ body {
   .who-we-are-h2 {
     margin-bottom: 160px;
   }
+}
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 700;
+  src: local(""), url(../fonts/roboto-v30-cyrillic-700.woff2) format("woff2");
+  font-display: Block;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: local(""), url(../fonts/open-sans-v34-cyrillic-700.woff2) format("woff2");
+  font-display: Block;
 }
 .uslugi {
   width: 100%;

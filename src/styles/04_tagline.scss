@@ -1,115 +1,115 @@
 @import "01_colors.scss";
 
-.pre-tagline {
-    width: 100%;
-    max-width: 1440px;
-    height: 567px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-end;
-}
+// .pre-tagline {
+//     width: 100%;
+//     max-width: 1440px;
+//     height: 567px;
+//     margin: 0 auto;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-between;
+//     align-items: flex-end;
+// }
 
-.tagline {
-    width: 100%;
-    height: 630px;
-    background: $color-for-background;
-    border-radius: 0 0 0 176px;
-    padding-top: 48px;
-    box-sizing: border-box;
-}
+// .tagline {
+//     width: 100%;
+//     height: 630px;
+//     background: $color-for-background;
+//     border-radius: 0 0 0 176px;
+//     padding-top: 48px;
+//     box-sizing: border-box;
+// }
 
-.tagline-text-and-svg {
-    width: 100%;
-    max-width: 1440px;
-    height: 500px;
-}
+// .tagline-text-and-svg {
+//     width: 100%;
+//     max-width: 1440px;
+//     height: 500px;
+// }
 
-.tagline-h1 {
-    font-family: "Roboto";
-    font-weight: 300;
-    font-size: 7.8vw;
-    line-height: 8.6vw;
-    text-transform: uppercase;
-    color: $color-for-links;
-    padding-left: 96px;
-    margin-top: 0;
-    margin-bottom: 0;
-    height: 124px;
-    width: 1170px;
-}
+// .tagline-h1 {
+//     font-family: "Roboto";
+//     font-weight: 300;
+//     font-size: 7.8vw;
+//     line-height: 8.6vw;
+//     text-transform: uppercase;
+//     color: $color-for-links;
+//     padding-left: 96px;
+//     margin-top: 0;
+//     margin-bottom: 0;
+//     height: 124px;
+//     width: 1170px;
+// }
 
-.opacity-0-styling {
-    opacity: 0;
-    transition: opacity 0.5s;
-}
+// .opacity-0-styling {
+//     opacity: 0;
+//     transition: opacity 0.5s;
+// }
 
-.opacity-1-styling {
-    opacity: 1;
-}
+// .opacity-1-styling {
+//     opacity: 1;
+// }
 
-.tagline-svg {
-    position: relative;
-    float: right;
-    bottom: 247px;
-    margin-right: 99px;
-}
+// .tagline-svg {
+//     position: relative;
+//     float: right;
+//     bottom: 247px;
+//     margin-right: 99px;
+// }
 
-.tagline-svg-zavitushka {
-    position: inherit;
-    margin-top: -35px;
-    width: 181px;
-    height: 189px;
-    display: block;
-}
+// .tagline-svg-zavitushka {
+//     position: inherit;
+//     margin-top: -35px;
+//     width: 181px;
+//     height: 189px;
+//     display: block;
+// }
 
-.tagline-svg-zvezdochka {
-    position: inherit;
-    margin-left: 175px;
-    width: 90px;
-    height: 90px;
-    display: block;
-}
+// .tagline-svg-zvezdochka {
+//     position: inherit;
+//     margin-left: 175px;
+//     width: 90px;
+//     height: 90px;
+//     display: block;
+// }
 
-.tagline-social-buttons {
-    display: flex;
-    width: 207px;
-    height: 44px;
-    justify-content: space-between;
-    align-items: center;
-    margin-right: 96px;
-    margin-bottom: 7px;
-}
+// .tagline-social-buttons {
+//     display: flex;
+//     width: 207px;
+//     height: 44px;
+//     justify-content: space-between;
+//     align-items: center;
+//     margin-right: 96px;
+//     margin-bottom: 7px;
+// }
 
-.tagline-social-button {
-    width: 34px;
-    height: 34px;
-}
+// .tagline-social-button {
+//     width: 34px;
+//     height: 34px;
+// }
 
-.tagline-social-buttons-blue-line {
-    height: 44px;
-    width: 1px;
-    background: $color-nice-blue;
-}
+// .tagline-social-buttons-blue-line {
+//     height: 44px;
+//     width: 1px;
+//     background: $color-nice-blue;
+// }
 
-.background-for-borders-tagline-and-who-we-are {
-    position: relative;
-    width: 100%;
-    height: 360px;
-    background: $color-nice-yellow;
-    transform: translateY(-50%);
-    z-index: -100;
-    box-sizing: border-box;
-    margin-bottom: -360px;
-  }
+// .background-for-borders-tagline-and-who-we-are {
+//     position: relative;
+//     width: 100%;
+//     height: 360px;
+//     background: $color-nice-yellow;
+//     transform: translateY(-50%);
+//     z-index: -100;
+//     box-sizing: border-box;
+//     margin-bottom: -360px;
+//   }
 
 
 
-@media (min-width: 1441px) {
-    .tagline-h1 {
-        font-size: 112px;
-        line-height: 124px;
-    }
+// @media (min-width: 1441px) {
+//     .tagline-h1 {
+//         font-size: 112px;
+//         line-height: 124px;
+//     }
 
-}
+// }
