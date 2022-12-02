@@ -1,6 +1,8 @@
 // Мы исходим из того, что у нас 3 строки разной длины с классом tagline-h1
 // и нам нужно отрисовать каждый символ поочерёдно в той же строке, где он находится
 
+transparencyForTaglineH1();
+
 function transparencyForTaglineH1() {
   const h1Array = document.querySelectorAll(".tagline-h1");
   const prefixForID = "symbol-";
@@ -29,10 +31,10 @@ function transparencyForTaglineH1() {
 
   function addOpacity1() {
     const forCleanInterval = setInterval(() => {
-      let symbol = document.querySelector(`#${prefixForID}${symbolNumber}`);
+      let symbol = document.querySelector(`#${prefixForID}${symbolID}`);
       if (symbol) {
         symbol.classList.add("opacity-1-styling");
-        symbolNumber++;
+        symbolID++;
       } else clearInterval(forCleanInterval);
     }, speed);
   }
