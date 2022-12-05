@@ -1,9 +1,12 @@
-// Мы исходим из того, что у нас 3 строки разной длины с классом tagline-h1
-// и нам нужно отрисовать каждый символ поочерёдно в той же строке, где он находится
+// At first we have 3 rows with tagline-h1 class
+// We need to paint all symbols in this rows one by one
+// 1. We take all rows at DOM with class tagline-h1
+// 2. We add new tag span with the unique id and opacity-0 class to the everyone symbols
+// 3. We add opacity-1 class to the everyone id one by one
 
-transparencyForTaglineH1();
+textAnimationWithOpacity();
 
-function transparencyForTaglineH1() {
+function textAnimationWithOpacity() {
   const h1Array = document.querySelectorAll(".tagline-h1");
   const prefixForID = "symbol-";
   const speed = 100;
