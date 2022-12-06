@@ -1,3 +1,7 @@
+// .critical-test {
+//     margin: 0 0;
+// }
+
 @import "01_colors.scss";
 
 /* roboto-300 - cyrillic */
@@ -7,7 +11,7 @@
     font-weight: 300;
     src: local(''),
          url('../fonts/roboto-v30-cyrillic-300.woff2') format('woff2'); /* Super Modern Browsers */
-    font-display: Block;
+    // font-display: Block;
 }
   
 /* roboto-regular - cyrillic */

@@ -3,7 +3,6 @@
   font-style: normal;
   font-weight: 300;
   src: local(""), url(../fonts/roboto-v30-cyrillic-300.woff2) format("woff2");
-  font-display: Block;
 }
 @font-face {
   font-family: Roboto;

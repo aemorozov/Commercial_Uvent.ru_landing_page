@@ -10,12 +10,15 @@ const gcssmq = require("gulp-group-css-media-queries");
 const gulpSass = require("gulp-sass");
 const sass = require("sass");
 const concatCss = require("gulp-concat-css");
+// const procss = require('gulp-progressive-css');
 
 const browserify = require("browserify");
 const source = require("vinyl-source-stream");
 const buffer = require("vinyl-buffer");
 const sourcemaps = require("gulp-sourcemaps");
 const log = require("gulplog");
+
+// const ts = require('gulp-typescript');
 
 const browserSync = require("browser-sync");
 
@@ -29,12 +32,20 @@ const jsFiles = `${srcDir}${jsDir}*.js`;
 const jsInput = `${srcDir}${jsDir}index.js`;
 const jsOutput = "app.js";
 
+// const tsDir = "ts/";
+// const tsFiles = `${srcDir}${tsDir}*.ts`;
+// const tsInput = `${srcDir}${tsDir}index.js`;
+// const tsOutput = "ts.js";
+
 const imgDir = "img/";
 const imgFiles = `${srcDir}${imgDir}**/*`;
 
 const stylesDir = "styles/";
-const styleFiles = `${srcDir}${stylesDir}**/*.+(css|scss), !000_critical.scss`;
-const styleCriticalFiles = `${srcDir}${stylesDir}000_critical.scss`;
+const styleFiles = [
+  `${srcDir}${stylesDir}*.+(css|scss)`,
+  `!${srcDir}${stylesDir}critical.scss`,
+];
+const criticalStyleFiles = `${srcDir}${stylesDir}critical.scss`;
 
 const fontsDir = "fonts/";
 const fontsFiles = `${srcDir}${fontsDir}**/*`;
@@ -49,6 +60,18 @@ const processHTML = () => {
     .pipe(gulp.dest(distDir))
     .pipe(browserSync.reload({ stream: true }));
 };
+
+// const processTS = () => {
+//   return gulp.src(`${tsFiles}`)
+//     .pipe(ts({
+//       noImplicitAny: true,
+//       outFile: `output.js`
+//     }))
+//     .pipe(buffer())
+//     .pipe(jsMinify())
+//     .on("error", log.error)
+//     .pipe(gulp.dest(`${distDir}${tsDir}`));
+// };
 
 const processJS = () => {
   return browserify({
@@ -76,7 +99,7 @@ const gulpSassWorker = gulpSass(sass);
 
 const processCriticalStyle = () => {
   return gulp
-    .src(styleCriticalFiles)
+    .src(criticalStyleFiles)
     .pipe(gulpSassWorker().on("error", gulpSassWorker.logError))
     .pipe(autoprefixer({ grid: true }))
     .pipe(gcssmq())
@@ -139,6 +162,7 @@ const processVideos = () => {
 const jobs = [
   clean,
   processHTML,
+  // processTS,
   processJS,
   processIMG,
   processCriticalStyle,
