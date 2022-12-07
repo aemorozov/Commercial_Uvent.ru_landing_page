@@ -3,6 +3,7 @@
   font-style: normal;
   font-weight: 300;
   src: local(""), url(../fonts/roboto-v30-cyrillic-300.woff2) format("woff2");
+  font-display: block;
 }
 @font-face {
   font-family: Roboto;
@@ -10,7 +11,7 @@
   font-weight: 400;
   src: local(""),
     url(../fonts/roboto-v30-cyrillic-regular.woff2) format("woff2");
-  font-display: Block;
+  font-display: swap;
 }
 html {
   overflow-x: hidden;
