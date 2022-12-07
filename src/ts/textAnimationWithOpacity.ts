@@ -15,11 +15,14 @@ function textAnimationWithOpacityTS(): void {
   function addSpansWithOpacity0(): void {
     for (let rowNumber = 0; rowNumber < h1Array.length; rowNumber++) {
       const textContent: string | null = h1Array[rowNumber].textContent;
+      
       if (!textContent) {
-          return
+        return
       }
+      
       const textContentAfterSplit: Array<String> = textContent.split("");
       const textContentLength: number = textContent.length;
+      
       h1Array[rowNumber].innerHTML = "";
 
       for (let i = 0; i < textContentLength; i++) {

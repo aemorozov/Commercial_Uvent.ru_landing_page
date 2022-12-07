@@ -19,7 +19,7 @@ function textAnimationWithOpacity() {
     for (let rowNumber = 0; rowNumber < h1Array.length; rowNumber++) {
       const textContent = h1Array[rowNumber].textContent;
       if (!textContent) {
-        return
+        return;
       }
       const textContentAfterSplit = textContent.split("");
       const textContentLength = textContent.length;

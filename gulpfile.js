@@ -18,7 +18,7 @@ const buffer = require("vinyl-buffer");
 const sourcemaps = require("gulp-sourcemaps");
 const log = require("gulplog");
 
-// const ts = require('gulp-typescript');
+const ts = require("gulp-typescript");
 
 const browserSync = require("browser-sync");
 
@@ -28,12 +28,16 @@ const srcDir = "./src/";
 const htmlFiles = `${srcDir}*.html`;
 
 const jsDir = "js/";
-const jsFiles = `${srcDir}${jsDir}*.js`;
+const jsFiles = [
+  `${srcDir}${jsDir}*.js`,
+  `!${srcDir}${jsDir}_textAnimation_not_used.js`,
+  `!${srcDir}${jsDir}_textAnimationWithOpacity_not_used.js`,
+];
 const jsInput = `${srcDir}${jsDir}index.js`;
 const jsOutput = "app.js";
 
-// const tsDir = "ts/";
-// const tsFiles = `${srcDir}${tsDir}*.ts`;
+const tsDir = "ts/";
+const tsFiles = `${srcDir}${tsDir}*.ts`;
 // const tsInput = `${srcDir}${tsDir}index.js`;
 // const tsOutput = "ts.js";
 
@@ -61,17 +65,20 @@ const processHTML = () => {
     .pipe(browserSync.reload({ stream: true }));
 };
 
-// const processTS = () => {
-//   return gulp.src(`${tsFiles}`)
-//     .pipe(ts({
-//       noImplicitAny: true,
-//       outFile: `output.js`
-//     }))
-//     .pipe(buffer())
-//     .pipe(jsMinify())
-//     .on("error", log.error)
-//     .pipe(gulp.dest(`${distDir}${tsDir}`));
-// };
+const processTS = () => {
+  return gulp
+    .src(`${tsFiles}`)
+    .pipe(
+      ts({
+        noImplicitAny: true,
+        outFile: `output.js`,
+      })
+    )
+    .pipe(buffer())
+    .pipe(jsMinify())
+    .on("error", log.error)
+    .pipe(gulp.dest(`${distDir}${tsDir}`));
+};
 
 const processJS = () => {
   return browserify({
@@ -161,7 +168,7 @@ const processVideos = () => {
 const jobs = [
   clean,
   processHTML,
-  // processTS,
+  processTS,
   processJS,
   processIMG,
   processCriticalStyle,
