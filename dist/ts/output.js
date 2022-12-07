@@ -1,20 +1,20 @@
 function textAnimationWithOpacityTS() {
   var n,
-    i = document.querySelectorAll(".tagline-h1"),
+    e = document.querySelectorAll(".tagline-h1"),
     o = "symbol-",
     r = 0;
   !(function () {
-    for (var t = 0; t < i.length; t++) {
-      var n = i[t].textContent;
-      if (!n) return;
+    for (var t = 0; t < e.length; t++) {
+      var n = e[t].textContent;
+      if (!n || window.innerWidth < 1023) return;
       var a = n.split(""),
-        c = n.length;
-      i[t].innerHTML = "";
-      for (var e = 0; e < c; e++)
-        (i[t].innerHTML += '<span class="opacity-0-styling" id="'
+        i = n.length;
+      e[t].innerHTML = "";
+      for (var c = 0; c < i; c++)
+        (e[t].innerHTML += '<span class="opacity-0-styling" id="'
           .concat(o)
           .concat(r, '">')
-          .concat(a[e], "</span>")),
+          .concat(a[c], "</span>")),
           r++;
     }
     r = 0;

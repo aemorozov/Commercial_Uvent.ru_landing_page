@@ -16,7 +16,7 @@ function textAnimationWithOpacityTS(): void {
     for (let rowNumber = 0; rowNumber < h1Array.length; rowNumber++) {
       const textContent: string | null = h1Array[rowNumber].textContent;
       
-      if (!textContent) {
+      if (!textContent || window.innerWidth < 1023) {
         return
       }
       
