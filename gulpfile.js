@@ -102,8 +102,7 @@ const processCriticalStyle = () => {
     .src(criticalStyleFiles)
     .pipe(gulpSassWorker().on("error", gulpSassWorker.logError))
     .pipe(autoprefixer({ grid: true }))
-    .pipe(gcssmq())
-    .pipe(concatCss("critical.css"))
+    .pipe(gcssmq()) // не работает
     .pipe(cssMinify())
     .pipe(gulp.dest(`${distDir}${stylesDir}`))
     .pipe(browserSync.stream());
