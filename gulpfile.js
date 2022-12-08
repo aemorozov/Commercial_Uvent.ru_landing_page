@@ -109,7 +109,7 @@ const processCriticalStyle = () => {
     .src(criticalStyleFiles)
     .pipe(gulpSassWorker().on("error", gulpSassWorker.logError))
     .pipe(autoprefixer({ grid: true }))
-    .pipe(gcssmq()) // не работает
+    .pipe(gcssmq())
     .pipe(cssMinify())
     .pipe(gulp.dest(`${distDir}${stylesDir}`))
     .pipe(browserSync.stream());
@@ -120,7 +120,7 @@ const processStyle = () => {
     .src(styleFiles)
     .pipe(gulpSassWorker().on("error", gulpSassWorker.logError))
     .pipe(autoprefixer({ grid: true }))
-    .pipe(gcssmq()) // не работает
+    .pipe(gcssmq())
     .pipe(concatCss("style.css"))
     .pipe(cssMinify())
     .pipe(gulp.dest(`${distDir}${stylesDir}`))
