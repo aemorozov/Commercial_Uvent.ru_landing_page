@@ -26,6 +26,7 @@
     "gulp-imagemin": "7",
     "gulp-penthouse": "^0.2.0",
     "gulp-progressive-css": "^2.1.0",
+    "gulp-run": "^1.7.1",
     "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-typescript": "^6.0.0-alpha.1",

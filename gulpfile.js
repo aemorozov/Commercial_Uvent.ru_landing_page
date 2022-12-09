@@ -4,6 +4,8 @@ const jsMinify = require("gulp-uglify");
 const imgagemin = require("gulp-imagemin");
 const { sync } = require("del");
 
+const run = require("gulp-run");
+
 const autoprefixer = require("gulp-autoprefixer");
 const cssMinify = require("gulp-clean-css");
 const gcssmq = require("gulp-group-css-media-queries");
@@ -46,7 +48,8 @@ const styleFiles = [
   `${srcDir}${stylesDir}*.+(css|scss)`,
   // `!${srcDir}${stylesDir}critical.scss`,
 ];
-// const criticalStyleFiles = `${srcDir}${stylesDir}critical.scss`;
+
+// const criticalStyleFiles = `${distDir}${stylesDir}critical.css`;
 
 const fontsDir = "fonts/";
 const fontsFiles = `${srcDir}${fontsDir}**/*`;
@@ -124,16 +127,21 @@ const processStyle = () => {
     .pipe(browserSync.stream());
 };
 
+const criticalCSS = async () => {
+  return run("node ./src/js/critical.js").exec();
+};
+
 const clean = async () => {
   return sync(distDir, { force: true });
 };
 
 const watchDev = () => {
   gulp.watch(styleFiles, processStyle).on("change", browserSync.reload);
+  // gulp.watch(styleFiles, criticalCSS).on("change", browserSync.reload);
   gulp.watch(htmlFiles, processHTML).on("change", browserSync.reload);
   gulp.watch(jsFiles, processJS).on("change", browserSync.reload);
   gulp.watch(imgFiles, processIMG).on("change", browserSync.reload);
-  // gulp.watch(criticalStyleFiles, processCriticalStyle).on("change", browserSync.reload);
+  // gulp.watch(criticalStyleFiles, watcherCriticalCSS).on("change", browserSync.reload);
   gulp.watch(tsFiles, processTS).on("change", browserSync.reload);
 };
 

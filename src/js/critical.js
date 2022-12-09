@@ -6,6 +6,7 @@ var tmpDir = require("os").tmpdir();
 
 var cssUrl = "http://localhost:8080/styles/style.css";
 var cssPath = path.join(tmpDir, "style.css");
+
 request(cssUrl)
   .pipe(fs.createWriteStream(cssPath))
   .on("close", function () {
