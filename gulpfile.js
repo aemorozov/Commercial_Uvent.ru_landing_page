@@ -180,7 +180,7 @@ const jobs = [
   processIMG,
   // processCriticalStyle,
   processStyle,
-  // criticalCSS,
+  criticalCSS,
   processFonts,
   processVideos,
 ];
