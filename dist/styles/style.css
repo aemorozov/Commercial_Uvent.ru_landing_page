@@ -406,7 +406,7 @@
 .projects-item1:hover .projects-gradient {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  justify-content: flex-end;
 }
 .projects-item1:hover .projects-h3 {
   display: none;
@@ -414,7 +414,7 @@
 .projects-item2:hover .projects-gradient {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  justify-content: flex-end;
 }
 .projects-item2:hover .projects-h3 {
   display: none;
@@ -422,7 +422,7 @@
 .projects-item3:hover .projects-gradient {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  justify-content: flex-end;
 }
 .projects-item3:hover .projects-h3 {
   display: none;
@@ -430,7 +430,7 @@
 .projects-item4:hover .projects-gradient {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  justify-content: flex-end;
 }
 .projects-item4:hover .projects-h3 {
   display: none;
@@ -438,7 +438,7 @@
 .projects-item5:hover .projects-gradient {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  justify-content: flex-end;
 }
 .projects-item5:hover .projects-h3 {
   display: none;
@@ -446,7 +446,7 @@
 .projects-item6:hover .projects-gradient {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  justify-content: flex-end;
 }
 .projects-item6:hover .projects-h3 {
   display: none;
