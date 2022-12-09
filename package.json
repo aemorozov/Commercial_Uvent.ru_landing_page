@@ -2,7 +2,10 @@
   "name": "uvent",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/aemorozov/uvent.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aemorozov/uvent.git"
+  },
   "author": "aemorozov <mclenina19@gmail.com>",
   "license": "MIT",
   "devDependencies": {
@@ -11,14 +14,17 @@
     "browserify": "^17.0.0",
     "commitlint": "8",
     "critical": "^5.0.3",
+    "criticalcss": "^2.1.0",
     "del": "5",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-concat-css": "^3.1.0",
+    "gulp-critical-css": "^1.0.1",
     "gulp-group-css-media-queries": "^1.2.2",
     "gulp-htmlmin": "^5.0.1",
     "gulp-imagemin": "7",
+    "gulp-penthouse": "^0.2.0",
     "gulp-progressive-css": "^2.1.0",
     "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^3.0.0",
@@ -62,5 +68,10 @@
   },
   "dependencies": {
     "vanilla-text-mask": "^5.1.1"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/aemorozov/uvent/issues"
+  },
+  "homepage": "https://github.com/aemorozov/uvent#readme",
+  "description": ""
 }
