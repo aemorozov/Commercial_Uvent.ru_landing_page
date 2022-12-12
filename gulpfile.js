@@ -127,8 +127,10 @@ const processStyle = () => {
     .pipe(browserSync.stream());
 };
 
-const criticalCSS = async () => {
-  return run("node ./src/js/critical.js").exec();
+const criticalCSS = () => {
+  setTimeout(() => {
+    return run("node ./src/js/critical").exec();
+  }, 10000);
 };
 
 const clean = async () => {
@@ -137,7 +139,7 @@ const clean = async () => {
 
 const watchDev = () => {
   gulp.watch(styleFiles, processStyle).on("change", browserSync.reload);
-  // gulp.watch(styleFiles, criticalCSS).on("change", browserSync.reload);
+  gulp.watch(styleFiles, criticalCSS).on("change", browserSync.reload);
   gulp.watch(htmlFiles, processHTML).on("change", browserSync.reload);
   gulp.watch(jsFiles, processJS).on("change", browserSync.reload);
   gulp.watch(imgFiles, processIMG).on("change", browserSync.reload);
@@ -180,10 +182,14 @@ const jobs = [
   processIMG,
   // processCriticalStyle,
   processStyle,
-  criticalCSS,
   processFonts,
   processVideos,
 ];
 
 exports.build = gulp.series(...jobs);
-exports.default = gulp.series(...jobs, initBrowserSync, watchDev);
+exports.default = gulp.parallel(
+  ...jobs,
+  initBrowserSync,
+  watchDev,
+  criticalCSS
+);
