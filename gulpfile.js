@@ -127,10 +127,14 @@ const processStyle = () => {
     .pipe(browserSync.stream());
 };
 
-const criticalCSS = () => {
+const criticalCSSForJobs = () => {
   setTimeout(() => {
-    return run("node ./src/js/critical").exec();
+    return run("node createCriticalCSS").exec();
   }, 10000);
+};
+
+const criticalCSS = () => {
+  return run("node createCriticalCSS").exec();
 };
 
 const clean = async () => {
@@ -184,12 +188,8 @@ const jobs = [
   processStyle,
   processFonts,
   processVideos,
+  criticalCSSForJobs,
 ];
 
 exports.build = gulp.series(...jobs);
-exports.default = gulp.parallel(
-  ...jobs,
-  initBrowserSync,
-  watchDev,
-  criticalCSS
-);
+exports.default = gulp.parallel(...jobs, initBrowserSync, watchDev);
