@@ -30,15 +30,17 @@
     line-height: 72px;
     color: #ffffff;
     margin-left: 96px;
-    margin-top: 102px;
+    margin-top: 76px;
+    margin-bottom: 0;
   }
   
   .feedback-text-p {
+    width: 41rem;
     font-weight: 400;
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 32px;
+    line-height: 40px;
     color: #ffffff;
-    margin-top: 103px;
+    margin-top: 35px;
     margin-left: 96px;
   }
   
@@ -52,8 +54,14 @@
   }
   
   .feedback-form {
-    margin-top: 98px;
-    padding-left: 80px;
+    width: 456px; 
+    height: 440px;
+    margin-top: 48px;
+    margin-left: 23px;
+    padding-left: 31px;
+    padding-top: 31px;
+    background: #FCF8F3;
+    border-radius: 40px;
     box-sizing: border-box;
   }
   
@@ -65,7 +73,7 @@
   .name,
   .email,
   .phone {
-    width: 400px;
+    width: 394px;
     height: 60px;
     background: #ffffff;
     border-radius: 12px;
@@ -75,7 +83,7 @@
     font-size: 24px;
     line-height: 32px;
     color: #8f8f8f;
-    padding-left: 15px;
+    padding-left: 18px;
     margin-bottom: 16px;
     outline: none;
     box-sizing: border-box;
@@ -86,9 +94,9 @@
   }
   
   .button-subscribe {
-    width: 400px;
+    width: 394px;
     height: 60px;
-    background: #FF9DC6;
+    background: $color-nice-blue;
     border-radius: 12px;
     border: 0px;
     cursor: pointer;
@@ -106,10 +114,10 @@
   .feedback-form-a {
     max-width: 400px;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
-    color: #ffffff;
-    margin-top: 31px;
+    font-size: 14px;
+    line-height: 16px;
+    color: #8F8F8F;
+    margin-top: 46px;
     text-decoration: none;
   }
   

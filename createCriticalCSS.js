@@ -1,15 +1,12 @@
-var request = require("request");
-var path = require("path");
-var criticalcss = require("criticalcss");
-var fs = require("fs");
-var tmpDir = require("os").tmpdir();
+const request = require("request");
+const path = require("path");
+const criticalcss = require("criticalcss");
+const fs = require("fs");
+const tmpDir = require("os").tmpdir();
 
-var cssUrl = "http://localhost:8080/styles/style.css";
-var cssPath = path.join(tmpDir, "style.css");
+const cssUrl = "http://localhost:8080/styles/style.css";
+const cssPath = path.join(tmpDir, "style.css");
 
-// setTimeout(createCriticalCSS(), 3000)
-
-// function createCriticalCSS() {
 request(cssUrl)
   .pipe(fs.createWriteStream(cssPath))
   .on("close", function () {
@@ -33,4 +30,3 @@ request(cssUrl)
       }
     });
   });
-// }
