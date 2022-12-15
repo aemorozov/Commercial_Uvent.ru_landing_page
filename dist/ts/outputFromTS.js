@@ -20,13 +20,13 @@ function makeCircleText() {
     t++
   )
     !(function (t) {
-      var n = a[t].innerHTML.toUpperCase(),
-        e = 360 / (n.length + 1);
-      a[t].innerHTML = n
+      var e = a[t].outerText.toUpperCase(),
+        n = 360 / (e.length + 1);
+      a[t].innerHTML = e
         .split("")
-        .map(function (t, n) {
+        .map(function (t, e) {
           return '<span class="circle-text" style="--rot:'
-            .concat(n * e + (r[t] || 0), 'deg">')
+            .concat(e * n + (r[t] || 0), 'deg">')
             .concat(t, "</span>");
         })
         .join("");
@@ -39,24 +39,24 @@ var h1Array = document.querySelectorAll(".tagline-h1"),
   symbolID = 0;
 function addSpansWithOpacity0() {
   for (var t = 0; t < h1Array.length; t++) {
-    var n = h1Array[t].textContent;
-    if (!n || window.innerWidth < 1023) return;
-    var e = n.split(""),
-      a = n.length;
+    var e = h1Array[t].textContent;
+    if (!e || window.innerWidth < 1023) return;
+    var n = e.split(""),
+      a = e.length;
     h1Array[t].innerHTML = "";
     for (var r = 0; r < a; r++)
       (h1Array[t].innerHTML += '<span class="opacity-0-styling" id="'
         .concat(prefixForID)
         .concat(symbolID, '">')
-        .concat(e[r], "</span>")),
+        .concat(n[r], "</span>")),
         symbolID++;
   }
   symbolID = 0;
 }
 function addOpacity1() {
-  var n = setInterval(function () {
+  var e = setInterval(function () {
     var t = document.querySelector("#".concat(prefixForID).concat(symbolID));
-    t ? (t.classList.add("opacity-1-styling"), symbolID++) : clearInterval(n);
+    t ? (t.classList.add("opacity-1-styling"), symbolID++) : clearInterval(e);
   }, speed);
 }
 addSpansWithOpacity0(), addOpacity1();

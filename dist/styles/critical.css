@@ -91,9 +91,6 @@ body {
   transition: opacity 0.5s;
   -webkit-transition: opacity 0.5s;
 }
-.opacity-1-styling {
-  opacity: 1;
-}
 .tagline-svg {
   position: relative;
   float: right;
