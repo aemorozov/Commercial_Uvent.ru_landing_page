@@ -1,63 +1,140 @@
-function makeCircleText() {
-  for (
-    var a = document.getElementsByClassName("text-for-circle-in-js"),
-      r = {
-        А: 0.5,
-        В: 0.5,
-        Е: 1,
-        Ж: -1.8,
-        И: -0.5,
-        Н: -0.5,
-        О: -1,
-        П: 1,
-        У: 1,
-        Ы: -1,
-        Ь: 1,
-        Я: -1,
-      },
-      t = 0;
-    t < a.length;
-    t++
-  )
-    !(function (t) {
-      var e = a[t].outerText.toUpperCase(),
-        n = 360 / (e.length + 1);
-      a[t].innerHTML = e
-        .split("")
-        .map(function (t, e) {
-          return '<span class="circle-text" style="--rot:'
-            .concat(e * n + (r[t] || 0), 'deg">')
-            .concat(t, "</span>");
-        })
-        .join("");
-    })(t);
-}
 makeCircleText();
-var h1Array = document.querySelectorAll(".tagline-h1"),
-  prefixForID = "symbol-",
-  speed = 100,
-  symbolID = 0;
+function makeCircleText() {
+  // забираем все элементы с классом text-for-circle-in-js в одну коллекцию
+  var collection = document.getElementsByClassName("text-for-circle-in-js");
+  // создаём объект, где лежат коррекции для каждого символа
+  var correctionForSymbols = {
+    А: 0.5,
+    В: 0.5,
+    Е: 1,
+    Ж: -1.8,
+    И: -0.5,
+    Н: -0.5,
+    О: -1,
+    П: 1,
+    У: 1,
+    Ы: -1,
+    Ь: 1,
+    Я: -1,
+  };
+  var _loop_1 = function (i) {
+    var element = collection[i];
+    if (!(element instanceof HTMLElement)) {
+      return { value: void 0 };
+    }
+    // забираем весь текст из DOM элемента коллекции и переводим его в верхний регистр
+    // const collectionElementText = collection[i].outerText.toUpperCase();
+    var collectionElementText = element.outerText.toUpperCase();
+    // делим полную окружность на количество элементов в строке + 1 пробел
+    var rotation = 360 / (collectionElementText.length + 1);
+    // пересобираем текст и добавляем каждому символу координату вдоль окружности плюс коррекцию
+    collection[i].innerHTML = collectionElementText
+      .split("")
+      .map(function (symbol, index) {
+        return '<span class="circle-text" style="--rot:'
+          .concat(
+            index * rotation + (correctionForSymbols[symbol] || 0),
+            'deg">'
+          )
+          .concat(symbol, "</span>");
+      })
+      .join("");
+  };
+  // берём по очереди каждый DOM элемент коллекции text
+  for (var i = 0; i < collection.length; i++) {
+    var state_1 = _loop_1(i);
+    if (typeof state_1 === "object") return state_1.value;
+  }
+}
+define("phoneNumber", ["require", "exports", "vanilla-text-mask"], function (
+  require,
+  exports,
+  vanilla_text_mask_1
+) {
+  "use strict";
+  exports.__esModule = true;
+  var phoneMask = [
+    "+",
+    "7",
+    " ",
+    "(",
+    /[1-9]/,
+    /\d/,
+    /\d/,
+    ")",
+    " ",
+    /\d/,
+    /\d/,
+    /\d/,
+    "-",
+    /\d/,
+    /\d/,
+    /\d/,
+    /\d/,
+  ];
+  var phoneInput = document.querySelector("#phone");
+  vanilla_text_mask_1["default"].maskInput({
+    inputElement: phoneInput,
+    mask: phoneMask,
+  });
+});
+var h1Array = document.querySelectorAll(".tagline-h1");
+var prefixForID = "symbol-";
+var speed = 100;
+var symbolID = 0;
+addSpansWithOpacity0();
+addOpacity1();
 function addSpansWithOpacity0() {
-  for (var t = 0; t < h1Array.length; t++) {
-    var e = h1Array[t].textContent;
-    if (!e || window.innerWidth < 1023) return;
-    var n = e.split(""),
-      a = e.length;
-    h1Array[t].innerHTML = "";
-    for (var r = 0; r < a; r++)
-      (h1Array[t].innerHTML += '<span class="opacity-0-styling" id="'
+  for (var rowNumber = 0; rowNumber < h1Array.length; rowNumber++) {
+    var textContent = h1Array[rowNumber].textContent;
+    if (!textContent || window.innerWidth < 1023) {
+      return;
+    }
+    var textContentAfterSplit = textContent.split("");
+    var textContentLength = textContent.length;
+    h1Array[rowNumber].innerHTML = "";
+    for (var i = 0; i < textContentLength; i++) {
+      h1Array[rowNumber].innerHTML += '<span class="opacity-0-styling" id="'
         .concat(prefixForID)
         .concat(symbolID, '">')
-        .concat(n[r], "</span>")),
-        symbolID++;
+        .concat(textContentAfterSplit[i], "</span>");
+      symbolID++;
+    }
   }
   symbolID = 0;
 }
 function addOpacity1() {
-  var e = setInterval(function () {
-    var t = document.querySelector("#".concat(prefixForID).concat(symbolID));
-    t ? (t.classList.add("opacity-1-styling"), symbolID++) : clearInterval(e);
+  var forCleanInterval = setInterval(function () {
+    var symbol = document.querySelector(
+      "#".concat(prefixForID).concat(symbolID)
+    );
+    if (symbol) {
+      symbol.classList.add("opacity-1-styling");
+      symbolID++;
+    } else clearInterval(forCleanInterval);
   }, speed);
 }
-addSpansWithOpacity0(), addOpacity1();
-//# sourceMappingURL=outputFromTS.js.map
+var textBlock = document.querySelector(".text-on-video-div1");
+var text = document.querySelector(".text-on-video-p");
+var playButton = document.querySelector(".play-button");
+var video = document.querySelector(".video");
+var play = false;
+if (textBlock && text && playButton && video) {
+  textBlock.addEventListener("click", function () {
+    if (play) {
+      play = false;
+      video.pause();
+      text.style.opacity = "0.99";
+      playButton.style.opacity = "0.5";
+    } else {
+      play = true;
+      video.play();
+      text.style.opacity = "0";
+      playButton.style.opacity = "0";
+    }
+  });
+} else {
+  throw Error(
+    "Can`t fined elements with classes (.text-on-video-div || .text-on-video-p || .play-button || .video)"
+  );
+}

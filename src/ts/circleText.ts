@@ -1,11 +1,11 @@
-makeCircleText();
+makeCircleText()
 
 function makeCircleText() {
     // забираем все элементы с классом text-for-circle-in-js в одну коллекцию
-    const collection: HTMLElement = document.getElementsByClassName("text-for-circle-in-js");
+    const collection = document.getElementsByClassName("text-for-circle-in-js");
 
     // создаём объект, где лежат коррекции для каждого символа
-    const correctionForSymbols = {
+    const correctionForSymbols: Record<string, number> = {
     А: 0.5,
     В: 0.5,
     Е: 1,
@@ -22,9 +22,16 @@ function makeCircleText() {
 
   // берём по очереди каждый DOM элемент коллекции text
   for (let i = 0; i < collection.length; i++) {
+
+    const element = collection[i];
+    
+    if (!(element instanceof HTMLElement)) {
+      return;
+    }
+
     // забираем весь текст из DOM элемента коллекции и переводим его в верхний регистр
     // const collectionElementText = collection[i].outerText.toUpperCase();
-    const collectionElementText = collection[i].outerText.toUpperCase();
+    const collectionElementText = element.outerText.toUpperCase();
     // делим полную окружность на количество элементов в строке + 1 пробел
     const rotation = 360 / (collectionElementText.length + 1);
 
@@ -32,7 +39,7 @@ function makeCircleText() {
     collection[i].innerHTML = collectionElementText
       .split("")
       .map(
-        (symbol: string, index: number) =>
+        (symbol, index) =>
           `<span class="circle-text" style="--rot:${
             index * rotation + (correctionForSymbols[symbol] || 0)
           }deg">${symbol}</span>`

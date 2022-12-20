@@ -16,6 +16,7 @@
     "critical": "^5.0.3",
     "criticalcss": "^2.1.0",
     "del": "5",
+    "ember-cli-babel": "^7.26.11",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-clean-css": "^4.3.0",

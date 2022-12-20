@@ -1,4 +1,4 @@
-const vanillaTextMask = require("vanilla-text-mask");
+import vanillaTextMask from "vanilla-text-mask";
 
 const phoneMask = [
   "+",

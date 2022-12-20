@@ -32,15 +32,17 @@ const htmlFiles = `${srcDir}*.html`;
 const jsDir = "js/";
 const jsFiles = [
   `${srcDir}${jsDir}*.js`,
+  `!${srcDir}${jsDir}_circleText_not_used_port_TS.js`,
+  `!${srcDir}${jsDir}_phoneNumber_not_used_port_TS.js`,
+  `!${srcDir}${jsDir}_videoControl_not_used_port_TS.js`,
   `!${srcDir}${jsDir}_textAnimation_not_used.js`,
-  `!${srcDir}${jsDir}_textAnimationWithOpacity_not_used.js`,
+  `!${srcDir}${jsDir}_textAnimationWithOpacity_not_used_port_TS.js`,
 ];
 const jsInput = `${srcDir}${jsDir}index.js`;
 const jsOutput = "app.js";
 
 const tsDir = "ts/";
-const tsFiles = `${srcDir}${tsDir}*.ts`;
-const tsOutput = "appFromTS.js";
+const tsFiles = [`${srcDir}${tsDir}*.ts`];
 
 const imgDir = "img/";
 const imgFiles = `${srcDir}${imgDir}**/*`;
@@ -63,19 +65,23 @@ const processHTML = () => {
 };
 
 const processTS = () => {
-  return gulp
-    .src(`${tsFiles}`)
-    .pipe(sourcemaps.init({ loadMaps: true }))
-    .pipe(
-      ts({
-        noImplicitAny: true,
-        outFile: `outputFromTS.js`,
-      })
-    )
-    .pipe(jsMinify())
-    .on("error", log.error)
-    .pipe(sourcemaps.write("./"))
-    .pipe(gulp.dest(`${distDir}${tsDir}`));
+  return (
+    gulp
+      .src(`${tsFiles}`)
+      .pipe(sourcemaps.init({ loadMaps: true }))
+      .pipe(
+        ts({
+          noImplicitAny: true,
+          module: "amd",
+          moduleResolution: "node",
+          outFile: `outputFromTS.js`,
+        })
+      )
+      // .pipe(jsMinify())
+      .on("error", log.error)
+      // .pipe(sourcemaps.write("./"))
+      .pipe(gulp.dest(`${distDir}${tsDir}`))
+  );
 };
 
 const processJS = () => {
