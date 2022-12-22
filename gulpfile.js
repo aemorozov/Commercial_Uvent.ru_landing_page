@@ -38,7 +38,8 @@ const jsFiles = [
   `!${srcDir}${jsDir}_textAnimation_not_used.js`,
   `!${srcDir}${jsDir}_textAnimationWithOpacity_not_used_port_TS.js`,
 ];
-const jsInput = `${srcDir}${jsDir}index.js`;
+const jsInput = `${srcDir}${jsDir}app.js`;
+// const jsInput = `${srcDir}${jsDir}index.js`;
 const jsOutput = "app.js";
 
 const tsDir = "ts/";
@@ -79,7 +80,7 @@ const processTS = () => {
     .pipe(jsMinify())
     .on("error", log.error)
     .pipe(sourcemaps.write("./"))
-    .pipe(gulp.dest(`${distDir}${jsDir}`));
+    .pipe(gulp.dest(`${srcDir}${jsDir}`));
 };
 
 const processJS = () => {
@@ -96,6 +97,21 @@ const processJS = () => {
     .pipe(sourcemaps.write("./"))
     .pipe(gulp.dest(`${distDir}${jsDir}`));
 };
+
+// const processJS = () => {
+//   return browserify({
+//     entries: jsInput,
+//     debug: true,
+//   })
+//     .bundle()
+//     .pipe(source(jsOutput))
+//     .pipe(buffer())
+//     .pipe(sourcemaps.init({ loadMaps: true }))
+//     .pipe(jsMinify())
+//     .on("error", log.error)
+//     .pipe(sourcemaps.write("./"))
+//     .pipe(gulp.dest(`${distDir}${jsDir}`));
+// };
 
 const processIMG = () => {
   return gulp
@@ -174,11 +190,11 @@ const jobs = [
   clean,
   processHTML,
   processTS,
-  // processJS,
   processIMG,
   processStyle,
   processFonts,
   processVideos,
+  // processJS,
   processCriticalCSSForJobs,
 ];
 
