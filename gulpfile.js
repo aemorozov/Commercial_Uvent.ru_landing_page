@@ -65,23 +65,21 @@ const processHTML = () => {
 };
 
 const processTS = () => {
-  return (
-    gulp
-      .src(`${tsFiles}`)
-      .pipe(sourcemaps.init({ loadMaps: true }))
-      .pipe(
-        ts({
-          noImplicitAny: true,
-          module: "amd",
-          moduleResolution: "node",
-          outFile: `outputFromTS.js`,
-        })
-      )
-      // .pipe(jsMinify())
-      .on("error", log.error)
-      .pipe(sourcemaps.write("./"))
-      .pipe(gulp.dest(`${distDir}${tsDir}`))
-  );
+  return gulp
+    .src(`${tsFiles}`)
+    .pipe(sourcemaps.init({ loadMaps: true }))
+    .pipe(
+      ts({
+        noImplicitAny: true,
+        module: "amd",
+        moduleResolution: "node",
+        outFile: `app.js`,
+      })
+    )
+    .pipe(jsMinify())
+    .on("error", log.error)
+    .pipe(sourcemaps.write("./"))
+    .pipe(gulp.dest(`${distDir}${jsDir}`));
 };
 
 const processJS = () => {
