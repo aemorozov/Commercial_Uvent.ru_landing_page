@@ -79,7 +79,7 @@ const processTS = () => {
       )
       // .pipe(jsMinify())
       .on("error", log.error)
-      // .pipe(sourcemaps.write("./"))
+      .pipe(sourcemaps.write("./"))
       .pipe(gulp.dest(`${distDir}${tsDir}`))
   );
 };
@@ -176,7 +176,7 @@ const jobs = [
   clean,
   processHTML,
   processTS,
-  processJS,
+  // processJS,
   processIMG,
   processStyle,
   processFonts,

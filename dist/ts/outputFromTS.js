@@ -46,38 +46,20 @@ function makeCircleText() {
     if (typeof state_1 === "object") return state_1.value;
   }
 }
-define("phoneNumber", ["require", "exports", "vanilla-text-mask"], function (
-  require,
-  exports,
-  vanilla_text_mask_1
-) {
-  "use strict";
-  exports.__esModule = true;
-  var phoneMask = [
-    "+",
-    "7",
-    " ",
-    "(",
-    /[1-9]/,
-    /\d/,
-    /\d/,
-    ")",
-    " ",
-    /\d/,
-    /\d/,
-    /\d/,
-    "-",
-    /\d/,
-    /\d/,
-    /\d/,
-    /\d/,
-  ];
-  var phoneInput = document.querySelector("#phone");
-  vanilla_text_mask_1["default"].maskInput({
-    inputElement: phoneInput,
-    mask: phoneMask,
-  });
-});
+mobileMenu();
+function mobileMenu() {
+  var mobileMenu = document.querySelector(".mobile-menu");
+  var burger = document.querySelector(".burger-button");
+  var closeButton = document.querySelector(".close-button");
+  if (mobileMenu && burger && closeButton && window.innerWidth < 745) {
+    burger.addEventListener("click", function () {
+      mobileMenu.style.left = "0";
+    });
+    closeButton.addEventListener("click", function () {
+      mobileMenu.style.left = "-100%";
+    });
+  }
+}
 var h1Array = document.querySelectorAll(".tagline-h1");
 var prefixForID = "symbol-";
 var speed = 100;
@@ -114,7 +96,7 @@ function addOpacity1() {
     } else clearInterval(forCleanInterval);
   }, speed);
 }
-var textBlock = document.querySelector(".text-on-video-div1");
+var textBlock = document.querySelector(".text-on-video-div");
 var text = document.querySelector(".text-on-video-p");
 var playButton = document.querySelector(".play-button");
 var video = document.querySelector(".video");
@@ -138,3 +120,5 @@ if (textBlock && text && playButton && video) {
     "Can`t fined elements with classes (.text-on-video-div || .text-on-video-p || .play-button || .video)"
   );
 }
+
+//# sourceMappingURL=outputFromTS.js.map

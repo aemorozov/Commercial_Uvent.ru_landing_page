@@ -40,7 +40,16 @@
     color: $color-for-links;
     text-decoration: none;
 }
-  
+
+.burger-button {
+    display: none;
+    margin-right: 20px;
+}
+
+.mobile-menu {
+    display: none;
+}
+
 @media (min-width: 1441px) {
     .logo {
       margin-left: 96px;
@@ -48,5 +57,136 @@
   
     .nav {
       margin-right: 96px;
+    }
+}
+
+@media (max-width: 1281px) {
+    .nav {
+        margin-right: 7.5vw;
+        width: 382px;
+    }
+    .logo {
+        margin-left: 7.5vw;
+    }
+}
+
+@media (max-width: 1280px) {
+    .logo-img {
+        width: 142px;
+        height: 21px;
+    }
+    .nav {
+        margin-top: -5px;
+    }
+    .logo {
+        margin-top: -8px;
+    }
+}
+
+@media (max-width: 1025px) {
+    .logo {
+        margin-left: 9.4vw;
+    }
+    .nav {
+        margin-right: 9.4vw;
+        width: 383px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .logo {
+        margin-left: 46px;
+    }
+    .nav {
+        margin-right: 46px;
+        width: 314px;
+    }
+}
+
+@media (max-width: 744px) {
+    .header {
+        height: 100px;
+    }
+    .header-content {
+        padding-top: 38px;
+    }
+    .logo {
+        margin-top: -8px;
+        margin-left: 20px;
+    }
+    .burger-button {
+        display: block;
+    }
+    .nav {
+        display: none;
+    }
+    .mobile-menu {
+        display: block;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background: #FCF8F3;
+        z-index: 300;
+        left: -100%;
+        top: 0;
+        transition: 0.4s ease;
+    }
+    .header-mobile-menu {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 66px;
+    }
+    .logo-img-mobile {
+        width: 140px;
+        height: 22px;
+        margin-top: 8px;
+        margin-left: 20px;
+    }
+    .close-button {
+        margin-right: 20px;
+        margin-top: -1px;
+    }
+    .nav-mobile-menu {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        align-items: center;
+        margin-top: 37px;
+    }
+    .nav-uslugi-mobile-menu,
+    .nav-projects-mobile-menu,
+    .nav-cont-mobile-menu,
+    .nav-request-mobile-menu {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 28px;
+        line-height: 63.5px;
+        color: #292929;
+        text-decoration: none;
+        width: 100%;
+        text-align: center;
+    }
+    .tagline-svg-zvezdochka-mobile-menu {
+        position: absolute;
+        top: 170px;
+        right: 21px;
+        width: 50px;
+        height: 50px;    
+    }
+    .how-we-are-working-zvezdochka-mobile-menu {
+        position: absolute;
+        height: 90px;
+        width: 90px;
+        right: 26%;
+        top: 415px;
+    }
+    .tagline-svg-zavitushka-mobile-menu {
+        position: absolute;
+        height: 90px;
+        width: 90px;
+        left: 29.5%;
+        top: 487px;
+        transform: rotateZ(353deg);
     }
 }

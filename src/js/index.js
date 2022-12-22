@@ -2,3 +2,4 @@
 // require("../ts/textAnimationWithOpacity");
 // require("./phoneNumber");
 // require("./videoControl");
+require("./mobileMenu");

@@ -1,4 +1,4 @@
-const textBlock = document.querySelector(".text-on-video-div1");
+const textBlock = document.querySelector(".text-on-video-div");
 const text: HTMLElement | null = document.querySelector(".text-on-video-p");
 const playButton: HTMLElement | null = document.querySelector(".play-button");
 const video: HTMLMediaElement | null = document.querySelector(".video");

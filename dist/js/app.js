@@ -1,38 +1,69 @@
-!(function t(o, u, i) {
-  function f(e, r) {
-    if (!u[e]) {
-      if (!o[e]) {
+!(function r(o, u, i) {
+  function c(t, e) {
+    if (!u[t]) {
+      if (!o[t]) {
         var n = "function" == typeof require && require;
-        if (!r && n) return n(e, !0);
-        if (c) return c(e, !0);
+        if (!e && n) return n(t, !0);
+        if (f) return f(t, !0);
         throw (
-          (((r = new Error("Cannot find module '" + e + "'")).code =
+          (((e = new Error("Cannot find module '" + t + "'")).code =
             "MODULE_NOT_FOUND"),
-          r)
+          e)
         );
       }
-      (n = u[e] = { exports: {} }),
-        o[e][0].call(
+      (n = u[t] = { exports: {} }),
+        o[t][0].call(
           n.exports,
-          function (r) {
-            return f(o[e][1][r] || r);
+          function (e) {
+            return c(o[t][1][e] || e);
           },
           n,
           n.exports,
-          t,
+          r,
           o,
           u,
           i
         );
     }
-    return u[e].exports;
+    return u[t].exports;
   }
   for (
-    var c = "function" == typeof require && require, r = 0;
-    r < i.length;
-    r++
+    var f = "function" == typeof require && require, e = 0;
+    e < i.length;
+    e++
   )
-    f(i[r]);
-  return f;
-})({ 1: [function (r, e, n) {}, {}] }, {}, [1]);
+    c(i[e]);
+  return c;
+})(
+  {
+    1: [
+      function (e, t, n) {
+        e("./mobileMenu");
+      },
+      { "./mobileMenu": 2 },
+    ],
+    2: [
+      function (e, t, n) {
+        {
+          const r = document.querySelector(".mobile-menu"),
+            o = document.querySelector(".burger-button"),
+            u = document.querySelector(".close-button");
+          r &&
+            o &&
+            u &&
+            window.innerWidth < 745 &&
+            (o.addEventListener("click", () => {
+              r.style.left = "0";
+            }),
+            u.addEventListener("click", () => {
+              r.style.left = "-100%";
+            }));
+        }
+      },
+      {},
+    ],
+  },
+  {},
+  [1]
+);
 //# sourceMappingURL=app.js.map
