@@ -94,6 +94,29 @@
     border-radius: 50%;
   }
 
+  .transparent-borders {
+    width: 100vw;
+    height: 900px;
+    left: 0;
+    position: absolute;
+    transform: translateY(-100%);
+    display: flex;
+    justify-content: center;
+  }
+
+  .central-block {
+    max-width: 1440px;
+    width: 100%;
+    flex-grow: 1;
+  }
+
+  .border-left,
+  .border-right {
+    width: max-content;
+    background-color: $color-for-background;
+    flex-grow: 1;
+  }
+
   @media (min-width: 900px) and (max-width: 1200px) {
     .uslugi-for-circles {
       margin-left: calc(20vw - 93px);

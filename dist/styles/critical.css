@@ -9,6 +9,10 @@ body {
   padding: 0px;
   margin: 0px;
 }
+.container {
+  max-width: 1440px;
+  margin: 0px auto;
+}
 .header {
   height: 157px;
   background-color: rgb(252, 247, 241);
