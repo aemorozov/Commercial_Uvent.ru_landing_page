@@ -80,21 +80,6 @@ const processTS = () => {
     .pipe(jsMinify())
     .on("error", log.error)
     .pipe(sourcemaps.write("./"))
-    .pipe(gulp.dest(`${srcDir}${jsDir}`));
-};
-
-const processJS = () => {
-  return browserify({
-    entries: jsInput,
-    debug: true,
-  })
-    .bundle()
-    .pipe(source(jsOutput))
-    .pipe(buffer())
-    .pipe(sourcemaps.init({ loadMaps: true }))
-    .pipe(jsMinify())
-    .on("error", log.error)
-    .pipe(sourcemaps.write("./"))
     .pipe(gulp.dest(`${distDir}${jsDir}`));
 };
 
@@ -154,7 +139,7 @@ const watchDev = () => {
     .watch(styleFiles, processCriticalCSSForWatcher)
     .on("change", browserSync.reload);
   gulp.watch(htmlFiles, processHTML).on("change", browserSync.reload);
-  gulp.watch(jsFiles, processJS).on("change", browserSync.reload);
+  // gulp.watch(jsFiles, processJS).on("change", browserSync.reload);
   gulp.watch(imgFiles, processIMG).on("change", browserSync.reload);
   gulp.watch(tsFiles, processTS).on("change", browserSync.reload);
 };

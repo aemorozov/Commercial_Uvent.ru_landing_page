@@ -21,9 +21,13 @@ request(cssUrl)
             if (err) {
               console.log(err);
             } else {
-              fs.writeFile("dist/styles/critical.css", output, function (err) {
-                if (err) return console.log(err);
-              });
+              fs.writeFile(
+                "public/styles/critical.css",
+                output,
+                function (err) {
+                  if (err) return console.log(err);
+                }
+              );
             }
           }
         );
