@@ -375,7 +375,7 @@ body {
   height: 900px;
   background: #fcf7f1;
   padding-top: 43px;
-  padding-left: 6.7vw;
+  padding-left: 95px;
   box-sizing: border-box;
 }
 .uslugi-content {
@@ -391,7 +391,10 @@ body {
 .uslugi-for-circles {
   display: flex;
   margin-top: 165px;
-  margin-left: calc(12vw - 115px);
+  max-width: 1285px;
+  width: 100%;
+  overflow: hidden;
+  padding-left: 60px;
 }
 .uslugi-circle1,
 .uslugi-circle2,
@@ -460,18 +463,6 @@ body {
   transform: translateY(-100%);
   display: flex;
   justify-content: center;
-}
-.central-block {
-  max-width: 1440px;
-  width: 100%;
-  flex-grow: 1;
-}
-.border-left,
-.border-right {
-  width: -moz-max-content;
-  width: max-content;
-  background-color: #fcf7f1;
-  flex-grow: 1;
 }
 @media (min-width: 900px) and (max-width: 1200px) {
   .uslugi-for-circles {
@@ -861,12 +852,12 @@ body {
   align-items: center;
   color: #fff;
   padding-top: 74px;
-  margin-left: 96px;
-  margin-top: 0;
+  margin: 0 auto 0 96px;
 }
 .reviews-for-flex {
   width: 100%;
   max-width: 1440px;
+  overflow: hidden;
 }
 .reviews-cards {
   margin-top: 57px;

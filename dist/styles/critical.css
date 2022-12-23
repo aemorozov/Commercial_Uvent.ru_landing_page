@@ -8,6 +8,9 @@ body {
   overflow-x: hidden;
   padding: 0px;
   margin: 0px;
+  background-color: rgb(252, 247, 241);
+  background-position: initial initial;
+  background-repeat: initial initial;
 }
 .container {
   max-width: 1440px;
@@ -291,7 +294,7 @@ body {
   border-bottom-right-radius: 0px;
   border-bottom-left-radius: 0px;
   background-color: rgb(61, 176, 240);
-  padding-left: 6.7vw;
+  padding-left: 96.5px;
   padding-top: 42px;
   padding-right: 25px;
   box-sizing: border-box;

@@ -15,88 +15,56 @@ function makeCircleText() {
         Ь: 1,
         Я: -1,
       },
-      e = 0;
-    e < o.length;
-    e++
+      t = 0;
+    t < o.length;
+    t++
   ) {
-    var t = (function (e) {
-      var t = o[e];
-      if (!(t instanceof HTMLElement)) return { value: void 0 };
-      var t = t.outerText.toUpperCase(),
-        n = 360 / (t.length + 1);
-      o[e].innerHTML = t
+    var e = (function (t) {
+      var e = o[t];
+      if (!(e instanceof HTMLElement)) return { value: void 0 };
+      var e = e.outerText.toUpperCase(),
+        n = 360 / (e.length + 1);
+      o[t].innerHTML = e
         .split("")
-        .map(function (e, t) {
+        .map(function (t, e) {
           return '<span class="circle-text" style="--rot:'
-            .concat(t * n + (r[e] || 0), 'deg">')
-            .concat(e, "</span>");
+            .concat(e * n + (r[t] || 0), 'deg">')
+            .concat(t, "</span>");
         })
         .join("");
-    })(e);
-    if ("object" == typeof t) return t.value;
+    })(t);
+    if ("object" == typeof e) return e.value;
   }
 }
 function mobileMenu() {
-  var e = document.querySelector(".mobile-menu"),
-    t = document.querySelector(".burger-button"),
+  var t = document.querySelector(".mobile-menu"),
+    e = document.querySelector(".burger-button"),
     n = document.querySelector(".close-button");
-  e &&
-    t &&
+  t &&
+    e &&
     n &&
     window.innerWidth < 745 &&
-    (t.addEventListener("click", function () {
-      e.style.left = "0";
+    (e.addEventListener("click", function () {
+      t.style.left = "0";
     }),
     n.addEventListener("click", function () {
-      e.style.left = "-100%";
+      t.style.left = "-100%";
     }));
 }
-makeCircleText(),
-  mobileMenu(),
-  define(
-    "phoneNumber",
-    ["require", "exports", "vanilla-text-mask"],
-    function (e, t, n) {
-      "use strict";
-      t.__esModule = !0;
-      t = document.querySelector("#phone");
-      n.default.maskInput({
-        inputElement: t,
-        mask: [
-          "+",
-          "7",
-          " ",
-          "(",
-          /[1-9]/,
-          /\d/,
-          /\d/,
-          ")",
-          " ",
-          /\d/,
-          /\d/,
-          /\d/,
-          "-",
-          /\d/,
-          /\d/,
-          /\d/,
-          /\d/,
-        ],
-      });
-    }
-  );
+makeCircleText(), mobileMenu();
 var h1Array = document.querySelectorAll(".tagline-h1"),
   prefixForID = "symbol-",
   speed = 100,
   symbolID = 0;
 function addSpansWithOpacity0() {
-  for (var e = 0; e < h1Array.length; e++) {
-    var t = h1Array[e].textContent;
-    if (!t || window.innerWidth < 1023) return;
-    var n = t.split(""),
-      o = t.length;
-    h1Array[e].innerHTML = "";
+  for (var t = 0; t < h1Array.length; t++) {
+    var e = h1Array[t].textContent;
+    if (!e || window.innerWidth < 1023) return;
+    var n = e.split(""),
+      o = e.length;
+    h1Array[t].innerHTML = "";
     for (var r = 0; r < o; r++)
-      (h1Array[e].innerHTML += '<span class="opacity-0-styling" id="'
+      (h1Array[t].innerHTML += '<span class="opacity-0-styling" id="'
         .concat(prefixForID)
         .concat(symbolID, '">')
         .concat(n[r], "</span>")),
@@ -105,9 +73,9 @@ function addSpansWithOpacity0() {
   symbolID = 0;
 }
 function addOpacity1() {
-  var t = setInterval(function () {
-    var e = document.querySelector("#".concat(prefixForID).concat(symbolID));
-    e ? (e.classList.add("opacity-1-styling"), symbolID++) : clearInterval(t);
+  var e = setInterval(function () {
+    var t = document.querySelector("#".concat(prefixForID).concat(symbolID));
+    t ? (t.classList.add("opacity-1-styling"), symbolID++) : clearInterval(e);
   }, speed);
 }
 addSpansWithOpacity0(), addOpacity1();

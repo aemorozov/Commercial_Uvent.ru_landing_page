@@ -5,7 +5,7 @@
     height: 900px;
     background: $color-for-background;
     padding-top: 43px;
-    padding-left: 6.7vw;
+    padding-left: 95px;
     box-sizing: border-box;
   }
   
@@ -24,7 +24,10 @@
   .uslugi-for-circles {
     display: flex;
     margin-top: 165px;
-    margin-left: calc(12vw - 115px);
+    max-width: 1285px;
+    width: 100%;
+    overflow: hidden;
+    padding-left: 60px;
   }
   
   .uslugi-circle1,
@@ -102,19 +105,6 @@
     transform: translateY(-100%);
     display: flex;
     justify-content: center;
-  }
-
-  .central-block {
-    max-width: 1440px;
-    width: 100%;
-    flex-grow: 1;
-  }
-
-  .border-left,
-  .border-right {
-    width: max-content;
-    background-color: $color-for-background;
-    flex-grow: 1;
   }
 
   @media (min-width: 900px) and (max-width: 1200px) {
