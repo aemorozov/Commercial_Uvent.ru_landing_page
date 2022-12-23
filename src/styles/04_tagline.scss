@@ -29,8 +29,10 @@
 .tagline-h1 {
     font-family: "Roboto";
     font-weight: 300;
-    font-size: 7.8vw;
-    line-height: 8.6vw;
+    font-size: 112px;
+    line-height: 124px;
+    // font-size: 7.8vw;
+    // line-height: 8.6vw;
     text-transform: uppercase;
     color: $color-for-links;
     padding-left: 96px;
@@ -104,7 +106,11 @@
     margin-bottom: -360px;
   }
 
-
+@media (max-width: 1281px) {
+    .opacity-0-styling {
+        margin-right: -5px;
+    }
+}
 
 @media (min-width: 1441px) {
     .tagline-h1 {

@@ -213,8 +213,8 @@ body {
 .tagline-h1 {
   font-family: Roboto;
   font-weight: 300;
-  font-size: 7.8vw;
-  line-height: 8.6vw;
+  font-size: 112px;
+  line-height: 124px;
   text-transform: uppercase;
   color: rgb(41, 41, 41);
   padding-left: 96px;
@@ -280,6 +280,11 @@ body {
   .tagline-h1 {
     font-size: 112px;
     line-height: 124px;
+  }
+}
+@media (max-width: 1281px) {
+  .opacity-0-styling {
+    margin-right: -5px;
   }
 }
 .who-we-are {
