@@ -24,7 +24,7 @@ const ts = require("gulp-typescript");
 
 const browserSync = require("browser-sync");
 
-const distDir = "./dist/";
+const distDir = "./public/";
 const srcDir = "./src/";
 
 const htmlFiles = `${srcDir}*.html`;
