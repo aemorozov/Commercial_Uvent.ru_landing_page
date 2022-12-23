@@ -112,6 +112,40 @@
     }
 }
 
+@media (max-width: 1280px) {
+    .tagline {
+        height: 534px;
+    }
+    .opacity-0-styling {
+        margin-right: 0px;
+    }
+    .tagline-h1 {
+        font-size: 82px;
+        line-height: 92px;
+        height: 92px;
+    }
+    .tagline-svg {
+        bottom: 132px;
+        margin-right: 108px;
+    }
+    .tagline-svg-zvezdochka {
+        margin-left: 143px;
+        width: 75px;
+        height: 75px;
+    }
+    .tagline-svg-zavitushka {
+        margin-top: -31px;
+        width: 146px;
+        height: 153px;
+    }
+    .tagline-text-and-svg {
+        height: 380px;
+    }
+    .pre-tagline {
+        height: 470px;
+    }
+}
+
 @media (min-width: 1441px) {
     .tagline-h1 {
         font-size: 112px;
