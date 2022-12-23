@@ -49,7 +49,9 @@ const imgDir = "img/";
 const imgFiles = `${srcDir}${imgDir}**/*`;
 
 const stylesDir = "styles/";
-const styleFiles = `${srcDir}${stylesDir}*.+(css|scss)`;
+const styleFiles = `${srcDir}${stylesDir}*.scss`;
+const criticalCSSFile = `${srcDir}${stylesDir}*.css`;
+// const styleFiles = `${srcDir}${stylesDir}*.+(css|scss)`;
 
 const fontsDir = "fonts/";
 const fontsFiles = `${srcDir}${fontsDir}**/*`;
@@ -125,6 +127,13 @@ const processCriticalCSSForJobs = () => {
   }, timeoutForCreateCriticalCSS);
 };
 
+const processGetCriticalCSSToPublic = () => {
+  return gulp
+    .src(criticalCSSFile)
+    .pipe(gulp.dest(`${distDir}${stylesDir}`))
+    .pipe(browserSync.stream());
+};
+
 const processCriticalCSSForWatcher = () => {
   return run("node createCriticalCSS").exec();
 };
@@ -180,8 +189,12 @@ const jobs = [
   processFonts,
   processVideos,
   // processJS,
-  processCriticalCSSForJobs,
 ];
 
-exports.build = gulp.series(...jobs);
-exports.default = gulp.parallel(...jobs, initBrowserSync, watchDev);
+exports.build = gulp.series(...jobs, processGetCriticalCSSToPublic);
+exports.default = gulp.parallel(
+  ...jobs,
+  processCriticalCSSForJobs,
+  initBrowserSync,
+  watchDev
+);
