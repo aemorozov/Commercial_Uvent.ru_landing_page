@@ -128,7 +128,7 @@ const processCriticalCSSForJobs = () => {
   }, timeoutForCreateCriticalCSS);
 };
 
-const processGetCriticalCSSToPublic = () => {
+const processGetCriticalCSSToPublic = async () => {
   setTimeout(() => {
     return gulp
       .src(criticalCSSFile)
