@@ -13,6 +13,7 @@ const gulpSass = require("gulp-sass");
 const sass = require("sass");
 const concatCss = require("gulp-concat-css");
 const timeoutForCreateCriticalCSS = 15000;
+const timeoutForCreateCriticalCSSToPablic = 20000;
 
 const browserify = require("browserify");
 const source = require("vinyl-source-stream");
@@ -128,10 +129,12 @@ const processCriticalCSSForJobs = () => {
 };
 
 const processGetCriticalCSSToPublic = () => {
-  return gulp
-    .src(criticalCSSFile)
-    .pipe(gulp.dest(`${distDir}${stylesDir}`))
-    .pipe(browserSync.stream());
+  setTimeout(() => {
+    return gulp
+      .src(criticalCSSFile)
+      .pipe(gulp.dest(`${distDir}${stylesDir}`))
+      .pipe(browserSync.stream());
+  });
 };
 
 const processCriticalCSSForWatcher = () => {
@@ -195,6 +198,7 @@ exports.build = gulp.series(...jobs, processGetCriticalCSSToPublic);
 exports.default = gulp.parallel(
   ...jobs,
   processCriticalCSSForJobs,
+  processGetCriticalCSSToPublic,
   initBrowserSync,
   watchDev
 );
