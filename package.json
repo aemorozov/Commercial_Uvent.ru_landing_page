@@ -69,6 +69,7 @@
     ]
   },
   "dependencies": {
+    "dotenv": "^16.0.3",
     "vanilla-text-mask": "^5.1.1"
   },
   "bugs": {
