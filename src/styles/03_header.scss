@@ -15,7 +15,7 @@
 }
   
 .logo {
-    margin-left: 6.7vw;
+    margin-left: 96px;
 }
   
 .logo-img {
@@ -25,7 +25,7 @@
 }
   
 .nav {
-    margin-right: 6.7vw;
+    margin-right: 96px;
     margin-top: -10px;
     display: flex;
     width: 382px;
@@ -60,13 +60,15 @@
     }
 }
 
+@media (max-width: 1350px) {
+    .opacity-0-styling {
+        margin-left: -0.38vw;
+    }
+}
+
 @media (max-width: 1281px) {
     .nav {
-        margin-right: 7.5vw;
         width: 382px;
-    }
-    .logo {
-        margin-left: 7.5vw;
     }
 }
 
@@ -80,6 +82,9 @@
     }
     .logo {
         margin-top: -8px;
+    }
+    .opacity-0-styling {
+        margin-left: 0;
     }
 }
 

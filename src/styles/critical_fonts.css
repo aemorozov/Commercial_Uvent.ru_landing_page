@@ -1,0 +1,8 @@
+/* roboto-300 - cyrillic */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  src: local(""), url("../fonts/roboto-v30-cyrillic-300.woff2") format("woff2"); /* Super Modern Browsers */
+  font-display: fallback;
+}
