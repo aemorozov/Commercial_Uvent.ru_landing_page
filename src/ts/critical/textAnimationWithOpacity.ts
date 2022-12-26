@@ -4,7 +4,9 @@ const speed = 100;
 let symbolID = 0;
 
 addSpansWithOpacity0();
-addOpacity1();
+
+setTimeout(addOpacity1, 1000)
+
 
 function addSpansWithOpacity0() {
   for (let rowNumber = 0; rowNumber < h1Array.length; rowNumber++) {
