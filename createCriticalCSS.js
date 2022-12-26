@@ -3,7 +3,6 @@ const path = require("path");
 const criticalcss = require("criticalcss");
 const fs = require("fs");
 const tmpDir = require("os").tmpdir();
-const dotenv = require("dotenv").config();
 const url = "http://localhost:8080";
 
 const cssUrl = `${url}` + "/styles/style.css";
@@ -18,7 +17,7 @@ request(cssUrl)
       } else {
         criticalcss.findCritical(
           `${url}`,
-          { rules: JSON.parse(output) },
+          { rules: JSON.parse(output), height: 1200, restoreFontFaces: true },
           function (err, output) {
             if (err) {
               console.log(err);
