@@ -86,7 +86,7 @@ const processTS = () => {
     .pipe(gulp.dest(`${distDir}${jsDir}`));
 };
 
-const processCriticalTS = () => {
+const processCriticalTS = async () => {
   setTimeout(() => {
     return gulp
       .src(`${tsCriticalFiles}`)
@@ -142,7 +142,7 @@ const processStyle = () => {
     .pipe(browserSync.stream());
 };
 
-const processCriticalCSS = () => {
+const processCriticalCSS = async () => {
   setTimeout(() => {
     return gulp
       .src("public/styles/style.css")
