@@ -13,7 +13,7 @@ const gulpSass = require("gulp-sass");
 const sass = require("sass");
 const concatCss = require("gulp-concat-css");
 const crittr = require("gulp-crittr");
-const timeForCriticalCSS = 20000;
+const timeForCriticalCSS = 30000;
 
 const browserify = require("browserify");
 const source = require("vinyl-source-stream");
@@ -22,7 +22,7 @@ const sourcemaps = require("gulp-sourcemaps");
 const log = require("gulplog");
 
 const ts = require("gulp-typescript");
-const timeForCriticalTS = 20000;
+const timeForCriticalTS = 30000;
 
 const browserSync = require("browser-sync");
 
@@ -149,7 +149,7 @@ const processCriticalCSS = async () => {
       .pipe(
         crittr({
           out: "critical.css",
-          urls: ["https://aemorozov-uvent.vercel.app/"],
+          urls: ["https://uvent-aemorozov.vercel.app/"],
           width: 1400,
           height: 1200,
         })
@@ -164,9 +164,11 @@ const clean = async () => {
 
 const watchDev = () => {
   gulp.watch(styleFiles, processStyle).on("change", browserSync.reload);
+  gulp.watch(styleFiles, processCriticalCSS).on("change", browserSync.reload);
   gulp.watch(htmlFiles, processHTML).on("change", browserSync.reload);
   gulp.watch(imgFiles, processIMG).on("change", browserSync.reload);
   gulp.watch(tsFiles, processTS).on("change", browserSync.reload);
+  gulp.watch(tsFiles, processCriticalTS).on("change", browserSync.reload);
 };
 
 browserSync.create();
