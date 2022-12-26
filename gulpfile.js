@@ -13,8 +13,7 @@ const gulpSass = require("gulp-sass");
 const sass = require("sass");
 const concatCss = require("gulp-concat-css");
 const crittr = require("gulp-crittr");
-const timeoutForCreateCriticalCSS = 15000;
-const timeoutForCreateCriticalCSSToPublic = 20000;
+const timeForCriticalCSS = 20000;
 
 const browserify = require("browserify");
 const source = require("vinyl-source-stream");
@@ -23,6 +22,7 @@ const sourcemaps = require("gulp-sourcemaps");
 const log = require("gulplog");
 
 const ts = require("gulp-typescript");
+const timeForCriticalTS = 20000;
 
 const browserSync = require("browser-sync");
 
@@ -46,6 +46,7 @@ const jsDir = "js/";
 
 const tsDir = "ts/";
 const tsFiles = [`${srcDir}${tsDir}*.ts`];
+const tsCriticalFiles = [`${srcDir}${tsDir}critical/*.ts`];
 
 const imgDir = "img/";
 const imgFiles = `${srcDir}${imgDir}**/*`;
@@ -85,6 +86,26 @@ const processTS = () => {
     .pipe(gulp.dest(`${distDir}${jsDir}`));
 };
 
+const processCriticalTS = () => {
+  setTimeout(() => {
+    return gulp
+      .src(`${tsCriticalFiles}`)
+      .pipe(sourcemaps.init({ loadMaps: true }))
+      .pipe(
+        ts({
+          noImplicitAny: true,
+          module: "amd",
+          moduleResolution: "node",
+          outFile: `critical.js`,
+        })
+      )
+      .pipe(jsMinify())
+      .on("error", log.error)
+      .pipe(sourcemaps.write("./"))
+      .pipe(gulp.dest(`${distDir}${jsDir}critical/`));
+  }, timeForCriticalTS);
+};
+
 // const processJS = () => {
 //   return browserify({
 //     entries: jsInput,
@@ -121,7 +142,7 @@ const processStyle = () => {
     .pipe(browserSync.stream());
 };
 
-const processCriticalCSS = async () => {
+const processCriticalCSS = () => {
   setTimeout(() => {
     return gulp
       .src("public/styles/style.css")
@@ -133,8 +154,8 @@ const processCriticalCSS = async () => {
           height: 1200,
         })
       )
-      .pipe(gulp.dest("public/styles/critical.css"));
-  }, 15000);
+      .pipe(gulp.dest("public/styles/stylescritical.css"));
+  }, timeForCriticalCSS);
 };
 
 const clean = async () => {
@@ -177,10 +198,11 @@ const processVideos = () => {
 
 const jobs = [
   clean,
+  processStyle,
   processHTML,
   processTS,
+  processCriticalTS,
   processIMG,
-  processStyle,
   processFonts,
   processVideos,
   processCriticalCSS,
