@@ -31,7 +31,7 @@ const srcDir = "./src/";
 
 const htmlFiles = `${srcDir}*.html`;
 
-// const jsDir = "js/";
+const jsDir = "js/";
 // const jsFiles = [
 //   `${srcDir}${jsDir}*.js`,
 //   `!${srcDir}${jsDir}_circleText_not_used_port_TS.js`,
