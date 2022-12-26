@@ -106,6 +106,13 @@
     margin-bottom: -360px;
   }
 
+@media (min-width: 1441px) {
+    .tagline-h1 {
+        font-size: 112px;
+        line-height: 124px;
+    }
+}
+
 @media (max-width: 1281px) {
     .opacity-0-styling {
         margin-right: -5px;
@@ -146,10 +153,31 @@
     }
 }
 
-@media (min-width: 1441px) {
+@media (max-width: 1024px) {
     .tagline-h1 {
-        font-size: 112px;
-        line-height: 124px;
+        font-size: 62px;
+        line-height: 72px;
+        height: 72px;
+        text-align: center;
+        width: 100%;
+        padding-left: 0px;
     }
-
+    .tagline-svg {
+        bottom: -30px;
+        margin-right: 50%;
+        transform: translateX(60%);
+    }
+    .tagline-svg-zvezdochka {
+        margin-left: 123px;
+        width: 60px;
+        height: 60px;
+    }
+    .tagline-svg-zavitushka {
+        margin-top: -24px;
+        width: 127px;
+        height: 129px;
+    }
+    .tagline-social-buttons {
+        margin-right: 54px;
+    }
 }
