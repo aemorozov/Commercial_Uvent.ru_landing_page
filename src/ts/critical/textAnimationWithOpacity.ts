@@ -12,7 +12,7 @@ function addSpansWithOpacity0() {
   for (let rowNumber = 0; rowNumber < h1Array.length; rowNumber++) {
     const textContent = h1Array[rowNumber].textContent;
     
-    if (!textContent || window.innerWidth < 1023) {
+    if (!textContent) {
       return
     }
     
