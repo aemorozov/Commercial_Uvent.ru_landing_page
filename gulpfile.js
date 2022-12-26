@@ -31,18 +31,18 @@ const srcDir = "./src/";
 
 const htmlFiles = `${srcDir}*.html`;
 
-const jsDir = "js/";
-const jsFiles = [
-  `${srcDir}${jsDir}*.js`,
-  `!${srcDir}${jsDir}_circleText_not_used_port_TS.js`,
-  `!${srcDir}${jsDir}_phoneNumber_not_used_port_TS.js`,
-  `!${srcDir}${jsDir}_videoControl_not_used_port_TS.js`,
-  `!${srcDir}${jsDir}_textAnimation_not_used.js`,
-  `!${srcDir}${jsDir}_textAnimationWithOpacity_not_used_port_TS.js`,
-];
-const jsInput = `${srcDir}${jsDir}app.js`;
+// const jsDir = "js/";
+// const jsFiles = [
+//   `${srcDir}${jsDir}*.js`,
+//   `!${srcDir}${jsDir}_circleText_not_used_port_TS.js`,
+//   `!${srcDir}${jsDir}_phoneNumber_not_used_port_TS.js`,
+//   `!${srcDir}${jsDir}_videoControl_not_used_port_TS.js`,
+//   `!${srcDir}${jsDir}_textAnimation_not_used.js`,
+//   `!${srcDir}${jsDir}_textAnimationWithOpacity_not_used_port_TS.js`,
+// ];
+// const jsInput = `${srcDir}${jsDir}app.js`;
 // const jsInput = `${srcDir}${jsDir}index.js`;
-const jsOutput = "app.js";
+// const jsOutput = "app.js";
 
 const tsDir = "ts/";
 const tsFiles = [`${srcDir}${tsDir}*.ts`];
@@ -52,8 +52,6 @@ const imgFiles = `${srcDir}${imgDir}**/*`;
 
 const stylesDir = "styles/";
 const styleFiles = `${srcDir}${stylesDir}*.scss`;
-const criticalCSSFile = `${srcDir}${stylesDir}*.css`;
-// const styleFiles = `${srcDir}${stylesDir}*.+(css|scss)`;
 
 const fontsDir = "fonts/";
 const fontsFiles = `${srcDir}${fontsDir}**/*`;
@@ -123,25 +121,6 @@ const processStyle = () => {
     .pipe(browserSync.stream());
 };
 
-// const processCriticalCSSForJobs = () => {
-//   setTimeout(() => {
-//     return run("node createCriticalCSS").exec();
-//   }, timeoutForCreateCriticalCSS);
-// };
-
-// const processGetCriticalCSSToPublic = async () => {
-//   setTimeout(() => {
-//     return gulp
-//       .src(criticalCSSFile)
-//       .pipe(gulp.dest(`${distDir}${stylesDir}`))
-//       .pipe(browserSync.stream());
-//   }, timeoutForCreateCriticalCSSToPublic);
-// };
-
-// const processCriticalCSSForWatcher = () => {
-//   return run("node createCriticalCSS").exec();
-// };
-
 const processCriticalCSS = async () => {
   setTimeout(() => {
     return gulp
@@ -164,11 +143,7 @@ const clean = async () => {
 
 const watchDev = () => {
   gulp.watch(styleFiles, processStyle).on("change", browserSync.reload);
-  // gulp
-  //   .watch(styleFiles, processCriticalCSSForWatcher)
-  //   .on("change", browserSync.reload);
   gulp.watch(htmlFiles, processHTML).on("change", browserSync.reload);
-  // gulp.watch(jsFiles, processJS).on("change", browserSync.reload);
   gulp.watch(imgFiles, processIMG).on("change", browserSync.reload);
   gulp.watch(tsFiles, processTS).on("change", browserSync.reload);
 };
@@ -209,17 +184,7 @@ const jobs = [
   processFonts,
   processVideos,
   processCriticalCSS,
-  // processJS,
 ];
 
-exports.build = gulp.series(
-  ...jobs
-  // , processGetCriticalCSSToPublic
-);
-exports.default = gulp.parallel(
-  ...jobs,
-  // processCriticalCSSForJobs,
-  // processGetCriticalCSSToPublic,
-  initBrowserSync,
-  watchDev
-);
+exports.build = gulp.series(...jobs);
+exports.default = gulp.parallel(...jobs, initBrowserSync, watchDev);
