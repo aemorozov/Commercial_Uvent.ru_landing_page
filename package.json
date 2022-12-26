@@ -22,6 +22,7 @@
     "gulp-clean-css": "^4.3.0",
     "gulp-concat-css": "^3.1.0",
     "gulp-critical-css": "^1.0.1",
+    "gulp-crittr": "^1.0.8",
     "gulp-group-css-media-queries": "^1.2.2",
     "gulp-htmlmin": "^5.0.1",
     "gulp-imagemin": "7",

@@ -12,8 +12,9 @@ const gcssmq = require("gulp-group-css-media-queries");
 const gulpSass = require("gulp-sass");
 const sass = require("sass");
 const concatCss = require("gulp-concat-css");
+const crittr = require("gulp-crittr");
 const timeoutForCreateCriticalCSS = 15000;
-const timeoutForCreateCriticalCSSToPablic = 20000;
+const timeoutForCreateCriticalCSSToPublic = 20000;
 
 const browserify = require("browserify");
 const source = require("vinyl-source-stream");
@@ -122,23 +123,39 @@ const processStyle = () => {
     .pipe(browserSync.stream());
 };
 
-const processCriticalCSSForJobs = () => {
-  setTimeout(() => {
-    return run("node createCriticalCSS").exec();
-  }, timeoutForCreateCriticalCSS);
-};
+// const processCriticalCSSForJobs = () => {
+//   setTimeout(() => {
+//     return run("node createCriticalCSS").exec();
+//   }, timeoutForCreateCriticalCSS);
+// };
 
-const processGetCriticalCSSToPublic = async () => {
+// const processGetCriticalCSSToPublic = async () => {
+//   setTimeout(() => {
+//     return gulp
+//       .src(criticalCSSFile)
+//       .pipe(gulp.dest(`${distDir}${stylesDir}`))
+//       .pipe(browserSync.stream());
+//   }, timeoutForCreateCriticalCSSToPublic);
+// };
+
+// const processCriticalCSSForWatcher = () => {
+//   return run("node createCriticalCSS").exec();
+// };
+
+const processCriticalCSS = async () => {
   setTimeout(() => {
     return gulp
-      .src(criticalCSSFile)
-      .pipe(gulp.dest(`${distDir}${stylesDir}`))
-      .pipe(browserSync.stream());
-  });
-};
-
-const processCriticalCSSForWatcher = () => {
-  return run("node createCriticalCSS").exec();
+      .src("public/styles/style.css")
+      .pipe(
+        crittr({
+          out: "critical.css",
+          urls: ["https://aemorozov-uvent.vercel.app/"],
+          width: 1400,
+          height: 1200,
+        })
+      )
+      .pipe(gulp.dest("public/styles/critical.css"));
+  }, 15000);
 };
 
 const clean = async () => {
@@ -147,9 +164,9 @@ const clean = async () => {
 
 const watchDev = () => {
   gulp.watch(styleFiles, processStyle).on("change", browserSync.reload);
-  gulp
-    .watch(styleFiles, processCriticalCSSForWatcher)
-    .on("change", browserSync.reload);
+  // gulp
+  //   .watch(styleFiles, processCriticalCSSForWatcher)
+  //   .on("change", browserSync.reload);
   gulp.watch(htmlFiles, processHTML).on("change", browserSync.reload);
   // gulp.watch(jsFiles, processJS).on("change", browserSync.reload);
   gulp.watch(imgFiles, processIMG).on("change", browserSync.reload);
@@ -191,14 +208,18 @@ const jobs = [
   processStyle,
   processFonts,
   processVideos,
+  processCriticalCSS,
   // processJS,
 ];
 
-exports.build = gulp.series(...jobs, processGetCriticalCSSToPublic);
+exports.build = gulp.series(
+  ...jobs
+  // , processGetCriticalCSSToPublic
+);
 exports.default = gulp.parallel(
   ...jobs,
-  processCriticalCSSForJobs,
-  processGetCriticalCSSToPublic,
+  // processCriticalCSSForJobs,
+  // processGetCriticalCSSToPublic,
   initBrowserSync,
   watchDev
 );

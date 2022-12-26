@@ -50,7 +50,7 @@
       crossorigin
     />
     <!-- <link href="styles/critical_fonts.css" rel="stylesheet" type="text/css" /> -->
-    <link href="styles/critical.css" rel="stylesheet" type="text/css" />
+    <link href="styles/stylescritical.css" rel="stylesheet" type="text/css" />
     <link rel="canonical" href="https://uvent.ru" />
     <link rel="alternate" hreflang="ru" href="http://uvent.ru" />
     <link rel="shortlink" href="https://uvent.ru/" />
@@ -748,7 +748,10 @@
   <script src="js/app.js" async></script>
   <link
     href="styles/style.css"
-    rel="stylesheet"
+    rel="preload"
+    as="style"
+    onload="this.rel='stylesheet'"
+    media="all"
     type="text/css"
     id="style"
     async
