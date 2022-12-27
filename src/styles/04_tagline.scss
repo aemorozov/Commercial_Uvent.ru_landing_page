@@ -230,4 +230,64 @@
         border-radius: 0 0 0 132px;
         padding-top: 46px;
     }
+    .tagline-svg-zvezdochka-mobile-menu {
+        position: absolute;
+        top: 170px;
+        right: 21px;
+        width: 50px;
+        height: 50px;    
+    }
+    .how-we-are-working-zvezdochka-mobile-menu {
+        position: absolute;
+        height: 90px;
+        width: 90px;
+        right: 26%;
+        top: 415px;
+    }
+    .tagline-svg-zavitushka-mobile-menu {
+        position: absolute;
+        height: 90px;
+        width: 90px;
+        left: 29.5%;
+        top: 487px;
+        transform: rotateZ(353deg);
+    }
+}
+
+@media (max-width: 539px) {
+    .tagline {
+        height: 360px;
+    }
+    .pre-tagline {
+        height: 250px;
+    }
+    .tagline-text-and-svg {
+        height: 250px;
+    }
+    .tagline-h1 {
+        font-size: 38px;
+        line-height: 46px;
+        height: 46px;
+    }
+    .tagline-svg {
+        bottom: -23px;
+    }
+    .tagline-svg-zvezdochka {
+        margin-left: 73px;
+        width: 40px;
+        height: 40px;
+    }
+    .tagline-svg-zavitushka {
+        margin-top: 2px;
+        width: 70px;
+        height: 70px;
+    }
+}
+
+@media (max-width: 429px) {
+    .tagline-h1 {
+        font-size: 30px;
+        line-height: 36px;
+        height: 36px;
+    }    
 }
