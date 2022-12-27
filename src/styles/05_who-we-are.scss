@@ -75,3 +75,80 @@
     line-height: 30px;
   }
 }
+
+@media (max-width: 1024px) {
+  .who-we-are {
+    flex-direction: column;
+  }
+  .who-we-are-text {
+    width: 100%;
+    padding-left: 0;
+    text-align: center;
+    height: 426px;
+  }
+  .who-we-are-h2 {
+    margin-top: 45px;
+    margin-bottom: 138px;
+  }
+  .who-we-are-img {
+    width: 100%;
+    height: 695px;
+    background: url(../img/1024/who-we-are/Rectangle-39372_1_.webp);
+    background-position: center;
+    background-size: cover;
+  }
+  .zvezdochka {
+    top: 413px;
+    right: -14px;
+  }
+}
+
+@media (max-width: 744px) {
+  .who-we-are-text {
+    border-radius: 132px 0 0 0;
+    height: 335px;
+  }
+  .who-we-are-h2 {
+    font-size: 30px;
+    line-height: 36px;
+    margin-top: 17px;
+  }
+  .who-we-are-h3 {
+    font-size: 20px;
+    line-height: 22px;
+  }
+  .who-we-are-img {
+    height: 496px;
+  }
+  .zvezdochka {
+    top: 301px;
+    right: -5px;
+    width: 87px;
+  }
+}
+
+@media (max-width: 429px) {
+  .who-we-are-h2 {
+    font-size: 28px;
+    line-height: 32px;
+    margin-bottom: 100px;
+  }
+  .who-we-are-h3 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .who-we-are-img {
+    height: 282px;
+  }
+  .zvezdochka {
+    top: 100px;
+  }
+  .who-we-are-text {
+    height: 269px;
+  }
+  .zvezdochka {
+    top: 124px;
+    right: -8px;
+    width: 87px;
+}
+}
