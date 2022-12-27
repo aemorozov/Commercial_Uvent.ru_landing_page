@@ -76,6 +76,12 @@
   }
 }
 
+@media (max-width: 1050px) {
+  .who-we-are-text {
+    width: 530px;
+}
+}
+
 @media (max-width: 1024px) {
   .who-we-are {
     flex-direction: column;
