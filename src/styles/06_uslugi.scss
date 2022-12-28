@@ -12,7 +12,7 @@
   .uslugi-content {
     max-width: 1440px;
     margin: 0 auto;
-    margin-left: 95px;
+    // margin-left: 95px;
     margin-top: 120px;
   }
   
@@ -21,15 +21,23 @@
     font-size: 64px;
     line-height: 72px;
     color: $color-for-links;
+    margin-left: 95px;
+  }
+
+  .for-slider {
+    max-width: 1440px;
+    overflow: hidden;
   }
   
   .uslugi-for-circles {
     display: flex;
-    margin-top: 165px;
-    max-width: 1285px;
-    width: 100%;
-    overflow: hidden;
-    padding-left: 60px;
+    margin-top: 113px;
+    margin-left: 95px;
+    // max-width: 1285px;
+    width: fit-content;
+    // overflow: hidden;
+    // padding-left: 60px;
+    transition: 0.5s ease;
   }
   
   .uslugi-circle1,
@@ -45,6 +53,10 @@
     height: 500px;
     border-radius: 50%;
     margin-left: -59px;
+  }
+
+  .uslugi-circle1:first-child {
+    margin-left: 0px;
   }
   
   .uslugi-circle1,
@@ -115,7 +127,7 @@
     justify-content: space-between;
     margin-left: -2.5%;
     position: absolute;
-    top: 450px;
+    top: 458px;
     z-index: 100;
     display: none;
   }
@@ -125,6 +137,7 @@
     height: 67.87px;
     background: #fff;
     border-radius: 50%;
+    cursor: pointer;
   }
 
   .arrow-left-img, .arrow-right-img {
@@ -179,7 +192,7 @@
     margin-top: 110px;
   }
   .uslugi-for-circles {
-    margin-top: 157px;
+    margin-top: 115px;
   }
   
 }
@@ -191,10 +204,11 @@
 }
 .uslugi-h2 {
   text-align: center;
+  margin-left: 0px;
 }
 .uslugi-for-circles {
   margin-left: 45px;
-  margin-top: 77px;
+  margin-top: 38px;
 }
 }
 
@@ -229,7 +243,7 @@
     margin: -48px auto;
   }
   .uslugi-for-circles {
-    margin-left: 16px;
-    margin-top: 40px;
+    margin-left: 40px;
+    margin-top: 13px;
 }
 }
