@@ -78,12 +78,12 @@ setTimeout(() => {
             function move() {
                 const deltaX = coordinates[0] - coordinates[1]
                 console.log('coordinates', coordinates, 'deltaX', deltaX)
-                if(deltaX > 200 && margin > redLineForMovingToLeft) {
+                if(deltaX > 100 && margin > redLineForMovingToLeft) {
                     toLeft()
                     addNewMargin()
                     coordinates[0] = coordinates[1]
                 }
-                else if(deltaX < -200 && margin < redLineForMovingToRight) {
+                else if(deltaX < -100 && margin < redLineForMovingToRight) {
                     toRight()
                     addNewMargin()
                     coordinates[0] = coordinates[1]
