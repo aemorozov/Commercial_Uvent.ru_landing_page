@@ -4,19 +4,43 @@ const buttonRight: HTMLElement | null = document.querySelector('.arrow-right')
 const arrowsAria: HTMLElement | null = document.querySelector('.arrows')
 const timeToTakeTheMarginLeft = 500
 const screenWidth = window.innerWidth
-const shift = 461
 const correctionDeltaX = 1
 const correctionDeltaY = 1
 const step = 5
 let enabled: Boolean = true
 let redLineForMovingToLeft = -1650
+let shift = 461
 
 setTimeout(() => {
 
     if(fieldServices) {
 
-        if(screenWidth < 1440 && screenWidth > 740) redLineForMovingToLeft = -1600
-        else if(screenWidth < 741) redLineForMovingToLeft = -700
+        if(screenWidth < 1440 && screenWidth > 1200) {
+            redLineForMovingToLeft = -1100
+            shift = 330
+        }
+        else if(screenWidth <= 1200 && screenWidth > 1000) {
+            redLineForMovingToLeft = -1300
+            shift = 300
+        }
+        else if(screenWidth <= 1000 && screenWidth > 744) {
+            redLineForMovingToLeft = -1600
+            shift = 280
+        }
+        else if(screenWidth <= 744 && screenWidth > 550) {
+            redLineForMovingToLeft = -900
+            shift = 240
+        }
+        else if(screenWidth <= 550 && screenWidth > 400) {
+            redLineForMovingToLeft = -1000
+            shift = 210
+        }
+        else if(screenWidth <= 400) {
+            redLineForMovingToLeft = -1100
+            shift = 190
+        }
+        
+
 
         let margin = fieldServices.offsetLeft
         let redLineForMovingToRight = margin - 1
@@ -63,6 +87,7 @@ setTimeout(() => {
             const coordinates = [0, 0]
 
             function saveStartX(event: TouchEvent) {
+                event.preventDefault()
                 const screenX = Math.floor(event.changedTouches[0].clientX)
                 coordinates[0] = screenX
                     fieldServices?.addEventListener('touchmove', saveActualX)
@@ -70,6 +95,7 @@ setTimeout(() => {
             }
 
             function saveActualX(event: TouchEvent) {
+                event.preventDefault()
                 const clientX = Math.floor(event.changedTouches[0].clientX)
                 coordinates[1] = clientX
                 move()
