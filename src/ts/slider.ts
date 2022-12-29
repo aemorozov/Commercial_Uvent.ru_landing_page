@@ -1,13 +1,15 @@
 const fieldServices: HTMLElement | null = document.querySelector('.uslugi-for-circles')
 const buttonLeft: HTMLElement | null = document.querySelector('.arrow-left')
 const buttonRight: HTMLElement | null = document.querySelector('.arrow-right')
+const arrowsAria: HTMLElement | null = document.querySelector('.arrows')
+const timeToTakeTheMarginLeft = 500
 const screenWidth = window.innerWidth
-const shift = 500
+const shift = 461
 const correctionDeltaX = 1
 const correctionDeltaY = 1
 const step = 5
 let enabled: Boolean = true
-let redLineForMovingToLeft = -1900
+let redLineForMovingToLeft = -1650
 
 setTimeout(() => {
 
@@ -19,46 +21,74 @@ setTimeout(() => {
         let margin = fieldServices.offsetLeft
         let redLineForMovingToRight = margin - 1
 
-        if(margin) {
-            fieldServices.addEventListener('wheel', getDelta)
-
-            function getDelta(i: WheelEvent) {
-                enabled = false
+        wheel()
+        touch()
+        buttons()
+        
+        function wheel() {
+            fieldServices?.addEventListener('wheel', moveForWheel)
+            arrowsAria?.addEventListener('wheel', moveForWheel)
+            function moveForWheel(i: WheelEvent): void {
                 i.preventDefault()
-                let delta = Math.floor((i.deltaX / correctionDeltaX) || (i.deltaY / correctionDeltaY))
-                if (delta > step || delta < -step && enabled) {  
-                    motion(delta)
+                const delta = Math.floor((i.deltaX / correctionDeltaX) || (i.deltaY / correctionDeltaY))
+                if ((delta > step || delta < -step) && enabled === true) {
+                    if(delta < 0 && margin < redLineForMovingToRight) toRight()
+                    if(delta > 0 && margin > redLineForMovingToLeft) toLeft()
                     addNewMargin()
                 }
-                checkedTrueOrFalse()
-                // console.log('margin:', margin, 'delta:', delta, 'enabled:', enabled)
             }
-    
-            function motion(delta: Number) {
-                if(delta < 0 && margin < redLineForMovingToRight) {
-                    toRight()
-                }
-                if(delta > 0 && margin > redLineForMovingToLeft) {
-                    toLeft()
-                }
-            }
+            checkedTrueOrFalse()
         }
 
-        if(buttonLeft && buttonRight) {
-            buttonLeft.addEventListener('click', () => {
+        function buttons() {
+            buttonLeft?.addEventListener('click', () => {
                 if(margin < redLineForMovingToRight) {
                     toRight()
                     addNewMargin()
                     checkedTrueOrFalse()
                 }
             })
-            buttonRight.addEventListener('click', () => {
+            buttonRight?.addEventListener('click', () => {
                 if(margin > redLineForMovingToLeft) {
                     toLeft()
                     addNewMargin()
                     checkedTrueOrFalse()
                 }
             })
+        }
+
+        function touch() {
+            fieldServices?.addEventListener('touchstart', saveStartX)
+            arrowsAria?.addEventListener('touchstart', saveStartX)
+            const coordinates = [0, 0]
+
+            function saveStartX(event: TouchEvent) {
+                const screenX = Math.floor(event.changedTouches[0].clientX)
+                coordinates[0] = screenX
+                    fieldServices?.addEventListener('touchmove', saveActualX)
+                    arrowsAria?.addEventListener('touchmove', saveActualX)
+            }
+
+            function saveActualX(event: TouchEvent) {
+                const clientX = Math.floor(event.changedTouches[0].clientX)
+                coordinates[1] = clientX
+                move()
+            }
+
+            function move() {
+                const deltaX = coordinates[0] - coordinates[1]
+                console.log('coordinates', coordinates, 'deltaX', deltaX)
+                if(deltaX > 200 && margin > redLineForMovingToLeft) {
+                    toLeft()
+                    addNewMargin()
+                    coordinates[0] = coordinates[1]
+                }
+                else if(deltaX < -200 && margin < redLineForMovingToRight) {
+                    toRight()
+                    addNewMargin()
+                    coordinates[0] = coordinates[1]
+                }
+            }
         }
 
         function addNewMargin() {
@@ -68,21 +98,19 @@ setTimeout(() => {
         }
 
         function toRight() {
+            enabled = false  
             margin += shift
         }
 
         function toLeft() {
+            enabled = false  
             margin -= shift
         }
 
         function checkedTrueOrFalse() {
-            console.log('before', enabled)
-            if(fieldServices) {
-                fieldServices.addEventListener("transitionend", () => {
-                    enabled = true
-                    console.log('after', enabled)
-                })
-            }
+            fieldServices?.addEventListener("transitionend", () => {
+                enabled = true
+            })
         }
     }
-}, 500)
+}, timeToTakeTheMarginLeft)
