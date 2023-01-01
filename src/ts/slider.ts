@@ -88,11 +88,12 @@ setTimeout(() => {
             const coordinates = [0, 0]
             // fieldServices?.style.overflowX = 'auto';
 
+            let screenX: number
             let screenY: number
-
+            
             function saveStartX(event: TouchEvent) {
                 // event.preventDefault()
-                const screenX = Math.floor(event.changedTouches[0].clientX)
+                screenX = Math.floor(event.changedTouches[0].clientX)
                 screenY = Math.floor(event.changedTouches[0].clientY)
                 coordinates[0] = screenX
                     fieldServices?.addEventListener('touchmove', saveActualX)
@@ -102,24 +103,23 @@ setTimeout(() => {
             function saveActualX(event: TouchEvent) {
                 const clientY = Math.floor(event.changedTouches[0].clientY)
                 console.log('screenY', screenY, 'clientY', clientY)
-                if(Math.abs(screenY - clientY) < 5) {
+                if(Math.abs(screenY - clientY) < 10) {
                     event.preventDefault()
                     const clientX = Math.floor(event.changedTouches[0].clientX)
                     coordinates[1] = clientX
                     move()
                 }
-                
             }
 
             function move() {
                 const deltaX = coordinates[0] - coordinates[1]
                 console.log('coordinates', coordinates, 'deltaX', deltaX)
-                if(deltaX > 30 && margin > redLineForMovingToLeft) {
+                if(deltaX > 40 && margin > redLineForMovingToLeft) {
                     toLeft()
                     addNewMargin()
                     coordinates[0] = coordinates[1]
                 }
-                else if(deltaX < -30 && margin < redLineForMovingToRight) {
+                else if(deltaX < -40 && margin < redLineForMovingToRight) {
                     toRight()
                     addNewMargin()
                     coordinates[0] = coordinates[1]
