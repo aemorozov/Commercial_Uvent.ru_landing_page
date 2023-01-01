@@ -102,7 +102,7 @@ setTimeout(() => {
             function saveActualX(event: TouchEvent) {
                 const clientY = Math.floor(event.changedTouches[0].clientY)
                 console.log('screenY', screenY, 'clientY', clientY)
-                if(Math.abs(screenY - clientY) < 20) {
+                if(Math.abs(screenY - clientY) < 5) {
                     event.preventDefault()
                     const clientX = Math.floor(event.changedTouches[0].clientX)
                     coordinates[1] = clientX
@@ -114,12 +114,12 @@ setTimeout(() => {
             function move() {
                 const deltaX = coordinates[0] - coordinates[1]
                 console.log('coordinates', coordinates, 'deltaX', deltaX)
-                if(deltaX > 100 && margin > redLineForMovingToLeft) {
+                if(deltaX > 30 && margin > redLineForMovingToLeft) {
                     toLeft()
                     addNewMargin()
                     coordinates[0] = coordinates[1]
                 }
-                else if(deltaX < -100 && margin < redLineForMovingToRight) {
+                else if(deltaX < -30 && margin < redLineForMovingToRight) {
                     toRight()
                     addNewMargin()
                     coordinates[0] = coordinates[1]
