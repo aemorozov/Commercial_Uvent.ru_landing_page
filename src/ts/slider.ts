@@ -86,7 +86,6 @@ setTimeout(() => {
 
         function touch() {
             body?.addEventListener('touchstart', addOverflowX)
-            // arrowsAria?.addEventListener('touchstart', addOverflowX)
 
             function addOverflowX() {
                 if(forSlider) forSlider.style.overflowX = 'auto'

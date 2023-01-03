@@ -2,7 +2,7 @@
 
 .uslugi {
     width: 100%;
-    height: 900px;
+    height: 806px;
     background: $color-for-background;
     margin-top: -25px;
     box-sizing: border-box;
@@ -161,28 +161,31 @@
 }
 
 @media (max-width: 1439px) {
+  .uslugi {
+    height: 707px;
+  }
   .uslugi-circle1, .uslugi-circle2, .uslugi-circle3, .uslugi-circle4, .uslugi-circle5, .uslugi-circle6, .uslugi-circle7 {
     min-width: 400px;
     width: 400px;
     height: 400px;
     margin-left: -59px;
-}
-.text-for-circle-in-js {
-  margin-top: 179px;
-  margin-left: 250px;
-}
-.circle-text {
-  font-size: 32px;
-  display: inline-block;
-  width: 25px;
-  position: absolute;
-  transform: translate(-63.5px,0) rotate(var(--rot)) translate(0,-160px);
-}
-.uslugi-circle1-img, .uslugi-circle2-img, .uslugi-circle3-img, .uslugi-circle4-img, .uslugi-circle5-img, .uslugi-circle6-img, .uslugi-circle7-img {
-  width: 230px;
-  height: 230px;
-  margin: -92px auto;
-}
+  }
+  .text-for-circle-in-js {
+    margin-top: 179px;
+    margin-left: 250px;
+  }
+  .circle-text {
+    font-size: 32px;
+    display: inline-block;
+    width: 25px;
+    position: absolute;
+    transform: translate(-63.5px,0) rotate(var(--rot)) translate(0,-160px);
+  }
+  .uslugi-circle1-img, .uslugi-circle2-img, .uslugi-circle3-img, .uslugi-circle4-img, .uslugi-circle5-img, .uslugi-circle6-img, .uslugi-circle7-img {
+    width: 230px;
+    height: 230px;
+    margin: -92px auto;
+  }
 }
 
 @media (max-width: 1280px) {
