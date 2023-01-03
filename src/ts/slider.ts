@@ -1,4 +1,4 @@
-const body: HTMLElement | null = document.querySelector('.body')
+const body: HTMLElement | null = document.querySelector('body')
 const forSlider: HTMLElement | null = document.querySelector('.for-slider')
 const fieldServices: HTMLElement | null = document.querySelector('.uslugi-for-circles')
 const buttonLeft: HTMLElement | null = document.querySelector('.arrow-left')
