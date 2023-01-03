@@ -178,6 +178,10 @@
     display: block;
   }
 
+  .zvezda1-for-1439 {
+    display: none;
+  }
+
   @media (max-width: 1439px) {
     .for-overflow {
       overflow-x: auto;
@@ -188,7 +192,19 @@
     }
     .how-we-are-working-content {
       margin-left: 0px;
+      position: relative;
     }
+    .zvezda1-for-1439 {
+      display: block;
+      position:absolute;
+      top: -69px;
+    left: 680px;
+    }
+    .zvezda1-for-1439-img {
+      width: 100px;
+      height:100px;
+    }
+    
     .how-we-are-working-h2 {
       margin-left: 95px;
     }
@@ -219,7 +235,6 @@
       border: 2px solid rgba(254, 212, 103, 1);
       margin-right: 95px;
     }
-    
     .item1-p-disp-none,
     .item2-p-disp-none,
     .item3-p-disp-none,
@@ -252,6 +267,15 @@
     }
     .how-we-are-working-flex-item4:hover .zvezda4 {
       display: none;
+    }
+    .how-we-are-working-flex-item1:hover{
+      border: 2px solid rgba(64, 216, 201, 1);
+    }
+    .how-we-are-working-flex-item3:hover {
+      border: 2px solid rgba(61, 176, 240, 1);
+    }
+    .how-we-are-working-flex-item4:hover {
+      border: 2px solid rgba(254, 212, 103, 1);
     }
   }
 
