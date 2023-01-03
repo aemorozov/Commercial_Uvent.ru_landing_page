@@ -1,3 +1,4 @@
+const body: HTMLElement | null = document.querySelector('.body')
 const forSlider: HTMLElement | null = document.querySelector('.for-slider')
 const fieldServices: HTMLElement | null = document.querySelector('.uslugi-for-circles')
 const buttonLeft: HTMLElement | null = document.querySelector('.arrow-left')
@@ -84,58 +85,58 @@ setTimeout(() => {
         }
 
         function touch() {
-            fieldServices?.addEventListener('touchstart', addOverflowX)
-            arrowsAria?.addEventListener('touchstart', addOverflowX)
+            fieldServices?.addEventListener('body', addOverflowX)
+            // arrowsAria?.addEventListener('touchstart', addOverflowX)
 
             function addOverflowX() {
                 if(forSlider) forSlider.style.overflowX = 'auto'
             }
         }
 
-        function touch_old() {
-            fieldServices?.addEventListener('touchstart', saveStartX)
-            arrowsAria?.addEventListener('touchstart', saveStartX)
-            const coordinates = [0, 0]
-            // fieldServices?.style.overflowX = 'auto';
+        // function touch_old() {
+        //     fieldServices?.addEventListener('touchstart', saveStartX)
+        //     arrowsAria?.addEventListener('touchstart', saveStartX)
+        //     const coordinates = [0, 0]
+        //     // fieldServices?.style.overflowX = 'auto';
 
-            let screenX: number
-            let screenY: number
+        //     let screenX: number
+        //     let screenY: number
             
-            function saveStartX(event: TouchEvent) {
-                // event.preventDefault()
-                screenX = Math.floor(event.changedTouches[0].clientX)
-                screenY = Math.floor(event.changedTouches[0].clientY)
-                coordinates[0] = screenX
-                    fieldServices?.addEventListener('touchmove', saveActualX)
-                    arrowsAria?.addEventListener('touchmove', saveActualX)
-            }
+        //     function saveStartX(event: TouchEvent) {
+        //         // event.preventDefault()
+        //         screenX = Math.floor(event.changedTouches[0].clientX)
+        //         screenY = Math.floor(event.changedTouches[0].clientY)
+        //         coordinates[0] = screenX
+        //             fieldServices?.addEventListener('touchmove', saveActualX)
+        //             arrowsAria?.addEventListener('touchmove', saveActualX)
+        //     }
 
-            function saveActualX(event: TouchEvent) {
-                const clientY = Math.floor(event.changedTouches[0].clientY)
-                console.log('screenY', screenY, 'clientY', clientY)
-                if(Math.abs(screenY - clientY) < 20) {
-                    event.preventDefault()
-                    const clientX = Math.floor(event.changedTouches[0].clientX)
-                    coordinates[1] = clientX
-                    move()
-                }
-            }
+        //     function saveActualX(event: TouchEvent) {
+        //         const clientY = Math.floor(event.changedTouches[0].clientY)
+        //         console.log('screenY', screenY, 'clientY', clientY)
+        //         if(Math.abs(screenY - clientY) < 20) {
+        //             event.preventDefault()
+        //             const clientX = Math.floor(event.changedTouches[0].clientX)
+        //             coordinates[1] = clientX
+        //             move()
+        //         }
+        //     }
 
-            function move() {
-                const deltaX = coordinates[0] - coordinates[1]
-                console.log('coordinates', coordinates, 'deltaX', deltaX)
-                if(deltaX > 40 && margin > redLineForMovingToLeft) {
-                    toLeft()
-                    addNewMargin()
-                    coordinates[0] = coordinates[1]
-                }
-                else if(deltaX < -40 && margin < redLineForMovingToRight) {
-                    toRight()
-                    addNewMargin()
-                    coordinates[0] = coordinates[1]
-                }
-            }
-        }
+        //     function move() {
+        //         const deltaX = coordinates[0] - coordinates[1]
+        //         console.log('coordinates', coordinates, 'deltaX', deltaX)
+        //         if(deltaX > 40 && margin > redLineForMovingToLeft) {
+        //             toLeft()
+        //             addNewMargin()
+        //             coordinates[0] = coordinates[1]
+        //         }
+        //         else if(deltaX < -40 && margin < redLineForMovingToRight) {
+        //             toRight()
+        //             addNewMargin()
+        //             coordinates[0] = coordinates[1]
+        //         }
+        //     }
+        // }
 
         function addNewMargin() {
             if(fieldServices) {
