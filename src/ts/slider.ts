@@ -1,3 +1,4 @@
+const forSlider: HTMLElement | null = document.querySelector('.for-slider')
 const fieldServices: HTMLElement | null = document.querySelector('.uslugi-for-circles')
 const buttonLeft: HTMLElement | null = document.querySelector('.arrow-left')
 const buttonRight: HTMLElement | null = document.querySelector('.arrow-right')
@@ -83,6 +84,15 @@ setTimeout(() => {
         }
 
         function touch() {
+            fieldServices?.addEventListener('touchstart', addOverflowX)
+            arrowsAria?.addEventListener('touchstart', addOverflowX)
+
+            function addOverflowX() {
+                if(forSlider) forSlider.style.overflowX = 'auto'
+            }
+        }
+
+        function touch_old() {
             fieldServices?.addEventListener('touchstart', saveStartX)
             arrowsAria?.addEventListener('touchstart', saveStartX)
             const coordinates = [0, 0]
@@ -103,7 +113,7 @@ setTimeout(() => {
             function saveActualX(event: TouchEvent) {
                 const clientY = Math.floor(event.changedTouches[0].clientY)
                 console.log('screenY', screenY, 'clientY', clientY)
-                if(Math.abs(screenY - clientY) < 10) {
+                if(Math.abs(screenY - clientY) < 20) {
                     event.preventDefault()
                     const clientX = Math.floor(event.changedTouches[0].clientX)
                     coordinates[1] = clientX
