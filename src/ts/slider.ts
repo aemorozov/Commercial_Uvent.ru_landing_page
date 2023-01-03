@@ -85,7 +85,7 @@ setTimeout(() => {
         }
 
         function touch() {
-            fieldServices?.addEventListener('body', addOverflowX)
+            body?.addEventListener('touchstart', addOverflowX)
             // arrowsAria?.addEventListener('touchstart', addOverflowX)
 
             function addOverflowX() {
