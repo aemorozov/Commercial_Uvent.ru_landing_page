@@ -3,7 +3,7 @@
 .projects {
     width: 100%;
     height: 1743px;
-    padding-left: 95px;
+    // padding-left: 95px;
     padding-top: 24px;
     background: $color-for-background;
     box-sizing: border-box;
@@ -17,15 +17,17 @@
   }
   
   .projects-h2 {
+    width: fit-content;
     font-weight: 400;
     font-size: 64px;
     line-height: 72px;
     color: $color-for-links;
+    margin-left: 95px;
   }
   
   .projects-flex {
     max-width: 1248px;
-    margin: 58px 60px 50px 0;
+    margin: 58px 60px 50px 95px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -185,13 +187,44 @@
     display: none;
   }
 
-  @media (min-width: 900px) and (max-width: 1400px) {
-    .projects-center {
-      margin: 110px auto;
+  @media (max-width: 1439px) {
+    .projects-h3 {
+      margin-bottom: 33px;
+    }
+    .projects-h3, .projects-h3-gradient {
+      font-size: 28px;
+      line-height: 32px;
+    }
+    .projects-h3-gradient {
+      margin-bottom: -12px;
     }
     .projects-flex {
-        flex-wrap: nowrap;
-        width: 3800px;
-        max-width: none;
+      margin: 58px 95px 50px 95px;
+    }
+    .projects-item1,
+    .projects-item2,
+    .projects-item3,
+    .projects-item4,
+    .projects-item5,
+    .projects-item6 {
+      width: 48%;
+    }
+  }
+
+  @media (max-width: 1280px) {
+    .projects {
+      height: 1691px;
+    }
+    .projects-h2 {
+      margin-top: 23px;
+      font-size: 48px;
+      line-height: 52px;
+    }
+    .projects-h3, .projects-h3-gradient {
+      font-size: 24px;
+      line-height: 28px;
+    }
+    .projects-h3 {
+      margin-bottom: 28px;
     }
   }
