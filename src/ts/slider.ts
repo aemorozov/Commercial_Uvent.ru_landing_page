@@ -56,7 +56,7 @@ setTimeout(() => {
             fieldServices?.addEventListener('wheel', moveForWheel, {passive: true})
             arrowsAria?.addEventListener('wheel', moveForWheel, {passive: true})
             function moveForWheel(i: WheelEvent): void {
-                i.preventDefault()
+                // i.preventDefault()
                 const delta = Math.floor((i.deltaX / correctionDeltaX) || (i.deltaY / correctionDeltaY))
                 if ((delta > step || delta < -step) && enabled === true) {
                     if(delta < 0 && margin < redLineForMovingToRight) toRight()
