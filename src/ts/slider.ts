@@ -53,8 +53,8 @@ setTimeout(() => {
         }
         
         function wheel() {
-            fieldServices?.addEventListener('wheel', moveForWheel)
-            arrowsAria?.addEventListener('wheel', moveForWheel)
+            fieldServices?.addEventListener('wheel', moveForWheel, {passive: true})
+            arrowsAria?.addEventListener('wheel', moveForWheel, {passive: true})
             function moveForWheel(i: WheelEvent): void {
                 i.preventDefault()
                 const delta = Math.floor((i.deltaX / correctionDeltaX) || (i.deltaY / correctionDeltaY))
@@ -85,57 +85,12 @@ setTimeout(() => {
         }
 
         function touch() {
-            body?.addEventListener('touchstart', addOverflowX)
+            body?.addEventListener('touchstart', addOverflowX, {passive: true})
 
             function addOverflowX() {
                 if(forSlider) forSlider.style.overflowX = 'auto'
             }
         }
-
-        // function touch_old() {
-        //     fieldServices?.addEventListener('touchstart', saveStartX)
-        //     arrowsAria?.addEventListener('touchstart', saveStartX)
-        //     const coordinates = [0, 0]
-        //     // fieldServices?.style.overflowX = 'auto';
-
-        //     let screenX: number
-        //     let screenY: number
-            
-        //     function saveStartX(event: TouchEvent) {
-        //         // event.preventDefault()
-        //         screenX = Math.floor(event.changedTouches[0].clientX)
-        //         screenY = Math.floor(event.changedTouches[0].clientY)
-        //         coordinates[0] = screenX
-        //             fieldServices?.addEventListener('touchmove', saveActualX)
-        //             arrowsAria?.addEventListener('touchmove', saveActualX)
-        //     }
-
-        //     function saveActualX(event: TouchEvent) {
-        //         const clientY = Math.floor(event.changedTouches[0].clientY)
-        //         console.log('screenY', screenY, 'clientY', clientY)
-        //         if(Math.abs(screenY - clientY) < 20) {
-        //             event.preventDefault()
-        //             const clientX = Math.floor(event.changedTouches[0].clientX)
-        //             coordinates[1] = clientX
-        //             move()
-        //         }
-        //     }
-
-        //     function move() {
-        //         const deltaX = coordinates[0] - coordinates[1]
-        //         console.log('coordinates', coordinates, 'deltaX', deltaX)
-        //         if(deltaX > 40 && margin > redLineForMovingToLeft) {
-        //             toLeft()
-        //             addNewMargin()
-        //             coordinates[0] = coordinates[1]
-        //         }
-        //         else if(deltaX < -40 && margin < redLineForMovingToRight) {
-        //             toRight()
-        //             addNewMargin()
-        //             coordinates[0] = coordinates[1]
-        //         }
-        //     }
-        // }
 
         function addNewMargin() {
             if(fieldServices) {
@@ -156,7 +111,7 @@ setTimeout(() => {
         function checkedTrueOrFalse() {
             fieldServices?.addEventListener("transitionend", () => {
                 enabled = true
-            })
+            }, {passive: true})
         }
     }
 }, timeToTakeTheMarginLeft)
