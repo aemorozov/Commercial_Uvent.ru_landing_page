@@ -36,9 +36,13 @@
     text-transform: uppercase;
 }
   
-.nav > a {
+.nav-links {
     color: $color-for-links;
     text-decoration: none;
+}
+
+.nav-links:hover {
+    color: $color-one;
 }
 
 .burger-button {
@@ -127,6 +131,7 @@
     .burger-button {
         display: block;
         margin-right: 30px;
+        cursor: pointer;
     }
     .nav {
         display: none;
@@ -136,28 +141,9 @@
         position: fixed;
         width: 100vw;
         height: 100vh;
-        background: #FCF8F3;
-        z-index: 300;
-        left: -100%;
-        top: 0;
+        background: $color-for-background;
+        top: 130px;
         transition: 0.4s ease;
-    }
-    .header-mobile-menu {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 56px;
-    }
-    .logo-img-mobile {
-        width: 140px;
-        height: 22px;
-        margin-top: 8px;
-        margin-left: 30px;
-    }
-    .close-button {
-        margin-right: 30px;
-        margin-top: -1px;
-        width: 40px;
-        height: 40px;
     }
     .nav-mobile-menu {
         display: flex;
@@ -166,10 +152,7 @@
         align-items: center;
         margin-top: 37px;
     }
-    .nav-uslugi-mobile-menu,
-    .nav-projects-mobile-menu,
-    .nav-cont-mobile-menu,
-    .nav-request-mobile-menu {
+    .nav-link-mobile-menu {
         font-family: 'Roboto';
         font-style: normal;
         font-weight: 300;
@@ -179,5 +162,67 @@
         text-decoration: none;
         width: 100%;
         text-align: center;
+        transition: 0.3s ease;
     }
+    .nav-link-mobile-menu:hover {
+        color: $color-one;
+    }
+}
+
+
+
+
+.hamb {
+    cursor: pointer;
+    float: right;
+    padding: 40px 40px;
+}
+
+.hamb-line {
+    background: black;
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+}
+
+.hamb-line::before,
+.hamb-line::after{
+    background: black;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+.hamb-line::before{
+    top: 5px;
+}
+.hamb-line::after{
+    top: -5px;
+}
+
+.new-mobile-menu {
+    display: none;
+}
+
+.new-mobile-menu:checked ~ .mobile-menu {
+    max-height: 100vh;
+}
+
+.new-mobile-menu:checked ~ .mobile-menu .nav-mobile-menu .nav-link-mobile-menu {
+    max-height: 100vh;
+}
+
+.new-mobile-menu:checked ~ .hamb .hamb-line {
+    background: transparent;
+}
+.new-mobile-menu:checked ~ .hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top:0;
+}
+.new-mobile-menu:checked ~ .hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top:0;
 }

@@ -56,19 +56,19 @@
   }
   
   .item1-number {
-    color: $color-nice-blue;
+    color: $color-one;
   }
   
   .item2-number {
-    color: $color-nice-yellow;
+    color: $color-two;
   }
   
   .item3-number {
-    color: $color-nice-pink;
+    color: $color-tree;
   }
   
   .item4-number {
-    color: $color-nice-green;
+    color: $color-four;
   }
   
   .item1-h3,
@@ -136,7 +136,7 @@
   .how-we-are-working-flex-item3:hover,
   .how-we-are-working-flex-item4:hover {
     margin-top: -2px;
-    border: 2px solid $color-nice-pink;
+    border: 2px solid $color-tree;
     box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.25);
     border-radius: 30px;
     box-sizing: border-box;
@@ -218,7 +218,7 @@
     .how-we-are-working-flex-item3,
     .how-we-are-working-flex-item4 {
       margin-top: -2px;
-      border: 2px solid $color-nice-pink;
+      border: 2px solid $color-tree;
       box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.25);
       border-radius: 30px;
       box-sizing: border-box;

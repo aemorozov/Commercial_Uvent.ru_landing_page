@@ -5,7 +5,7 @@ let symbolID = 0;
 
 addSpansWithOpacity0();
 
-setTimeout(addOpacity1, 1000)
+setTimeout(addOpacity1, 500)
 
 
 function addSpansWithOpacity0() {

@@ -27,18 +27,16 @@
   .for-slider {
     max-width: 1440px;
     overflow: hidden;
-    // overflow-x: auto;
+    overflow-x: auto;
     height: 660px;
   }
   
   .uslugi-for-circles {
+    scroll-margin-block-end: 300px;
     display: flex;
     margin-top: 113px;
     margin-left: 95px;
-    // max-width: 1285px;
     width: fit-content;
-    // overflow: auto;
-    // padding-left: 60px;
     transition: 0.5s ease;
   }
   
@@ -63,18 +61,18 @@
   
   .uslugi-circle1,
   .uslugi-circle5 {
-    background: $color-nice-green;
+    background: $color-four;
   }
   
   .uslugi-circle2,
   .uslugi-circle4,
   .uslugi-circle6 {
-    background: $color-nice-pink;
+    background: $color-tree;
   }
   
   .uslugi-circle3,
   .uslugi-circle7 {
-    background: $color-nice-blue;
+    background: $color-one;
   }
   
   .text-for-circle-in-js {
