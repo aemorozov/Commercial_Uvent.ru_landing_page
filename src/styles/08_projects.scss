@@ -262,6 +262,13 @@
     }
   }
 
+  @media (max-width: 745px) {
+    .projects-flex {
+      margin-left: 52px;
+      margin-top: 20px;
+    }
+  }
+
   @media (max-width: 744px) {
     .projects {
       height: 449px;
@@ -275,6 +282,7 @@
       margin-left: 40px;
       max-width: 1543px;
       width: 1543px;
+      margin-top: 25px;
       padding-right: 60px;
     }
     .projects-item1, .projects-item2, .projects-item3, .projects-item4, .projects-item5, .projects-item6 {
@@ -294,5 +302,17 @@
       height: 90px;
       border-radius: 30px;
       background: linear-gradient(360deg, rgba(5, 0, 0, 0.4) 4.09%, rgba(0, 0, 0, 0) 54.55%);
+    }
+  }
+
+  @media (max-width: 375px) {
+    .projects-h2 {
+      margin: 12px auto;
+      font-size: 28px;
+      line-height: 32px;
+    }
+    .projects-flex {
+      margin-left: 31px;
+      margin-top: 20px;
     }
   }

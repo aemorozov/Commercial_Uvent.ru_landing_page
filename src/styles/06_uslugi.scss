@@ -28,6 +28,7 @@
     max-width: 1440px;
     overflow: hidden;
     // overflow-x: auto;
+    height: 660px;
   }
   
   .uslugi-for-circles {
@@ -188,6 +189,9 @@
     height: 230px;
     margin: -92px auto;
   }
+  .for-slider {
+    height: 550px;
+  }
 }
 
 @media (max-width: 1280px) {
@@ -206,19 +210,29 @@
 @media (max-width: 1024px) {
   .uslugi {
     height: 563px;
+  }
+    .uslugi-content {
+      margin-top: 115px;
+      margin-left: 0;
+  }
+  .uslugi-h2 {
+    text-align: center;
+    margin-left: 0px;
+  }
+  .uslugi-for-circles {
+    margin-left: 45px;
+    margin-top: 38px;
+  }
+  .for-slider {
+    height: 470px;
+  }
 }
-  .uslugi-content {
-    margin-top: 115px;
-    margin-left: 0;
-}
-.uslugi-h2 {
-  text-align: center;
-  margin-left: 0px;
-}
-.uslugi-for-circles {
-  margin-left: 45px;
-  margin-top: 38px;
-}
+
+@media (max-width: 745px) {
+  .uslugi-for-circles {
+    margin-left: 52px;
+    margin-top: 36px;
+  }
 }
 
 @media (max-width: 744px) {
@@ -228,10 +242,10 @@
   .uslugi-h2 {
     font-size: 30px;
     line-height: 36px;
-}
-.uslugi-content {
-  margin-top: 105px;
-}
+  }
+  .uslugi-content {
+    margin-top: 105px;
+  }
   .uslugi-circle1, .uslugi-circle2, .uslugi-circle3, .uslugi-circle4, .uslugi-circle5, .uslugi-circle6, .uslugi-circle7 {
     min-width: 232px;
     width: 232px;
@@ -257,5 +271,19 @@
   .uslugi-for-circles {
     margin-left: 40px;
     margin-top: 13px;
+  }
+  .for-slider {
+    height: 270px;
+  }
 }
+
+@media (max-width: 375px) {
+  .uslugi-h2 {
+    font-size: 28px;
+    line-height: 32px;
+  }
+  .uslugi-for-circles {
+    margin-left: 30px;
+    margin-top: 19px;
+  }
 }

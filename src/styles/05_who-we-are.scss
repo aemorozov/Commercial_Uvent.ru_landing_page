@@ -109,6 +109,18 @@
   }
 }
 
+@media (max-width: 745px) {
+  .who-we-are-img {
+    height: 496px;
+  }
+  .zvezdochka {
+    top: 242px;
+    right: -9px;
+    width: 136px;
+  }
+  
+}
+
 @media (max-width: 744px) {
   .who-we-are-text {
     border-radius: 132px 0 0 0;
@@ -123,13 +135,10 @@
     font-size: 20px;
     line-height: 22px;
   }
-  .who-we-are-img {
-    height: 496px;
-  }
   .zvezdochka {
-    top: 301px;
-    right: -5px;
-    width: 87px;
+    top: 303px;
+    right: -9px;
+    width: 88px;
   }
 }
 

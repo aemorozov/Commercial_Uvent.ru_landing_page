@@ -310,6 +310,12 @@
     }
   }
 
+  @media (max-width: 745px) {
+    .how-we-are-working-flex-item1 {
+      margin-left: 53px;
+    }
+  }
+
   @media (max-width: 744px) {
     .how-we-are-working {
       height: 586px;
@@ -346,5 +352,18 @@
       width: 215px;
       line-height: 20px;
       margin-top: 27px;
+    }
+  }
+
+  @media (max-width: 375px) {
+    .how-we-are-working-h2 {
+      font-size: 28px;
+      line-height: 32px;
+    }
+    .how-we-are-working-flex-item1 {
+      margin-left: 29px;
+    }
+    .how-we-are-working {
+      height: 574px;
     }
   }

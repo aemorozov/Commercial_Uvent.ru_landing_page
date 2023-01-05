@@ -116,6 +116,19 @@
     }
   }
 
+  @media (max-width: 745px) {
+    .reviews {
+      height: 661px;
+    }
+    .reviews-h2 {
+      padding-top: 70px;
+    }
+    .reviews-cards {
+      margin-top: 61px;
+      margin-left: 36px;
+    }
+  }
+
   @media (max-width: 744px) {
     .reviews {
       height: 474px;
@@ -163,3 +176,17 @@
     }
     
   }
+
+  @media (max-width: 375px) {
+    .reviews {
+      height: 472px;
+    }
+    .reviews-h2 {
+        font-size: 28px;
+        line-height: 32px;
+        padding-top: 81px;
+    }
+    .reviews-cards {
+        margin-left: 14px;
+    }
+}
