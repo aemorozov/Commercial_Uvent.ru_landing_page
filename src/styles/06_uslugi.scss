@@ -26,9 +26,9 @@
 
   .for-slider {
     max-width: 1440px;
-    overflow: hidden;
     overflow-x: auto;
     height: 660px;
+    scroll-behavior: smooth;
   }
   
   .uslugi-for-circles {
