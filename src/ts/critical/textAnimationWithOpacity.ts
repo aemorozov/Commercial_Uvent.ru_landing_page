@@ -1,11 +1,12 @@
 const h1Array = document.querySelectorAll(".tagline-h1");
 const prefixForID = "symbol-";
 const speed = 100;
+const startTextAnimation = 500
 let symbolID = 0;
 
 addSpansWithOpacity0();
 
-setTimeout(addOpacity1, 500)
+setTimeout(addOpacity1, startTextAnimation)
 
 
 function addSpansWithOpacity0() {

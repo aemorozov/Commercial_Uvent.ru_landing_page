@@ -140,6 +140,7 @@
         display: block;
         position: fixed;
         width: 100vw;
+        min-width: 325px;
         height: 100vh;
         background: $color-for-background;
         left: -130%;

@@ -16,5 +16,20 @@ body {
 
 .container {
   max-width: 1440px;
+  min-width: 325px;
   margin: 0 auto;
+}
+
+::-webkit-scrollbar{
+  height: 4px;
+  width: 4px;
+  background: none;
+  border: none; 
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:horizontal, ::-webkit-scrollbar-thumb:vertical{
+  height: 4px;
+  width: 4px;
+  background: $color-four;
+  border-radius: 10px;
 }
