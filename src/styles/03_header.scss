@@ -45,17 +45,11 @@
     color: $color-one;
 }
 
-.burger-button {
+.checkbox-mobile-menu, .burger, .mobile-menu {
     display: none;
-    margin-right: 20px;
 }
 
-.burger-button-img {
-    width: 40px;
-    height: 40px;
-}
-
-.mobile-menu {
+.checkbox-mobile-menu {
     display: none;
 }
 
@@ -122,16 +116,22 @@
         height: 100px;
     }
     .header-content {
-        padding-top: 28px;
+        padding-top: 0;
+    }
+    .header-block {
+        width: 100%;
+        // z-index: 500;
+        background: $color-for-background;
+        padding-top: 0;
+        margin-top: -18px;
     }
     .logo {
-        margin-top: -8px;
-        margin-left: 30px;
+        padding: 30px 30px;
+        float: left;
+        margin: 0;
     }
-    .burger-button {
+    .burger {
         display: block;
-        margin-right: 30px;
-        cursor: pointer;
     }
     .nav {
         display: none;
@@ -142,15 +142,18 @@
         width: 100vw;
         height: 100vh;
         background: $color-for-background;
-        top: 130px;
+        left: -100%;
         transition: 0.4s ease;
+        z-index: 500;
     }
-    .nav-mobile-menu {
+    .ul-mobile-menu {
         display: flex;
         flex-direction: column;
         width: 100vw;
         align-items: center;
-        margin-top: 37px;
+        margin-top: 140px;
+        list-style: none;
+        padding: 0;
     }
     .nav-link-mobile-menu {
         font-family: 'Roboto';
@@ -167,62 +170,62 @@
     .nav-link-mobile-menu:hover {
         color: $color-one;
     }
+    .how-we-are-working-zvezdochka-mobile-menu {
+        position: absolute;
+        height: 90px;
+        width: 90px;
+        right: 26%;
+        top: 416px;
+    }
+    .tagline-svg-zavitushka-mobile-menu {
+        position: absolute;
+        height: 90px;
+        width: 90px;
+        left: 29.5%;
+        top: 486px;
+        transform: rotateZ(353deg);
+    }
+    .burger, .burger-close {
+        cursor: pointer;
+        float: right;
+        padding: 40px 40px;
+    }
+    .burger-line {
+        background: $color-one;
+        display: block;
+        height: 1.5px;
+        position: relative;
+        width: 23.3px;
+    }
+    .burger-line-close {
+        width: 100%;
+        height: 100%;
+    }
+    .burger-close {
+        cursor: pointer;
+        float: right;
+        padding: 21px 30px;
+    }
+    .burger-line::before,
+    .burger-line::after{
+        background: $color-one;
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all .2s ease-out;
+        width: 100%;
+    }
+    .burger-line::before{
+        top: 10px;
+    }
+    .burger-line::after{
+        top: -10px;
+    }
+    .checkbox-mobile-menu:checked ~ .mobile-menu {
+        left: 0;
+    }
 }
 
 
 
-
-.hamb {
-    cursor: pointer;
-    float: right;
-    padding: 40px 40px;
-}
-
-.hamb-line {
-    background: black;
-    display: block;
-    height: 2px;
-    position: relative;
-    width: 24px;
-}
-
-.hamb-line::before,
-.hamb-line::after{
-    background: black;
-    content: '';
-    display: block;
-    height: 100%;
-    position: absolute;
-    transition: all .2s ease-out;
-    width: 100%;
-}
-.hamb-line::before{
-    top: 5px;
-}
-.hamb-line::after{
-    top: -5px;
-}
-
-.new-mobile-menu {
-    display: none;
-}
-
-.new-mobile-menu:checked ~ .mobile-menu {
-    max-height: 100vh;
-}
-
-.new-mobile-menu:checked ~ .mobile-menu .nav-mobile-menu .nav-link-mobile-menu {
-    max-height: 100vh;
-}
-
-.new-mobile-menu:checked ~ .hamb .hamb-line {
-    background: transparent;
-}
-.new-mobile-menu:checked ~ .hamb .hamb-line::before {
-    transform: rotate(-45deg);
-    top:0;
-}
-.new-mobile-menu:checked ~ .hamb .hamb-line::after {
-    transform: rotate(45deg);
-    top:0;
-}
