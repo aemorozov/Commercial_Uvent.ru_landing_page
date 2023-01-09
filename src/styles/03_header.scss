@@ -39,6 +39,7 @@
 .nav-links {
     color: $color-for-links;
     text-decoration: none;
+    transition: 0.3s ease;
 }
 
 .nav-links:hover {
