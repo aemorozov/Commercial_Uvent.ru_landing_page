@@ -18,6 +18,9 @@
     border-radius: 0 0 0 176px;
     padding-top: 48px;
     box-sizing: border-box;
+    max-width: 1440px;
+    margin: 0 auto;
+    min-width: 325px;
 }
 
 .tagline-text-and-svg {
@@ -103,7 +106,9 @@
     transform: translateY(-50%);
     z-index: -100;
     box-sizing: border-box;
-    margin-bottom: -360px;
+    max-width: 1440px;
+    min-width: 325px;
+    margin: 0 auto -360px auto;
   }
 
 @media (min-width: 1441px) {

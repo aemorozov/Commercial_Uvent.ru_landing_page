@@ -14,12 +14,6 @@ body {
   background: $color-for-background;
 }
 
-.container {
-  max-width: 1440px;
-  min-width: 325px;
-  margin: 0 auto;
-}
-
 ::-webkit-scrollbar{
   height: 4px;
   width: 4px;

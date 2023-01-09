@@ -8,6 +8,9 @@
     background: $color-for-background;
     box-sizing: border-box;
     border-radius: 0 0 0 170px;
+    max-width: 1440px;
+    min-width: 325px;
+    margin: 0 auto;
   }
   
   .projects-center {

@@ -7,6 +7,9 @@
     box-sizing: border-box;
     position: relative;
     z-index: 200;
+    max-width: 1440px;
+    min-width: 325px;
+    margin: 0 auto;
   }
   
   .feedback-flex {

@@ -3,6 +3,9 @@
 .header {
     height: 157px;
     background: $color-for-background;
+    max-width: 1440px;
+    min-width: 325px;
+    margin: 0 auto;
   }
   
 .header-content {
