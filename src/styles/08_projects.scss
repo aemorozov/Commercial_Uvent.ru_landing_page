@@ -166,8 +166,6 @@
     display: block;
   }
 
-
-
   @media (max-width: 1439px) {
     .projects-h3 {
       margin-bottom: 33px;
@@ -193,21 +191,16 @@
     .projects {
       height: 1691px;
     }
-    .projects-gradient {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-    }
     .projects-h2 {
       margin-top: 23px;
       font-size: 48px;
       line-height: 52px;
     }
-    .gradient {
-      background: linear-gradient(360deg,#050000 4%,rgba(0,0,0,0) 54.55%);
-    }
     .projects-h5 {
       display: block;
+    }
+    .gradient {
+      background: linear-gradient(360deg,#050000 4%,rgba(0,0,0,0) 54.55%);
     }
   }
 
@@ -278,6 +271,29 @@
     .gradient {
       height: 250px;
       border-radius: 30px;
+      background: linear-gradient(360deg,#050000 4%,rgba(0,0,0,0) 100%);
+    }
+    .projects-item1:hover .gradient {
+      background: linear-gradient(360deg,#050000 4%,rgba(0,0,0,0) 100%);
+    }
+
+    .projects-item2:hover .gradient {
+      background: linear-gradient(360deg,#050000 4%,rgba(0,0,0,0) 100%);
+    }
+
+    .projects-item3:hover .gradient {
+      background: linear-gradient(360deg,#050000 4%,rgba(0,0,0,0) 100%);
+    }
+
+    .projects-item4:hover .gradient {
+      background: linear-gradient(360deg,#050000 4%,rgba(0,0,0,0) 100%);
+    }
+
+    .projects-item5:hover .gradient {
+      background: linear-gradient(360deg,#050000 4%,rgba(0,0,0,0) 100%);
+    }
+
+    .projects-item6:hover .gradient {
       background: linear-gradient(360deg,#050000 4%,rgba(0,0,0,0) 100%);
     }
   }
