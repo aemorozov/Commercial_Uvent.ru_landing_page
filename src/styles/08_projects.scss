@@ -46,9 +46,9 @@
     border-radius: 60px;
     display: flex;
     align-items: flex-end;
-    padding-left: 32px;
     box-sizing: border-box;
     text-decoration: none;
+    position: relative;
   }
   
   .projects-item1 {
@@ -93,17 +93,20 @@
     z-index: 10;
     margin-right: 30px;
   }
+
+  .projects-h3 {
+    margin-left: 32px;
+  }  
   
   .projects-h3-gradient {
-    margin-bottom: -8px;
+    margin-bottom: -7px;
   }
   
   .projects-gradient {
-    background: linear-gradient(360deg, #050000 4.09%, rgba(0, 0, 0, 0) 54.55%);
+    // background: linear-gradient(360deg, #050000 4.09%, rgba(0, 0, 0, 0) 54.55%);
     border-radius: 0px 0px 60px 60px;
-    width: 150%;
+    width: 100%;
     height: 440px;
-    margin-left: -32px;
     max-width: 604px;
     padding-bottom: 40px;
     padding-left: 32px;
@@ -118,7 +121,8 @@
     align-items: center;
     color: $color-five;
     text-transform: uppercase;
-    margin-bottom: -10px;
+    margin-bottom: -7px;
+    z-index: 10;
   }
   
   .projects-item1:hover .projects-gradient {
@@ -187,6 +191,14 @@
     display: none;
   }
 
+  .gradient {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(360deg,#050000 4.09%,rgba(0,0,0,0) 54.55%);
+    position: absolute;
+    border-radius: 60px;
+  }
+
   @media (max-width: 1439px) {
     .projects-h3 {
       margin-bottom: 33px;
@@ -196,7 +208,7 @@
       line-height: 32px;
     }
     .projects-h3-gradient {
-      margin-bottom: -12px;
+      margin-bottom: -7px;
     }
     .projects-flex {
       margin: 58px 95px 50px 95px;
