@@ -90,6 +90,7 @@
     position: absolute;
     border-radius: 60px;
     position: relative;
+    transition: 0.3s ease;
   }
 
   .projects-h3 {
@@ -114,8 +115,10 @@
     z-index: 10;
     bottom: 63px;
     left: 32px;
-    display: none;
+    // display: none;
+    opacity: 0;
     padding-right: 30px;
+    transition: 0.3s ease;
   }
   
   .projects-item1:hover .gradient {
@@ -123,7 +126,8 @@
   }
   
   .projects-item1:hover .projects-h5 {
-    display: block;
+    // display: block;
+    opacity: 1;
   }
   
   .projects-item2:hover .gradient {
@@ -131,7 +135,8 @@
   }
   
   .projects-item2:hover .projects-h5 {
-    display: block;
+    // display: block;
+    opacity: 1;
   }
   
   .projects-item3:hover .gradient {
@@ -139,7 +144,8 @@
   }
   
   .projects-item3:hover .projects-h5 {
-    display: block;
+    // display: block;
+    opacity: 1;
   }
   
   .projects-item4:hover .gradient {
@@ -147,7 +153,8 @@
   }
   
   .projects-item4:hover .projects-h5 {
-    display: block;
+    // display: block;
+    opacity: 1;
   }
   
   .projects-item5:hover .gradient {
@@ -155,7 +162,8 @@
   }
   
   .projects-item5:hover .projects-h5 {
-    display: block;
+    // display: block;
+    opacity: 1;
   }
   
   .projects-item6:hover .gradient {
@@ -163,7 +171,8 @@
   }
   
   .projects-item6:hover .projects-h5 {
-    display: block;
+    // display: block;
+    opacity: 1;
   }
 
   @media (max-width: 1439px) {
