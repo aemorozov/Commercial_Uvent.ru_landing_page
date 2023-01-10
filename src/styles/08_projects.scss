@@ -206,7 +206,8 @@
       line-height: 52px;
     }
     .projects-h5 {
-      display: block;
+    // display: block;
+    opacity: 1;
     }
     .gradient {
       background: linear-gradient(360deg,#050000 4%,rgba(0,0,0,0) 54.55%);
