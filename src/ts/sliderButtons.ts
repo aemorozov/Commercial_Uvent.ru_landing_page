@@ -4,6 +4,8 @@ const buttonLeft: HTMLElement | null = document.querySelector('.arrow-left')
 const buttonRight: HTMLElement | null = document.querySelector('.arrow-right')
 const shift = 500
 let scrollLeftVar = forSlider?.scrollLeft
+let isAnimationEnd = true
+
 
 forSlider?.addEventListener('scroll', scrollingX)
 buttons()
@@ -18,6 +20,11 @@ function buttons() {
         return
     }
 
+    forSlider?.addEventListener('animationend', () => {
+        isAnimationEnd = true
+        console.log(isAnimationEnd)
+    })
+    
     buttonRight?.addEventListener('click', () => {
         forSlider.scrollLeft += shift 
     })

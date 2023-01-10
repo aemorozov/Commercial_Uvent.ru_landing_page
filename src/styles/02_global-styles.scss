@@ -15,15 +15,23 @@ body {
 }
 
 ::-webkit-scrollbar{
-  height: 4px;
-  width: 4px;
+  height: 10px;
+  width: 10px;
   background: none;
-  border: none; 
+  border: none;
   border-radius: 10px;
 }
-::-webkit-scrollbar-thumb:horizontal, ::-webkit-scrollbar-thumb:vertical{
-  height: 4px;
-  width: 4px;
-  background: $color-four;
+
+::-webkit-scrollbar-thumb:horizontal{
+  height: 10px;
+  background: none;
   border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:vertical{
+  width: 20px;
+  background: $color-tree;
+  border-radius: 10px;
+  transition: 0.3s ease;
 }

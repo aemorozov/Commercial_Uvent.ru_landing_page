@@ -189,6 +189,12 @@
     .for-overflow {
       overflow-x: auto;
     }
+    .for-overflow:hover::-webkit-scrollbar{
+      border: 0.1px solid $color-four; 
+    }
+    .for-overflow:hover::-webkit-scrollbar-thumb:horizontal{
+      background: $color-one;
+    }
     .how-we-are-working {
       padding-left: 0;
       height: 866px;

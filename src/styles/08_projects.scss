@@ -222,6 +222,12 @@
     .projects-for-overflow {
       overflow-x: auto;
     }
+    .projects-for-overflow:hover::-webkit-scrollbar{
+      border: 0.1px solid $color-four; 
+    }
+    .projects-for-overflow:hover::-webkit-scrollbar-thumb:horizontal{
+      background: $color-one;
+    }
     .projects-h2 {
       margin: 23px auto;
     }

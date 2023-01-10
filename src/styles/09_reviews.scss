@@ -35,6 +35,14 @@
     max-width: 1440px;
     overflow-x: auto;
   }
+
+  .reviews-for-flex:hover::-webkit-scrollbar{
+    border: 0.1px solid $color-two; 
+  }
+
+  .reviews-for-flex:hover::-webkit-scrollbar-thumb:horizontal{
+    background: $color-tree;
+  }
   
   .reviews-cards {
     margin-top: 57px;

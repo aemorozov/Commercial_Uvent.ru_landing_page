@@ -29,11 +29,24 @@
 
   .for-slider {
     max-width: 1440px;
-    overflow-x: auto;
     height: 660px;
+    overflow-x: auto;
     scroll-behavior: smooth;
+    transition: 0.3s ease;
   }
-  
+
+  // .for-slider:hover {
+  //   overflow-x: auto;
+  // }
+
+  .for-slider:hover::-webkit-scrollbar{
+    border: 0.1px solid $color-four; 
+  }
+
+  .for-slider:hover::-webkit-scrollbar-thumb:horizontal{
+    background: $color-one;
+  }
+
   .uslugi-for-circles {
     scroll-margin-block-end: 300px;
     display: flex;
@@ -97,6 +110,7 @@
     width: 25px;
     position: absolute;
     transform: translate(-12.5px, 0px) rotate(var(--rot)) translate(0, -200px);
+    cursor: default;
   }
   
   .uslugi-circle1-img,
@@ -124,23 +138,26 @@
     justify-content: center;
   }
 
-  .arrows {
-    display: flex;
-    width: 105%;
-    justify-content: space-between;
-    margin-left: -2.5%;
-    position: absolute;
-    top: 458px;
-    z-index: 100;
-    display: none;
-  }
-
   .arrow-left, .arrow-right {
     width: 67.87px;
     height: 67.87px;
     background: #fff;
     border-radius: 50%;
     cursor: pointer;
+    position: absolute;
+    display: none;
+  }
+
+  .arrow-left {
+    left: -40px;
+    top: 56%;
+    z-index: 1;
+  }
+
+  .arrow-right {
+    right: -40px;
+    top: 56%;
+    z-index: 1;
   }
 
   .arrow-left-img, .arrow-right-img {
@@ -159,8 +176,8 @@
   }
 
 @media (min-width: 1600px) {
-  .arrows {
-    display: flex;
+  .arrow-left, .arrow-right {
+    display: block;
   }
 }
 
