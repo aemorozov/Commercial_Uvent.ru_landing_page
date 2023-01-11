@@ -2,14 +2,13 @@
 
 .how-we-are-working {
     width: 100%;
-    height: 743px;
+    height: 700px;
     background: $color-for-background;
-    padding-top: 45px;
     padding-left: 95px;
     box-sizing: border-box;
     max-width: 1440px;
     min-width: 325px;
-    margin: 0 auto;
+    margin: 123px auto 0 auto;
   }
   
   .how-we-are-working-content {
@@ -190,14 +189,14 @@
       overflow-x: auto;
     }
     .for-overflow:hover::-webkit-scrollbar{
-      border: 0.1px solid $color-four; 
+      border-bottom: 0.1px solid $color-one-for-scrollbar; 
     }
     .for-overflow:hover::-webkit-scrollbar-thumb:horizontal{
-      background: $color-one;
+      background: $color-one-for-scrollbar-thumb;
     }
     .how-we-are-working {
       padding-left: 0;
-      height: 866px;
+      height: 823px;
     }
     .how-we-are-working-content {
       margin-left: 0px;
@@ -207,7 +206,7 @@
       display: block;
       position:absolute;
       top: -69px;
-    left: 680px;
+      left: 680px;
     }
     .zvezda1-for-1439-img {
       width: 100px;
@@ -288,6 +287,10 @@
   }
 
   @media (max-width: 1280px) {
+    .how-we-are-working {
+      height: 831px;
+      margin: 113px auto 0 auto;
+    }
     .how-we-are-working-h2 {
       font-size: 48px;
       line-height: 52px;
@@ -296,13 +299,13 @@
       left: 538px;
     }
     .how-we-are-working-flex {
-      margin-top: 133px;
+      margin-top: 129px;
     }
   }
 
   @media (max-width: 1024px) {
     .how-we-are-working {
-      height: 787px;
+      height: 753px;
     }
     .how-we-are-working-h2 {
       margin: 40px auto;
@@ -327,7 +330,7 @@
 
   @media (max-width: 744px) {
     .how-we-are-working {
-      height: 586px;
+      height: 553px;
     }
     .how-we-are-working-h2 {
       font-size: 30px;
@@ -373,6 +376,6 @@
       margin-left: 29px;
     }
     .how-we-are-working {
-      height: 574px;
+      height: 541px;
     }
   }

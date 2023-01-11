@@ -37,11 +37,11 @@
   }
 
   .reviews-for-flex:hover::-webkit-scrollbar{
-    border: 0.1px solid $color-two; 
+    border-bottom: 0.1px solid $color-two-for-scrollbar; 
   }
 
   .reviews-for-flex:hover::-webkit-scrollbar-thumb:horizontal{
-    background: $color-tree;
+    background: $color-two-for-scrollbar-thumb;
   }
   
   .reviews-cards {
@@ -129,10 +129,10 @@
 
   @media (max-width: 745px) {
     .reviews {
-      height: 661px;
+      height: 670px;
     }
     .reviews-h2 {
-      padding-top: 70px;
+      padding-top: 79px;
     }
     .reviews-cards {
       margin-top: 61px;

@@ -2,14 +2,13 @@
 
 .projects {
     width: 100%;
-    height: 1743px;
-    padding-top: 24px;
+    height: 1663px;
     background: $color-for-background;
     box-sizing: border-box;
     border-radius: 0 0 0 170px;
     max-width: 1440px;
     min-width: 325px;
-    margin: 0 auto;
+    margin: -31px auto 0 auto;
   }
   
   .projects-center {
@@ -198,7 +197,7 @@
 
   @media (max-width: 1280px) {
     .projects {
-      height: 1691px;
+      height: 1645px;
     }
     .projects-h2 {
       margin-top: 23px;
@@ -216,17 +215,17 @@
 
   @media (max-width: 1024px) {
     .projects {
-      height: 732px;
+      height: 686px;
       border-radius: 0;
     }
     .projects-for-overflow {
       overflow-x: auto;
     }
     .projects-for-overflow:hover::-webkit-scrollbar{
-      border: 0.1px solid $color-four; 
+      border-bottom: 0.1px solid $color-one-for-scrollbar; 
     }
     .projects-for-overflow:hover::-webkit-scrollbar-thumb:horizontal{
-      background: $color-one;
+      background: $color-one-for-scrollbar-thumb;
     }
     .projects-h2 {
       margin: 23px auto;
@@ -246,6 +245,9 @@
   }
 
   @media (max-width: 745px) {
+    .projects {
+      height: 678px;
+    }
     .projects-flex {
       margin-left: 52px;
       margin-top: 20px;
@@ -254,7 +256,7 @@
 
   @media (max-width: 744px) {
     .projects {
-      height: 449px;
+      height: 418px;
     }
     .projects-h2 {
       margin: 6px auto;
@@ -315,6 +317,9 @@
   }
 
   @media (max-width: 375px) {
+    .projects {
+      height: 414px;
+    }
     .projects-h2 {
       margin: 12px auto;
       font-size: 28px;

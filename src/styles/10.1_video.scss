@@ -1,14 +1,11 @@
 .for-video-block {
     width: 100%;
     max-width: 1440px;
-    margin: 0 auto;
     position: relative;
-    margin-top: -99px;
-    margin-bottom: -100px;
     z-index: 10;
     max-width: 1440px;
     min-width: 325px;
-    margin: 0 auto;
+    margin: -99px auto -99px auto;
 }
 
 .video {
@@ -62,6 +59,9 @@
     .text-on-video-p {
         font-size: 82px;
         line-height: 92px;
+    }
+    .for-video-block {
+        margin: -99px auto -103px auto;
     }
 }
 

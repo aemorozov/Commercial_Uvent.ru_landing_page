@@ -4,12 +4,11 @@
     width: 100%;
     height: 806px;
     background: $color-for-background;
-    margin-top: -25px;
     box-sizing: border-box;
     position: relative;
     max-width: 1440px;
     min-width: 325px;
-    margin: 0 auto;
+    margin: -25px auto;
   }
   
   .uslugi-content {
@@ -40,11 +39,11 @@
   // }
 
   .for-slider:hover::-webkit-scrollbar{
-    border: 0.1px solid $color-four; 
+    border-bottom: 0.1px solid $color-one-for-scrollbar; 
   }
 
   .for-slider:hover::-webkit-scrollbar-thumb:horizontal{
-    background: $color-one;
+    background: $color-one-for-scrollbar-thumb;
   }
 
   .uslugi-for-circles {
