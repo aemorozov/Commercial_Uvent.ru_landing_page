@@ -34,3 +34,74 @@ body {
   border-radius: 10px;
   transition: 0.3s ease;
 }
+
+.logo-for-right-border {
+  position: absolute;
+  top: 1040px;
+  right: 0;
+  display: none;
+  width: 144px;
+  height: 1191px;
+}
+
+.star-3200, .star-2-3200, .border-radius, .zigzag-left, .zigzag-right {
+  position: absolute;
+  display: none;
+}
+
+.star-3200 {
+  top: 0;
+  left: 0;
+  width: 404px;
+  height: 371px;
+  opacity: 0.5;
+}
+
+.star-2-3200 {
+  top: 5555px;
+  right: 0;
+  width: 338px;
+  height: 865px;
+}
+
+.border-radius {
+  top: 6292px;
+  left: 0;
+  width: 712px;
+  height: 751px;
+  display: none;
+}
+
+.zigzag-left {
+  top: 1287px;
+  left: 0;
+  width: 342px;
+  height: 584px;
+  opacity: 0.5;
+}
+
+.zigzag-right {
+  right: 0;
+  top: 3850px;
+  width: 293px;
+  height: 584px;
+  opacity: 0.5;
+}
+
+@media (min-width: 2799px) {
+  .logo-for-right-border {
+    display: block;
+  }
+}
+
+@media (min-width: 3199px) {
+  .star-3200, .star-2-3200, .border-radius {
+      display: block;
+  }
+}
+
+@media (min-width: 3999px) {
+  .zigzag-left, .zigzag-right {
+    display: block;
+  }
+}
