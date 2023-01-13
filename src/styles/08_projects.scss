@@ -92,7 +92,7 @@
     transition: 0.3s ease;
   }
 
-  .projects-h3 {
+  .projects-h2 {
     font-family: "Roboto";
     font-weight: 700;
     font-size: 32px;
@@ -104,7 +104,7 @@
     padding-right: 30px;
   }
 
-  .projects-h5 {
+  .projects-h3 {
     position: absolute;
     font-weight: 400;
     font-size: 24px;
@@ -124,7 +124,7 @@
     background: linear-gradient(360deg,#050000 4%,rgba(0,0,0,0) 54.55%);
   }
   
-  .projects-item1:hover .projects-h5 {
+  .projects-item1:hover .projects-h3 {
     // display: block;
     opacity: 1;
   }
@@ -133,7 +133,7 @@
     background: linear-gradient(360deg,#050000 4%,rgba(0,0,0,0) 54.55%);
   }
   
-  .projects-item2:hover .projects-h5 {
+  .projects-item2:hover .projects-h3 {
     // display: block;
     opacity: 1;
   }
@@ -142,7 +142,7 @@
     background: linear-gradient(360deg,#050000 4%,rgba(0,0,0,0) 54.55%);
   }
   
-  .projects-item3:hover .projects-h5 {
+  .projects-item3:hover .projects-h3 {
     // display: block;
     opacity: 1;
   }
@@ -151,7 +151,7 @@
     background: linear-gradient(360deg,#050000 4%,rgba(0,0,0,0) 54.55%);
   }
   
-  .projects-item4:hover .projects-h5 {
+  .projects-item4:hover .projects-h3 {
     // display: block;
     opacity: 1;
   }
@@ -160,7 +160,7 @@
     background: linear-gradient(360deg,#050000 4%,rgba(0,0,0,0) 54.55%);
   }
   
-  .projects-item5:hover .projects-h5 {
+  .projects-item5:hover .projects-h3 {
     // display: block;
     opacity: 1;
   }
@@ -169,16 +169,16 @@
     background: linear-gradient(360deg,#050000 4%,rgba(0,0,0,0) 54.55%);
   }
   
-  .projects-item6:hover .projects-h5 {
+  .projects-item6:hover .projects-h3 {
     // display: block;
     opacity: 1;
   }
 
   @media (max-width: 1439px) {
-    .projects-h3 {
+    .projects-h2 {
       margin-bottom: 33px;
     }
-    .projects-h3 {
+    .projects-h2 {
       font-size: 28px;
       line-height: 32px;
     }
@@ -204,7 +204,7 @@
       font-size: 48px;
       line-height: 52px;
     }
-    .projects-h5 {
+    .projects-h3 {
     // display: block;
     opacity: 1;
     }
@@ -277,11 +277,11 @@
       border-radius: 30px;
       background-size: cover;
     }
-    .projects-h3 {
+    .projects-h2 {
       font-size: 16px;
       line-height: 20px;
     }
-    .projects-h5 {
+    .projects-h3 {
       font-size: 16px;
       line-height: 20px;
       bottom: 48px;
