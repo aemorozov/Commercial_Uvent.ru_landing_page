@@ -82,11 +82,74 @@
   .footer-social-vk {
     width: 22px;
     height: 12px;
-    margin-top: 9px;
+    margin-top: 12px;
   }
   
   .black-line {
     height: 40px;
     width: 1px;
     background: $color-for-links;
+  }
+
+  @media (max-width: 1280px) {
+    .footer-logo {
+      width: 523px;
+      height: 80px;
+    }
+    .footer-flex {
+      width: 96%;
+      margin: 124px auto 0 auto;
+    }
+  }
+
+  @media (max-width: 1025px) {
+    .footer-logo {
+      width: 587px;
+      height: 90px;
+    }
+    .footer-flex {
+      width: 87%;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .footer {
+      height: 620px;
+    }
+    .footer-logo {
+      width: 450px;
+      height: 68px;
+    }
+    .footer-flex {
+      flex-direction: column;
+      width: fit-content;
+      align-items: center;
+      margin-top: 58px;
+    }
+    .footer-email, .footer-phone1, .footer-phone2 {
+      margin-top: 21px;
+    }
+    .footer-socials {
+      margin-top: 100px;
+      margin-right: 0;
+    }
+  }
+
+  @media (max-width: 745px) {
+    .footer-socials {
+      margin-top: 80px;
+    }
+  }
+
+  @media (max-width: 744px) {
+    .footer-logo {
+      width: 283px;
+      height: 42px;
+    }
+    .footer-flex {
+      margin-top: 42px;
+    }
+    .footer-socials {
+      margin-top: 58px;
+    }
   }
