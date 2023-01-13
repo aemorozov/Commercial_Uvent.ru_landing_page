@@ -1,0 +1,37 @@
+.for-arrows {
+    position: absolute;
+    width: 2400px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: -100;
+    display: none;
+}
+
+.for-arrows-arrow-1, .for-arrows-arrow-2, .for-arrows-arrow-3 {
+    position: absolute;
+}
+
+.for-arrows-arrow-1 {
+    top: 3048px;
+    left: 93px;
+}
+
+.for-arrows-arrow-2 {
+    top: 3579px;
+    left: 2044px;
+}
+
+.for-arrows-arrow-3 {
+    top: 6007px;
+    left: 128px;
+}
+  
+@media (min-width: 2799px) {
+    .for-arrows {
+        display: block;
+    }
+}
