@@ -23,6 +23,7 @@ const log = require("gulplog");
 
 const ts = require("gulp-typescript");
 const timeForCriticalTS = 30000;
+const tsify = require("tsify");
 
 const browserSync = require("browser-sync");
 
@@ -32,20 +33,12 @@ const srcDir = "./src/";
 const htmlFiles = `${srcDir}*.html`;
 
 const jsDir = "js/";
-// const jsFiles = [
-//   `${srcDir}${jsDir}*.js`,
-//   `!${srcDir}${jsDir}_circleText_not_used_port_TS.js`,
-//   `!${srcDir}${jsDir}_phoneNumber_not_used_port_TS.js`,
-//   `!${srcDir}${jsDir}_videoControl_not_used_port_TS.js`,
-//   `!${srcDir}${jsDir}_textAnimation_not_used.js`,
-//   `!${srcDir}${jsDir}_textAnimationWithOpacity_not_used_port_TS.js`,
-// ];
-// const jsInput = `${srcDir}${jsDir}app.js`;
-// const jsInput = `${srcDir}${jsDir}index.js`;
-// const jsOutput = "app.js";
+const jsInput = `${srcDir}${jsDir}index.js`;
+const jsOutput = "app.js";
 
 const tsDir = "ts/";
 const tsFiles = [`${srcDir}${tsDir}*.ts`];
+const tsIndexFile = [`${srcDir}${tsDir}index.ts`];
 const tsCriticalFiles = [`${srcDir}${tsDir}critical/*.ts`];
 
 const imgDir = "img/";
@@ -68,18 +61,34 @@ const processHTML = () => {
     .pipe(browserSync.reload({ stream: true }));
 };
 
+// const processTS = () => {
+//   return gulp
+//     .src(`${tsFiles}`)
+//     .pipe(sourcemaps.init({ loadMaps: true }))
+//     .pipe(
+//       ts({
+//         noImplicitAny: true,
+//         module: "amd",
+//         moduleResolution: "node",
+//         outFile: `app.js`,
+//       })
+//     )
+//     .pipe(jsMinify())
+//     .on("error", log.error)
+//     .pipe(sourcemaps.write("./"))
+//     .pipe(gulp.dest(`${distDir}${jsDir}`));
+// };
+
 const processTS = () => {
-  return gulp
-    .src(`${tsFiles}`)
+  return browserify({
+    entries: tsIndexFile,
+    debug: true,
+  })
+    .plugin(tsify)
+    .bundle()
+    .pipe(source(jsOutput))
+    .pipe(buffer())
     .pipe(sourcemaps.init({ loadMaps: true }))
-    .pipe(
-      ts({
-        noImplicitAny: true,
-        module: "amd",
-        moduleResolution: "node",
-        outFile: `app.js`,
-      })
-    )
     .pipe(jsMinify())
     .on("error", log.error)
     .pipe(sourcemaps.write("./"))
