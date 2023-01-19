@@ -1569,11 +1569,6 @@ amd-name-resolver@^1.3.1:
     ensure-posix-path "^1.0.1"
     object-hash "^1.3.1"
 
-amdefine@>=0.0.4:
-  version "1.0.1"
-  resolved "https://registry.npmjs.org/amdefine/-/amdefine-1.0.1.tgz"
-  integrity sha512-S2Hw0TtNkMJhIabBwIojKL9YHO5T0n5eNqWJ7Lrlel/zDbftQpxpapi8tZs3X1HWa+u+QeydGmzzNU0m09+Rcg==
-
 ansi-colors@^1.0.1:
   version "1.1.0"
   resolved "https://registry.npmjs.org/ansi-colors/-/ansi-colors-1.1.0.tgz"
@@ -1683,16 +1678,6 @@ anymatch@~3.1.2:
   dependencies:
     normalize-path "^3.0.0"
     picomatch "^2.0.4"
-
-apartment@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.npmjs.org/apartment/-/apartment-1.1.1.tgz"
-  integrity sha512-lqTVxuM05pKyCsr21nYKW4SJSiEJQyJL2AeXDsuYr3EtQW+57we+Eiu+PoxK5/fZ7BkzgjpVhDZrDtSo3XlCoQ==
-  dependencies:
-    css "2.2.1"
-    get-stdin "5.0.1"
-    lodash "3.10.1"
-    minimist "1.2.0"
 
 append-buffer@^1.0.2:
   version "1.0.2"
@@ -1995,11 +1980,6 @@ atob@^2.1.2:
   version "2.1.2"
   resolved "https://registry.npmjs.org/atob/-/atob-2.1.2.tgz"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
-
-atob@~1.1.0:
-  version "1.1.3"
-  resolved "https://registry.npmjs.org/atob/-/atob-1.1.3.tgz"
-  integrity sha512-RNyeNvFvPp+PQFx8+mttPY0KJ6wN+nkhWDp32I7iTElJyOkUaJ4Se7WRN7PsEFwGx9CONsuwjrrMNgV4AtZ44w==
 
 autoprefixer@^10.2.6:
   version "10.4.13"
@@ -3744,15 +3724,6 @@ css-what@^6.0.1, css-what@^6.1.0:
   resolved "https://registry.npmjs.org/css-what/-/css-what-6.1.0.tgz"
   integrity sha512-HTUrgRJ7r4dsZKU6GjmpfRK1O76h97Z8MfS1G0FozR+oF2kG6Vfe8JE6zwrkbxigziPHinCJ+gCPjA9EaBDtRw==
 
-css@2.2.1, "css@https://github.com/pocketjoso/css.git":
-  version "2.2.1"
-  resolved "git+ssh://git@github.com/pocketjoso/css.git#8ddea7e3cbc0a183ecf694a7a5fbc84326893893"
-  dependencies:
-    inherits "^2.0.1"
-    source-map "^0.1.38"
-    source-map-resolve "^0.3.0"
-    urix "^0.1.0"
-
 css@^2.0.0, css@^2.2.1:
   version "2.2.4"
   resolved "https://registry.npmjs.org/css/-/css-2.2.4.tgz"
@@ -5446,11 +5417,6 @@ get-proxy@^2.0.0:
   dependencies:
     npm-conf "^1.1.0"
 
-get-stdin@5.0.1:
-  version "5.0.1"
-  resolved "https://registry.npmjs.org/get-stdin/-/get-stdin-5.0.1.tgz"
-  integrity sha512-jZV7n6jGE3Gt7fgSTJoz91Ak5MuTLwMwkoYdjxuJ/AmjIsE1UC03y/IWkZCQGEvVNS9qoRNwy5BCqxImv0FVeA==
-
 get-stdin@7.0.0:
   version "7.0.0"
   resolved "https://registry.npmjs.org/get-stdin/-/get-stdin-7.0.0.tgz"
@@ -5919,14 +5885,6 @@ gulp-imagemin@7:
     imagemin-mozjpeg "^8.0.0"
     imagemin-optipng "^7.0.0"
     imagemin-svgo "^7.0.0"
-
-gulp-penthouse@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.npmjs.org/gulp-penthouse/-/gulp-penthouse-0.2.0.tgz"
-  integrity sha512-J8DRMDAy7moN9ydA6Hg3MvgLOAFy5xtNF4ylFL6p9CIloQRSd8Wn96ZTNmz5SnRpBsQF/4AmRJb8fT3MtZzmBw==
-  dependencies:
-    gulp-util "^3.0.8"
-    penthouse "~0.10.9"
 
 gulp-progressive-css@^2.1.0:
   version "2.1.0"
@@ -7254,11 +7212,6 @@ jsdom@^20.0.0:
     ws "^8.11.0"
     xml-name-validator "^4.0.0"
 
-jsesc@^1.0.0:
-  version "1.3.0"
-  resolved "https://registry.npmjs.org/jsesc/-/jsesc-1.3.0.tgz"
-  integrity sha512-Mke0DA0QjUWuJlhsE0ZPPhYiJkRap642SmI/4ztCFaUs6V2AiH1sfecc+57NgaryfAA2VR3v6O+CSjC1jZJKOA==
-
 jsesc@^2.5.1, jsesc@^2.5.2:
   version "2.5.2"
   resolved "https://registry.npmjs.org/jsesc/-/jsesc-2.5.2.tgz"
@@ -7816,11 +7769,6 @@ lodash.templatesettings@^4.0.0:
   dependencies:
     lodash._reinterpolate "^3.0.0"
 
-lodash@3.10.1:
-  version "3.10.1"
-  resolved "https://registry.npmjs.org/lodash/-/lodash-3.10.1.tgz"
-  integrity sha512-9mDDwqVIma6OZX79ZlDACZl8sBm0TEnkf99zV3iMA4GzkIT/9hiqP5mY0HoT1iNLCrKc/R1HByV+yJfRWVJryQ==
-
 lodash@4.17.21, lodash@^4.11.1, lodash@^4.15.0, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.21, lodash@^4.2.1:
   version "4.17.21"
   resolved "https://registry.npmjs.org/lodash/-/lodash-4.17.21.tgz"
@@ -8300,11 +8248,6 @@ minimist-options@^3.0.1:
   dependencies:
     arrify "^1.0.1"
     is-plain-obj "^1.1.0"
-
-minimist@1.2.0:
-  version "1.2.0"
-  resolved "https://registry.npmjs.org/minimist/-/minimist-1.2.0.tgz"
-  integrity sha512-7Wl+Jz+IGWuSdgsQEJ4JunV0si/iMhg42MnQQG6h1R6TNeVenp4U9x5CC5v/gYqz/fENLQITAWXidNtVL0NNbw==
 
 minimist@^1.1.0, minimist@^1.1.3, minimist@^1.2.0, minimist@^1.2.5, minimist@^1.2.6:
   version "1.2.7"
@@ -8797,7 +8740,7 @@ os-locale@^1.4.0:
   dependencies:
     lcid "^1.0.0"
 
-os-tmpdir@^1.0.1, os-tmpdir@~1.0.1, os-tmpdir@~1.0.2:
+os-tmpdir@~1.0.1, os-tmpdir@~1.0.2:
   version "1.0.2"
   resolved "https://registry.npmjs.org/os-tmpdir/-/os-tmpdir-1.0.2.tgz"
   integrity sha512-D2FR03Vir7FIu45XBY20mTb+/ZSWB00sjU9jdQXt83gDrI4Ztz5Fs7/yy74g2N5SVQY4xY1qDr4rNddwYRVX0g==
@@ -9218,19 +9161,6 @@ penthouse@^2.3.3:
     debug "^4.1.1"
     jsesc "^2.5.2"
     puppeteer "2.1.1"
-
-penthouse@~0.10.9:
-  version "0.10.9"
-  resolved "https://registry.npmjs.org/penthouse/-/penthouse-0.10.9.tgz"
-  integrity sha512-TbofbvcA3W1s86smT/3g4jLC4WbRmXqhlPBlC5obgZsRWyJv7sF+0lTUUipi9rM3MKbZzNJpoCF7SO+4wWXkjg==
-  dependencies:
-    apartment "^1.1.1"
-    css "https://github.com/pocketjoso/css.git"
-    css-mediaquery "^0.1.2"
-    jsesc "^1.0.0"
-    os-tmpdir "^1.0.1"
-    phantomjs-prebuilt "^2.1.3"
-    tmp "0.0.31"
 
 performance-now@^2.1.0:
   version "2.1.0"
@@ -10210,7 +10140,7 @@ resolve-pkg@2.0.0:
   dependencies:
     resolve-from "^5.0.0"
 
-resolve-url@^0.2.1, resolve-url@~0.2.1:
+resolve-url@^0.2.1:
   version "0.2.1"
   resolved "https://registry.npmjs.org/resolve-url/-/resolve-url-0.2.1.tgz"
   integrity sha512-ZuF55hVUQaaczgOIwqWzkEcEidmlD/xl44x1UZnhOXcYuFN2S6+rcxpG+C1N3So0wvNI3DmJICUFfu2SxhBmvg==
@@ -10776,16 +10706,6 @@ sort-keys@^2.0.0:
   resolved "https://registry.npmjs.org/source-map-js/-/source-map-js-1.0.2.tgz"
   integrity sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==
 
-source-map-resolve@^0.3.0:
-  version "0.3.1"
-  resolved "https://registry.npmjs.org/source-map-resolve/-/source-map-resolve-0.3.1.tgz"
-  integrity sha512-Z3zvKubKxN3rzPSpdzUYnUWyobg0dUxGp39DSpNzneqLRtAhQEJSK+xiVFjf1ZJM4fNpP0o3oT5RYwrbNJkFyA==
-  dependencies:
-    atob "~1.1.0"
-    resolve-url "~0.2.1"
-    source-map-url "~0.3.0"
-    urix "~0.1.0"
-
 source-map-resolve@^0.5.0, source-map-resolve@^0.5.2:
   version "0.5.3"
   resolved "https://registry.npmjs.org/source-map-resolve/-/source-map-resolve-0.5.3.tgz"
@@ -10809,18 +10729,6 @@ source-map-url@^0.4.0:
   version "0.4.1"
   resolved "https://registry.npmjs.org/source-map-url/-/source-map-url-0.4.1.tgz"
   integrity sha512-cPiFOTLUKvJFIg4SKVScy4ilPPW6rFgMgfuZJPNoDuMs3nC1HbMUycBoJw77xFIp6z1UJQJOfx6C9GMH80DiTw==
-
-source-map-url@~0.3.0:
-  version "0.3.0"
-  resolved "https://registry.npmjs.org/source-map-url/-/source-map-url-0.3.0.tgz"
-  integrity sha512-QU4fa0D6aSOmrT+7OHpUXw+jS84T0MLaQNtFs8xzLNe6Arj44Magd7WEbyVW5LNYoAPVV35aKs4azxIfVJrToQ==
-
-source-map@^0.1.38:
-  version "0.1.43"
-  resolved "https://registry.npmjs.org/source-map/-/source-map-0.1.43.tgz"
-  integrity sha512-VtCvB9SIQhk3aF6h+N85EaqIaBFIAfZ9Cu+NJHHVvc8BbEcnvDcFw6sqQ2dQrT6SlOrZq3tIvyD9+EGq/lJryQ==
-  dependencies:
-    amdefine ">=0.0.4"
 
 source-map@^0.5.1, source-map@^0.5.3, source-map@^0.5.6, source-map@~0.5.3:
   version "0.5.7"
@@ -11496,13 +11404,6 @@ tmp@0.0.28:
   dependencies:
     os-tmpdir "~1.0.1"
 
-tmp@0.0.31:
-  version "0.0.31"
-  resolved "https://registry.npmjs.org/tmp/-/tmp-0.0.31.tgz"
-  integrity sha512-lfyEfOppKvWNeId5CArFLwgwef+iCnbEIy0JWYf1httIEXnx4ndL4Dr1adw7hPgeQfSlTbc/gqn6iaKcROpw5Q==
-  dependencies:
-    os-tmpdir "~1.0.1"
-
 tmp@^0.0.33:
   version "0.0.33"
   resolved "https://registry.npmjs.org/tmp/-/tmp-0.0.33.tgz"
@@ -11943,7 +11844,7 @@ uri-js@^4.2.2:
   dependencies:
     punycode "^2.1.0"
 
-urix@^0.1.0, urix@~0.1.0:
+urix@^0.1.0:
   version "0.1.0"
   resolved "https://registry.npmjs.org/urix/-/urix-0.1.0.tgz"
   integrity sha512-Am1ousAhSLBeB9cG/7k7r2R0zj50uDRlZHPGbazid5s9rlF1F/QKYObEKSIunSjIOkJZqwRRLpvewjEkM7pSqg==
