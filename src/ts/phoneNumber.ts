@@ -1,6 +1,5 @@
 var vanillaTextMask = require("vanilla-text-mask");
 
-
 const phoneMask = [
   "+",
   "7",
