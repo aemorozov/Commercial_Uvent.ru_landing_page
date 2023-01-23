@@ -124,10 +124,11 @@
     }
     .header-block {
         width: 100%;
-        // z-index: 500;
         background: $color-for-background;
         padding-top: 0;
         margin-top: -18px;
+        position: fixed;
+        z-index: 300;
     }
     .logo {
         padding: 30px 30px;

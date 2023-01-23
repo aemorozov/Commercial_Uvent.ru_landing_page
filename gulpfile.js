@@ -177,7 +177,9 @@ const watchDev = () => {
   gulp.watch(htmlFiles, processHTML).on("change", browserSync.reload);
   gulp.watch(imgFiles, processIMG).on("change", browserSync.reload);
   gulp.watch(tsFiles, processTS).on("change", browserSync.reload);
-  gulp.watch(tsFiles, processCriticalTS).on("change", browserSync.reload);
+  gulp
+    .watch(tsCriticalFiles, processCriticalTS)
+    .on("change", browserSync.reload);
 };
 
 browserSync.create();
