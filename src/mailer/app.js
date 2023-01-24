@@ -68,7 +68,7 @@ function serializeForm(formNode) {
 }
 
 async function sendData(data) {
-  return await fetch("send_mail.php", {
+  return await fetch("/send_mail.php", {
     // отправляем в скрипт send_mail.php
     method: "POST", // методом POST
     body: data,
