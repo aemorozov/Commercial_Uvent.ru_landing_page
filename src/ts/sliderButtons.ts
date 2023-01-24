@@ -1,35 +1,26 @@
-const forSlider: HTMLElement | null = document.querySelector('.for-slider')
-const fieldServices: HTMLElement | null = document.querySelector('.uslugi-for-circles')
-const buttonLeft: HTMLElement | null = document.querySelector('.arrow-left')
-const buttonRight: HTMLElement | null = document.querySelector('.arrow-right')
+const sliders = document.querySelectorAll('.for-sliders')
+const arrows = document.querySelectorAll('.arrows')
 const shift = 500
-let scrollLeftVar = forSlider?.scrollLeft
-let isAnimationEnd = true
 
-
-forSlider?.addEventListener('scroll', scrollingX)
 buttons()
 
-function scrollingX() {
-    scrollLeftVar = forSlider?.scrollLeft
-    return scrollLeftVar
-}
-
 function buttons() {
-    if (!forSlider) {
-        return
+
+    arrows?.forEach(element => {
+        listenerThanWatchToParentAndScroll(element)
+    })
+
+    function listenerThanWatchToParentAndScroll(element: Element) {
+        element.addEventListener('click', () => {
+            const parent= element.parentElement?.querySelector('.for-sliders')
+            if (!parent) return
+            scroll(parent, element)
+        })
     }
 
-    forSlider?.addEventListener('animationend', () => {
-        isAnimationEnd = true
-        console.log(isAnimationEnd)
-    })
-    
-    buttonRight?.addEventListener('click', () => {
-        forSlider.scrollLeft += shift 
-    })
-
-    buttonLeft?.addEventListener('click', () => {
-        forSlider.scrollLeft -= shift 
-    })
+    function scroll(parent: Element | null, element: Element | null) {
+        if (!parent) return
+        if (!element) return
+        parent.scrollLeft += (element.className === 'arrow-right arrows') ? shift : -shift
+    }
 }

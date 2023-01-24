@@ -34,6 +34,8 @@
     height: 500px;
     max-width: 1440px;
     overflow-x: auto;
+    scroll-behavior: smooth;
+    transition: 0.3s ease;
   }
 
   .reviews-for-flex:hover::-webkit-scrollbar{
