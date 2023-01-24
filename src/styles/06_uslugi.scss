@@ -38,6 +38,15 @@
   //   overflow-x: auto;
   // }
 
+  .arrows {
+    box-shadow: 2.0px 4.0px 4.0px hsl(0deg 0% 0% / 0.44);
+  }
+
+  .arrows:active {
+    transition: 0.1s ease;
+    top: 56.5%;
+  }
+
   .for-slider:hover::-webkit-scrollbar{
     border-bottom: 0.1px solid $color-one-for-scrollbar; 
   }
@@ -167,11 +176,11 @@
   }
 
   .arrow-left-img {
-    transform: translateY(-50%) translateX(-60%);
+    transform: translateY(-50%) translateX(-50%);
   }
 
   .arrow-right-img {
-    transform: translateY(-50%) translateX(-40%);
+    transform: translateY(-50%) translateX(-50%);
   }
 
 @media (min-width: 1600px) {
