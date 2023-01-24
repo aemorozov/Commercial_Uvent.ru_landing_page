@@ -3,8 +3,8 @@
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\Exception;
 
-    require "PHPMailer/src/Exception.php";
-    require "PHPMailer/src/PHPMailer.php";
+    require "./PHPMailer/src/Exception.php";
+    require "./PHPMailer/src/PHPMailer.php";
 
     $mail = new PHPMailer(true); /* Создаем объект MAIL */
     $mail->CharSet = "UTF-8"; /* Задаем кодировку UTF-8 */
