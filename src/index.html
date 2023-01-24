@@ -694,9 +694,9 @@
         </div>
         <div class="feedback-form">
           <form
-            action="#"
+            action="send_mail.php"
             autocomplete="on"
-            method="get"
+            method="post"
             name="form"
             class="form"
           >
@@ -709,6 +709,7 @@
               required
               id="name"
               aria-placeholder="Ваше имя"
+              data-reg="^[А-ЯЁ][а-яё]*$"
             /><label for="name" class="label">Имя</label>
             <input
               type="email"
@@ -719,21 +720,26 @@
               required
               id="email"
               aria-placeholder="Ваша почта"
+              data-reg="^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$"
             /><label for="email" class="label">Email</label>
             <input
               type="text"
               maxlength="18"
               name="phone"
               class="phone"
-              pattern="[0-9]"
               placeholder="+7 (999) 999-99-99"
               required
               id="phone"
               aria-placeholder="Ваш номер телефона"
             /><label for="phone" class="label">Phone</label>
-            <button class="button-subscribe" aria-label="Отправить данные">
-              <span class="button-subscribe-span">Отправить</span>
-            </button>
+            <div aria-label="Отправить данные">
+              <input
+                class="button-subscribe"
+                type="submit"
+                id="button"
+                value="Отправить"
+              />
+            </div>
             <p class="feedback-form-p">
               Нажимая на кнопку, Вы даете согласие на обработку своих
               персональных данных, принимаете
@@ -893,6 +899,7 @@
     />
   </body>
   <script src="js/app.js" async></script>
+  <script src="mailer/app.js"></script>
   <link
     href="styles/style.css"
     rel="preload"

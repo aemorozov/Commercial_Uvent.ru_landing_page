@@ -53,6 +53,12 @@ const fontsFiles = `${srcDir}${fontsDir}**/*`;
 const videosDir = "videos/";
 const videoFiles = `${srcDir}${videosDir}**/*`;
 
+const mailer = `${srcDir}mailer/**/*`;
+
+const processMailer = () => {
+  return gulp.src(mailer).pipe(gulp.dest(`${distDir}mailer/`));
+};
+
 const processHTML = () => {
   return gulp
     .src(htmlFiles)
@@ -60,24 +66,6 @@ const processHTML = () => {
     .pipe(gulp.dest(distDir))
     .pipe(browserSync.reload({ stream: true }));
 };
-
-// const processTS = () => {
-//   return gulp
-//     .src(`${tsFiles}`)
-//     .pipe(sourcemaps.init({ loadMaps: true }))
-//     .pipe(
-//       ts({
-//         noImplicitAny: true,
-//         module: "amd",
-//         moduleResolution: "node",
-//         outFile: `app.js`,
-//       })
-//     )
-//     .pipe(jsMinify())
-//     .on("error", log.error)
-//     .pipe(sourcemaps.write("./"))
-//     .pipe(gulp.dest(`${distDir}${jsDir}`));
-// };
 
 const processTS = () => {
   return browserify({
@@ -114,21 +102,6 @@ const processCriticalTS = async () => {
       .pipe(gulp.dest(`${distDir}${jsDir}critical/`));
   }, timeForCriticalTS);
 };
-
-// const processJS = () => {
-//   return browserify({
-//     entries: jsInput,
-//     debug: true,
-//   })
-//     .bundle()
-//     .pipe(source(jsOutput))
-//     .pipe(buffer())
-//     .pipe(sourcemaps.init({ loadMaps: true }))
-//     .pipe(jsMinify())
-//     .on("error", log.error)
-//     .pipe(sourcemaps.write("./"))
-//     .pipe(gulp.dest(`${distDir}${jsDir}`));
-// };
 
 const processIMG = () => {
   return gulp
@@ -177,6 +150,7 @@ const watchDev = () => {
   gulp.watch(htmlFiles, processHTML).on("change", browserSync.reload);
   gulp.watch(imgFiles, processIMG).on("change", browserSync.reload);
   gulp.watch(tsFiles, processTS).on("change", browserSync.reload);
+  gulp.watch(mailer, processMailer).on("change", browserSync.reload);
   gulp
     .watch(tsCriticalFiles, processCriticalTS)
     .on("change", browserSync.reload);
@@ -219,6 +193,7 @@ const jobs = [
   processFonts,
   processVideos,
   processCriticalCSS,
+  processMailer,
 ];
 
 exports.build = gulp.series(...jobs);
