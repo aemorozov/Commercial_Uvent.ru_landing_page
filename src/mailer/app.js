@@ -32,51 +32,46 @@ function inputCheck(el) {
   }
 }
 
-// Здесь проверяем, можно ли отправить форму
 function formCheck(e) {
-  e.preventDefault(); // блокируем input
-  const allValid = []; // создаем массив валидных значений
+  e.preventDefault();
+  const allValid = [];
   validFormArr.forEach((el) => {
-    allValid.push(el.getAttribute("is-valid")); // проверяем каждое поле
+    allValid.push(el.getAttribute("is-valid"));
   });
   const isAllValid = allValid.reduce((acc, current) => {
-    // проверяем, чтобы все было правильно
     return acc && current;
   });
   if (!Boolean(Number(isAllValid))) {
-    alert("Заполните поля правильно!"); // если не правильно - сообщение пользователю
+    alert("Заполните поля правильно!");
     return;
   }
-  formSubmit(); // если правильно - отправляем данные
+  formSubmit();
 }
 
 async function formSubmit() {
-  const data = serializeForm(form); // получаем данные формы
-  const response = await sendData(data); // отправляем данные на почту
+  const data = serializeForm(form);
+  const response = await sendData(data);
   if (response.ok) {
-    let result = await response.json(); // если ответ OK отвечает пользователю
-    alert(result.message); // .. что данные отправлены
-    formReset(); // сбрасываем поля формы
+    let result = await response.json();
+    alert(result.message);
+    formReset();
   } else {
-    alert("Код ошибки: " + response.status); // если not OK - показываем код ошибки
+    alert("Код ошибки: " + response.status);
   }
 }
 
 function serializeForm(formNode) {
-  // формируем данные формы
   return new FormData(form);
 }
 
 async function sendData(data) {
   return await fetch("./mailer/send_mail.php", {
-    // отправляем в скрипт send_mail.php
-    method: "POST", // методом POST
+    method: "POST",
     body: data,
   });
 }
 
 function formReset() {
-  // сброс полей формы
   form.reset();
   validFormArr.forEach((el) => {
     el.setAttribute("is-valid", 0);
