@@ -14,7 +14,7 @@
     $email = $_POST["email"]; /* Почту */
     $phone = $_POST["phone"]; /* Телефон */
 
-    $email_template = "template_mail.html"; // Считываем файл разметки
+    $email_template = "./template_mail.html"; // Считываем файл разметки
     $body = file_get_contents($email_template); // Сохраняем данные в $body
     $body = str_replace('%name%', $name, $body); // Заменяем строку %name% на имя
     $body = str_replace('%email%', $email, $body); // строку %email% на почту
