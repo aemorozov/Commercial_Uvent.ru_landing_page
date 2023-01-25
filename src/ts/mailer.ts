@@ -1,10 +1,12 @@
 const emailjs = require('@emailjs/browser');
-const btn = <HTMLFormElement>document.getElementById('button');
+const btn = document.querySelector<HTMLInputElement>(".button");
 
 emailjs.init("D32-TRfUefWjSF0BO");
 
 document.getElementById('form')?.addEventListener('submit', function(event) {
    event.preventDefault();
+
+   if(!btn) return
 
    btn.value = 'Отправляется...';
 
