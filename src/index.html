@@ -693,35 +693,29 @@
           </div>
         </div>
         <div class="feedback-form">
-          <form
-            action="mailer/send_mail.php"
-            autocomplete="on"
-            method="post"
-            name="form"
-            class="form"
-          >
+          <form autocomplete="on" name="form" class="form" id="form">
             <input
               type="text"
               maxlength="30"
-              name="name"
+              name="from_name"
               class="name"
               placeholder="Имя"
               required
-              id="name"
+              id="from_name"
               aria-placeholder="Ваше имя"
               data-reg="^[А-ЯЁ][а-яё]*$"
-            /><label for="name" class="label">Имя</label>
+            /><label for="from_name" class="label">Имя</label>
             <input
               type="email"
               maxlength="50"
-              name="email"
+              name="reply_to"
               class="email"
               placeholder="Почта"
               required
-              id="email"
+              id="reply_to"
               aria-placeholder="Ваша почта"
               data-reg="^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$"
-            /><label for="email" class="label">Email</label>
+            /><label for="reply_to" class="label">Email</label>
             <input
               type="text"
               maxlength="18"
@@ -732,14 +726,12 @@
               id="phone"
               aria-placeholder="Ваш номер телефона"
             /><label for="phone" class="label">Phone</label>
-            <div aria-label="Отправить данные">
-              <input
-                class="button-subscribe"
-                type="submit"
-                id="button"
-                value="Отправить"
-              />
-            </div>
+            <input
+              class="button-subscribe"
+              type="submit"
+              id="button"
+              value="Отправить"
+            />
             <p class="feedback-form-p">
               Нажимая на кнопку, Вы даете согласие на обработку своих
               персональных данных, принимаете
@@ -899,7 +891,14 @@
     />
   </body>
   <script src="js/app.js" async></script>
-  <script src="mailer/app.js"></script>
+  <script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+  ></script>
+  <script type="text/javascript">
+    emailjs.init("D32-TRfUefWjSF0BO");
+  </script>
+  <!-- <script src="mailer/app.js"></script> -->
   <link
     href="styles/style.css"
     rel="preload"

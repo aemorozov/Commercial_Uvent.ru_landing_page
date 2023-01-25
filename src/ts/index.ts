@@ -3,3 +3,4 @@ require("./mobileMenu");
 require("./phoneNumber");
 require("./sliderButtons");
 require("./videoControls");
+require("./mailer");
