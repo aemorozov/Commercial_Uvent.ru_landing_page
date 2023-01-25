@@ -1,13 +1,10 @@
-// const requireFromUrl = require('require-from-url/sync');
-const emailjs = require('emailjs-com');
-const btn: HTMLInputElement | null = document.querySelector('.button');
+const emailjs = require('@emailjs/browser');
+const btn = <HTMLFormElement>document.getElementById('button');
+
+emailjs.init("D32-TRfUefWjSF0BO");
 
 document.getElementById('form')?.addEventListener('submit', function(event) {
    event.preventDefault();
-
-    console.log('click')
-
-   if (!btn) return
 
    btn.value = 'Отправляется...';
 
