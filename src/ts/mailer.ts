@@ -7,7 +7,7 @@ const thanks: HTMLElement | null = document.querySelector('.thanks')
 const thanksText: HTMLElement | null = document.querySelector('.thanks-text')
 const thanksTextBold: HTMLElement | null = document.querySelector('.thanks-text-bold')
 
-emailjs.init("0KeYNjBhOnI3x-_ra");
+emailjs.init("D32-TRfUefWjSF0BO");
 
 document.getElementById('form')?.addEventListener('submit', function(event) {
    event.preventDefault();
@@ -16,8 +16,8 @@ document.getElementById('form')?.addEventListener('submit', function(event) {
 
    btn.value = 'Отправляется...';
 
-   const serviceID = 'service_zld1lus';
-   const templateID = 'template_k5xltof';
+   const serviceID = 'service_tpk7b4m';
+   const templateID = 'template_j2n3uuh';
 
    emailjs.sendForm(serviceID, templateID, this)
     .then(() => {
