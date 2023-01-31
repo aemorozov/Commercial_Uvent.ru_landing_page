@@ -18,6 +18,10 @@
     display: flex;
     margin: 0 auto;
     justify-content: space-between;
+    transition: .3s ease;
+    position: absolute;
+    top: 0px;
+    // display: none;
   }
   
   .feedback-form {
@@ -124,6 +128,95 @@
     text-decoration: underline;
   }
 
+  // Animation
+
+  .animation-go-up {
+    top: -50px;
+    opacity: 0;
+    transition: 0.3s ease;
+  }
+
+  .display-none {
+    display: none;
+  }
+
+  .check-circle {
+    width: 121px;
+    height: 121px;
+    background-color: #fcf7f1;
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    margin-left: -60px;
+    mask-image: url("../img/check-circle.svg");
+    transform: translateY(100%);
+    opacity: 0;
+    transition: 0.5s ease;
+  }
+
+  .group-circle {
+    width: 94px;
+    height: 94px;
+    background-color: #fcf7f1;
+    position: absolute;
+    top: 20px;
+    left: 70%;
+    transform: translateX(-50%);
+    mask-image: url("../img/Group.svg");
+    transform: translateY(130%);
+    opacity: 0;
+    transition: 0.5s ease;
+  }
+
+  .thanks-flex {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 160px;
+  }
+
+  .thanks {
+    font-weight: 300;
+    font-size: 112px;
+    line-height: 124px;
+    text-transform: uppercase;
+    margin: 0;
+    color: white;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: 0.5s ease;
+  }
+
+  .thanks-text {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 40px;
+    margin: 20px;
+    color: white;
+    transform: translateY(200%);
+    opacity: 0;
+    transition: 0.5s ease;
+  }
+
+  .thanks-text-bold {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+    margin: 20px;
+    color: white;
+    transform: translateY(200%);
+    opacity: 0;
+    transition: 0.5s ease;
+  }
+
+  .thanks-go-up {
+    transform: translateY(0);
+    opacity: 1;
+    transition: 0.5s ease;
+  }
+
   @media (max-width: 1439px) {
     .feedback-text-h2 {
       font-size: 54px;
@@ -176,6 +269,10 @@
       line-height: 26px;
       max-width: 380px;
     }
+    .thanks-text, .thanks-text-bold {
+      font-size: 20px;
+      line-height: 26px;
+    }
   }
 
   @media (max-width: 1024px) {
@@ -214,6 +311,16 @@
       max-width: none;
       width: 100%;
     }
+
+    .thanks-text, .thanks-text-bold {
+      font-size: 32px;
+      line-height: 36px;
+      max-width: 80%;
+      text-align: center;
+    }
+    .thanks {
+      margin: 80px;
+    }
   }
 
   @media (max-width: 745px) {
@@ -244,6 +351,10 @@
       margin: 74px 0 0 0;
       padding: 28px 31px 0 31px;
     }
+    .thanks {
+      font-size: 62px;
+      line-height: 64px;
+    }
   }
 
   @media (max-width: 580px) {
@@ -257,5 +368,8 @@
     }
     .feedback-form-p {
       margin-top: 26px
+    }
+    .thanks-text, .thanks-text-bold {
+      font-size: 24px;
     }
   }
