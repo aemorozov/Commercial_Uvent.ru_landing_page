@@ -53,11 +53,8 @@ const fontsFiles = `${srcDir}${fontsDir}**/*`;
 const videosDir = "videos/";
 const videoFiles = `${srcDir}${videosDir}**/*`;
 
-// const mailer = `${srcDir}mailer/**/*`;
-
-// const processMailer = () => {
-//   return gulp.src(mailer).pipe(gulp.dest(`${distDir}mailer/`));
-// };
+const iconsDir = "icon/";
+const iconsFiles = `${srcDir}${iconsDir}**/*`;
 
 const processHTML = () => {
   return gulp
@@ -150,7 +147,6 @@ const watchDev = () => {
   gulp.watch(htmlFiles, processHTML).on("change", browserSync.reload);
   gulp.watch(imgFiles, processIMG).on("change", browserSync.reload);
   gulp.watch(tsFiles, processTS).on("change", browserSync.reload);
-  // gulp.watch(mailer, processMailer).on("change", browserSync.reload);
   gulp
     .watch(tsCriticalFiles, processCriticalTS)
     .on("change", browserSync.reload);
@@ -183,6 +179,10 @@ const processVideos = () => {
   return gulp.src(videoFiles).pipe(gulp.dest(`${distDir}${videosDir}`));
 };
 
+const processIcons = () => {
+  return gulp.src(iconsFiles).pipe(gulp.dest(`${distDir}${iconsDir}`));
+};
+
 const jobs = [
   clean,
   processStyle,
@@ -193,7 +193,7 @@ const jobs = [
   processFonts,
   processVideos,
   processCriticalCSS,
-  // processMailer,
+  processIcons,
 ];
 
 exports.build = gulp.series(...jobs);
