@@ -84,7 +84,26 @@
     height: 12px;
     margin-top: 12px;
   }
-  
+
+  .footer-credit {
+    display: block;
+    width: fit-content;
+    margin: 48px auto 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: rgba(41, 41, 41, 0.72);
+    text-decoration: underline;
+    text-decoration-color: currentColor;
+    text-underline-offset: 3px;
+    transition: color 0.2s ease;
+  }
+
+  .footer-credit:hover,
+  .footer-credit:focus-visible {
+    color: rgba(41, 41, 41, 1);
+  }
+
   .black-line {
     height: 40px;
     width: 1px;
@@ -114,7 +133,7 @@
 
   @media (max-width: 1024px) {
     .footer {
-      height: 620px;
+      height: 668px;
     }
     .footer-logo {
       width: 450px;
@@ -132,6 +151,9 @@
     .footer-socials {
       margin-top: 100px;
       margin-right: 0;
+    }
+    .footer-credit {
+      margin-top: 40px;
     }
   }
 
@@ -151,5 +173,10 @@
     }
     .footer-socials {
       margin-top: 58px;
+    }
+    .footer-credit {
+      margin-top: 32px;
+      font-size: 14px;
+      line-height: 20px;
     }
   }
